@@ -4,9 +4,14 @@ Penetration Testing
 --------------------
 - Offensive Security Certified Professional (OSCP) :white_check_mark: https://www.offensive-security.com/pwk-oscp/
 - Certified Red Team Professional (CRTP) :warning: https://www.pentesteracademy.com/activedirectorylab
-- Offensive Security Wireless Professional (OSWP): https://www.offensive-security.com/wifu-oswp/
+- Offensive Security Wireless Professional (OSWP) :warning: https://www.offensive-security.com/wifu-oswp/
 - Offensive Security Evasion Professional (OSEP): https://www.offensive-security.com/pen300-osep/
 - Hack The Box Pro Labs: https://www.hackthebox.eu/
+    - Dante :white_check_mark:
+    - Offshore
+    - RastaLabs
+    - Cybernetics
+    - APTLabs
 - Tryhackme: https://tryhackme.com/
 - Pentester Academy: https://www.pentesteracademy.com/
 - Offensive Security Proving Grounds: https://www.offensive-security.com/labs/
@@ -18,7 +23,7 @@ Penetration Testing
 
 Web Penetration Testing
 ------------------------
-- Pentesterlab: https://pentesterlab.com/
+- Pentesterlab :warning: https://pentesterlab.com/
 - Codecademy Python 2.7: https://www.codecademy.com/
 - Portswigger Academy: https://portswigger.net/web-security
 - DVWA: https://dvwa.co.uk/
