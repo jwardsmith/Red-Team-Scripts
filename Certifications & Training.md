@@ -21,18 +21,18 @@ Web Penetration Testing
 - Pentesterlab: https://pentesterlab.com/
 - Codecademy Python 2.7: https://www.codecademy.com/
 - Portswigger Academy: https://portswigger.net/web-security
-- DVWA
-- Offensive Security Web Expert (OSWE)
-- Hackerone
-- Bugcrowd
-- Synack Red Team
+- DVWA: https://dvwa.co.uk/
+- Offensive Security Web Expert (OSWE): https://www.offensive-security.com/awae-oswe/
+- Hackerone: https://www.hackerone.com/
+- Bugcrowd: https://www.bugcrowd.com/
+- Synack Red Team: https://www.synack.com/red-team/
 
 Exploit Development
 --------------------
-- SLAE
-- Offensive Security Exploit Developer (OSED)
-- Corelan
+- SLAE: https://www.pentesteracademy.com/course?id=3
+- Offensive Security Exploit Developer (OSED): https://www.offensive-security.com/exp301-osed/
+- Corelan: https://www.corelan-training.com/
 
 Other
 --------------------
-- AZ-500
+- AZ-500: https://docs.microsoft.com/en-us/learn/certifications/exams/az-500
