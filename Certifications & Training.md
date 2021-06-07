@@ -2,7 +2,7 @@
 
 Penetration Testing
 --------------------
-- Offensive Security Certified Professional (OSCP): https://www.offensive-security.com/pwk-oscp/
+- Offensive Security Certified Professional (OSCP):white_check_mark: https://www.offensive-security.com/pwk-oscp/
 - Certified Red Team Professional (CRTP): https://www.pentesteracademy.com/activedirectorylab
 - Offensive Security Wireless Professional (OSWP): https://www.offensive-security.com/wifu-oswp/
 - Offensive Security Evasion Professional (OSEP): https://www.offensive-security.com/pen300-osep/
