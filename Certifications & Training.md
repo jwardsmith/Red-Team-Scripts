@@ -19,6 +19,7 @@ Penetration Testing
 - Tryhackme: https://tryhackme.com/
 - Pentester Academy: https://www.pentesteracademy.com/
 - Offensive Security Proving Grounds: https://www.offensive-security.com/labs/
+- Hack The Box Academy: https://academy.hackthebox.eu/
 - OSINT Courses Tracelabs: https://academy.osintcombine.com/
 - Cyber Struggle Ranger: https://cyberstruggle.org/
 - Dronesec Courses: https://dronesec.com/
