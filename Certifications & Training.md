@@ -2,8 +2,8 @@
 
 Penetration Testing
 --------------------
-- Offensive Security Certified Professional (OSCP) :white_check_mark: https://www.offensive-security.com/pwk-oscp/
-- Certified Red Team Professional (CRTP) :white_check_mark: https://www.pentesteracademy.com/activedirectorylab
+- Offensive Security Certified Professional (OSCP): :white_check_mark: https://www.offensive-security.com/pwk-oscp/
+- Certified Red Team Professional (CRTP): :white_check_mark: https://www.pentesteracademy.com/activedirectorylab
 - Attacking Active Directory with Linux: :white_check_mark: https://www.pentesteracademy.com/linuxad
 - Certified Red Team Expert (CRTE): https://www.pentesteracademy.com/redteamlab
 - Certified Red Team Operator (CRTO): https://www.zeropointsecurity.co.uk/red-team-ops
@@ -20,8 +20,10 @@ Penetration Testing
 - Pentester Academy: https://www.pentesteracademy.com/
 - Offensive Security Proving Grounds: https://www.offensive-security.com/labs/
 - Hack The Box Academy: https://academy.hackthebox.eu/
+- eLearnSecurity: https://elearnsecurity.com/
 - OSINT Courses Tracelabs: https://academy.osintcombine.com/
 - Cyber Struggle Ranger: https://cyberstruggle.org/
+- Practical Network Penetration Tester: https://certifications.tcm-sec.com/product/practical-network-penetration-tester-with-training/
 - Dronesec Courses: https://dronesec.com/
 
 Web Penetration Testing
