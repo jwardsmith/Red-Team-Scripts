@@ -5,9 +5,9 @@ Penetration Testing
 - Offensive Security Certified Professional (OSCP): :white_check_mark: https://www.offensive-security.com/pwk-oscp/
 - Certified Red Team Professional (CRTP): :white_check_mark: https://www.pentesteracademy.com/activedirectorylab
 - Attacking Active Directory with Linux: :white_check_mark: https://www.pentesteracademy.com/linuxad
-- Certified Red Team Operator (CRTO): https://www.zeropointsecurity.co.uk/red-team-ops
+- Certified Red Team Operator (CRTO): :warning: https://www.zeropointsecurity.co.uk/red-team-ops
 - Certified Red Team Expert (CRTE): https://www.pentesteracademy.com/redteamlab
-- Offensive Security Wireless Professional (OSWP) :warning: https://www.offensive-security.com/wifu-oswp/
+- Offensive Security Wireless Professional (OSWP): :warning: https://www.offensive-security.com/wifu-oswp/
 - Offensive Security Evasion Professional (OSEP): https://www.offensive-security.com/pen300-osep/
 - PentesterAcademy Certified Enterprise Security Specialist (PACES): https://www.pentesteracademy.com/gcb
 - Hack The Box Pro Labs: https://www.hackthebox.eu/
