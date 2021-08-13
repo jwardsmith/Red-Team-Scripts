@@ -28,7 +28,7 @@ Penetration Testing
 
 Web Penetration Testing
 ------------------------
-- Pentesterlab :warning: https://pentesterlab.com/
+- Pentesterlab: :warning: https://pentesterlab.com/
 - Codecademy Python 2.7: https://www.codecademy.com/
 - Portswigger Academy: https://portswigger.net/web-security
 - DVWA: https://dvwa.co.uk/
