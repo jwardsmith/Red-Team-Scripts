@@ -11,11 +11,11 @@ Penetration Testing
 - Offensive Security Evasion Professional (OSEP): https://www.offensive-security.com/pen300-osep/
 - PentesterAcademy Certified Enterprise Security Specialist (PACES): https://www.pentesteracademy.com/gcb
 - Hack The Box Pro Labs: https://www.hackthebox.eu/
-    - Dante :white_check_mark:
-    - Offshore
-    - RastaLabs
-    - Cybernetics
-    - APTLabs
+    - Dante: :white_check_mark:
+    - Offshore:
+    - RastaLabs:
+    - Cybernetics:
+    - APTLabs:
 - Tryhackme: https://tryhackme.com/
 - Pentester Academy: https://www.pentesteracademy.com/
 - Offensive Security Proving Grounds: https://www.offensive-security.com/labs/
