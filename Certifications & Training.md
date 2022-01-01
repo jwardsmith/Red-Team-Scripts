@@ -42,6 +42,7 @@ Exploit Development
 - SLAE: https://www.pentesteracademy.com/course?id=3
 - Offensive Security Exploit Developer (OSED): https://www.offensive-security.com/exp301-osed/
 - Corelan: https://www.corelan-training.com/
+- Malware Development Essentials Course: https://institute.sektor7.net/red-team-operator-malware-development-essentials
 
 Other
 --------------------
