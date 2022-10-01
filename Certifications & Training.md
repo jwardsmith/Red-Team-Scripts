@@ -17,6 +17,7 @@ Penetration Testing
     - Cybernetics:
     - APTLabs:
 - Tryhackme: https://tryhackme.com/
+- Hack The Box Certified Bug Bounty Hunter (HTB CBBH): https://academy.hackthebox.com/preview/certifications/htb-certified-bug-bounty-hunter
 - Pentester Academy: https://www.pentesteracademy.com/
 - Offensive Security Proving Grounds: https://www.offensive-security.com/labs/
 - Hack The Box Academy: https://academy.hackthebox.eu/
