@@ -5,19 +5,18 @@ Penetration Testing
 - Offensive Security Certified Professional (OSCP): :white_check_mark: https://www.offensive-security.com/pwk-oscp/
 - Certified Red Team Professional (CRTP): :white_check_mark: https://www.pentesteracademy.com/activedirectorylab
 - Attacking Active Directory with Linux: :white_check_mark: https://www.pentesteracademy.com/linuxad
-- Certified Red Team Operator (CRTO): :warning: https://www.zeropointsecurity.co.uk/red-team-ops
 - Certified Red Team Expert (CRTE): :white_check_mark: https://www.pentesteracademy.com/redteamlab
+- Certified Red Team Operator (CRTO): :warning: https://www.zeropointsecurity.co.uk/red-team-ops
+- PentesterAcademy Certified Enterprise Security Specialist (PACES): https://www.pentesteracademy.com/gcb
 - Offensive Security Wireless Professional (OSWP): :warning: https://www.offensive-security.com/wifu-oswp/
 - Offensive Security Evasion Professional (OSEP): https://www.offensive-security.com/pen300-osep/
-- PentesterAcademy Certified Enterprise Security Specialist (PACES): https://www.pentesteracademy.com/gcb
 - Hack The Box Pro Labs: https://www.hackthebox.eu/
     - Dante: :white_check_mark:
     - Offshore:
     - RastaLabs:
     - Cybernetics:
     - APTLabs:
-- Tryhackme: https://tryhackme.com/
-- Hack The Box Certified Bug Bounty Hunter (HTB CBBH): https://academy.hackthebox.com/preview/certifications/htb-certified-bug-bounty-hunter
+- Tryhackme: https://tryhackme.com/ 
 - Pentester Academy: https://www.pentesteracademy.com/
 - Offensive Security Proving Grounds: https://www.offensive-security.com/labs/
 - Hack The Box Academy: https://academy.hackthebox.eu/
@@ -33,6 +32,7 @@ Web Penetration Testing
 - Codecademy Python 2.7: https://www.codecademy.com/
 - Portswigger Academy: https://portswigger.net/web-security
 - DVWA: https://dvwa.co.uk/
+- Hack The Box Certified Bug Bounty Hunter (HTB CBBH): https://academy.hackthebox.com/preview/certifications/htb-certified-bug-bounty-hunter
 - Offensive Security Web Expert (OSWE): https://www.offensive-security.com/awae-oswe/
 - Hackerone: https://www.hackerone.com/
 - Bugcrowd: https://www.bugcrowd.com/
