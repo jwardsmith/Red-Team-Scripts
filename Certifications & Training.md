@@ -8,7 +8,6 @@ Penetration Testing
 - Certified Red Team Expert (CRTE): :white_check_mark: https://www.pentesteracademy.com/redteamlab
 - Certified Red Team Operator (CRTO): :warning: https://www.zeropointsecurity.co.uk/red-team-ops
 - PentesterAcademy Certified Enterprise Security Specialist (PACES): https://www.pentesteracademy.com/gcb
-- Offensive Security Wireless Professional (OSWP): :warning: https://www.offensive-security.com/wifu-oswp/
 - Offensive Security Evasion Professional (OSEP): https://www.offensive-security.com/pen300-osep/
 - Hack The Box Pro Labs: https://www.hackthebox.eu/
     - Dante: :white_check_mark:
@@ -16,10 +15,7 @@ Penetration Testing
     - RastaLabs:
     - Cybernetics:
     - APTLabs:
-- Tryhackme: https://tryhackme.com/ 
-- Pentester Academy: https://www.pentesteracademy.com/
-- Offensive Security Proving Grounds: https://www.offensive-security.com/labs/
-- Hack The Box Academy: https://academy.hackthebox.eu/
+
 - eLearnSecurity: https://elearnsecurity.com/
 - OSINT Courses Tracelabs: https://academy.osintcombine.com/
 - Cyber Struggle Ranger: https://cyberstruggle.org/
@@ -45,6 +41,19 @@ Exploit Development
 - Corelan: https://www.corelan-training.com/
 - Malware Development Essentials Course: https://institute.sektor7.net/red-team-operator-malware-development-essentials
 
-Other
+Wireless Penetration Testing
+-----------------------------
+- Offensive Security Wireless Professional (OSWP): :warning: https://www.offensive-security.com/wifu-oswp/
+
+Cloud
 --------------------
+- Certified Az AD Red Team Professional (CARTP): https://bootcamps.pentesteracademy.com/certifications
 - AZ-500: https://docs.microsoft.com/en-us/learn/certifications/exams/az-500
+
+Training
+----------
+- Hack The Box: https://www.hackthebox.com/
+- Tryhackme: https://tryhackme.com/ 
+- Pentester Academy: https://www.pentesteracademy.com/
+- Offensive Security Proving Grounds: https://www.offensive-security.com/labs/
+- Hack The Box Academy: https://academy.hackthebox.com/
