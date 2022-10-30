@@ -15,7 +15,6 @@ Penetration Testing
     - RastaLabs:
     - Cybernetics:
     - APTLabs:
-
 - eLearnSecurity: https://elearnsecurity.com/
 - OSINT Courses Tracelabs: https://academy.osintcombine.com/
 - Cyber Struggle Ranger: https://cyberstruggle.org/
