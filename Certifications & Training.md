@@ -7,7 +7,7 @@ Penetration Testing
 - Attacking Active Directory with Linux: :white_check_mark: https://www.pentesteracademy.com/linuxad
 - Certified Red Team Expert (CRTE): :white_check_mark: https://www.pentesteracademy.com/redteamlab
 - Certified Red Team Operator (CRTO): :warning: https://www.zeropointsecurity.co.uk/red-team-ops
-- - Certified Red Team Operator 2 (CRTO 2): https://training.zeropointsecurity.co.uk/courses/red-team-ops-ii
+- Certified Red Team Operator 2 (CRTO 2): https://training.zeropointsecurity.co.uk/courses/red-team-ops-ii
 - PentesterAcademy Certified Enterprise Security Specialist (PACES): https://www.pentesteracademy.com/gcb
 - Offensive Security Evasion Professional (OSEP): https://www.offensive-security.com/pen300-osep/
 - Hack The Box Pro Labs: https://www.hackthebox.eu/
