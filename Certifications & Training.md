@@ -16,12 +16,6 @@ Penetration Testing
     - RastaLabs:
     - Cybernetics:
     - APTLabs:
-- eLearnSecurity: https://elearnsecurity.com/
-- OSINT Courses Tracelabs: https://academy.osintcombine.com/
-- Cyber Struggle Ranger: https://cyberstruggle.org/
-- Practical Network Penetration Tester: https://certifications.tcm-sec.com/product/practical-network-penetration-tester-with-training/
-- Dronesec Courses: https://dronesec.com/
-- Certified Red Team Analyst (CCRTA): https://www.cyberwarfare.live/courses/certified-red-team-analyst
 
 Web Penetration Testing
 ------------------------
@@ -58,3 +52,9 @@ Training
 - Tryhackme: https://tryhackme.com/ 
 - Pentester Academy: https://www.pentesteracademy.com/
 - Offensive Security Proving Grounds: https://www.offensive-security.com/labs/
+- eLearnSecurity: https://elearnsecurity.com/
+- OSINT Courses Tracelabs: https://academy.osintcombine.com/
+- TCM Security: https://certifications.tcm-sec.com/
+- Cyber Warfare Labs: https://www.cyberwarfare.live/
+- Dronesec Courses: https://dronesec.com/
+- Cyber Struggle Ranger: https://cyberstruggle.org/
