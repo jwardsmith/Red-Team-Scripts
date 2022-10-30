@@ -21,6 +21,7 @@ Penetration Testing
 - Cyber Struggle Ranger: https://cyberstruggle.org/
 - Practical Network Penetration Tester: https://certifications.tcm-sec.com/product/practical-network-penetration-tester-with-training/
 - Dronesec Courses: https://dronesec.com/
+- Certified Red Team Analyst (CCRTA): https://www.cyberwarfare.live/courses/certified-red-team-analyst
 
 Web Penetration Testing
 ------------------------
@@ -53,7 +54,7 @@ Cloud
 Training
 ----------
 - Hack The Box: https://www.hackthebox.com/
+- Hack The Box Academy: https://academy.hackthebox.com/
 - Tryhackme: https://tryhackme.com/ 
 - Pentester Academy: https://www.pentesteracademy.com/
 - Offensive Security Proving Grounds: https://www.offensive-security.com/labs/
-- Hack The Box Academy: https://academy.hackthebox.com/
