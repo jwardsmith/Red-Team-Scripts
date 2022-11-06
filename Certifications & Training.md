@@ -60,3 +60,6 @@ Training
 - Cyber Struggle Ranger: https://cyberstruggle.org/
 - WeChall: https://www.wechall.net/
 - PicoCTF: https://picoctf.org/
+- SANS Holiday Hack Challenges: https://www.holidayhackchallenge.com/past-challenges/
+- OverThWire: https://overthewire.org/wargames/
+- AttackDefense Labs: https://attackdefense.com/
