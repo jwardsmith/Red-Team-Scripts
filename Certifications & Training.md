@@ -59,3 +59,4 @@ Training
 - Dronesec Courses: https://dronesec.com/
 - Cyber Struggle Ranger: https://cyberstruggle.org/
 - WeChall: https://www.wechall.net/
+- PicoCTF: https://picoctf.org/
