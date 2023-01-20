@@ -10,6 +10,7 @@ Penetration Testing
 - Certified Red Team Operator 2 (CRTO 2): https://training.zeropointsecurity.co.uk/courses/red-team-ops-ii
 - PentesterAcademy Certified Enterprise Security Specialist (PACES): https://www.pentesteracademy.com/gcb
 - Offensive Security Evasion Professional (OSEP): https://www.offensive-security.com/pen300-osep/
+- Hack The Box Certified Penetration Testing Specialist (HTB CPTS): https://academy.hackthebox.com/preview/certifications/htb-certified-penetration-testing-specialist
 - Hack The Box Pro Labs: https://www.hackthebox.eu/
     - Dante: :white_check_mark:
     - Offshore:
