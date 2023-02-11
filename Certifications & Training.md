@@ -56,6 +56,7 @@ Training
 - eLearnSecurity: https://elearnsecurity.com/
 - OSINT Courses Tracelabs: https://academy.osintcombine.com/
 - TCM Security: https://certifications.tcm-sec.com/
+- Hacker101: https://www.hacker101.com/
 - Cyber Warfare Labs: https://www.cyberwarfare.live/
 - Dronesec Courses: https://dronesec.com/
 - Cyber Struggle Ranger: https://cyberstruggle.org/
