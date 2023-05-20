@@ -13,7 +13,7 @@ Penetration Testing
 - Hack The Box Certified Penetration Testing Specialist (HTB CPTS): https://academy.hackthebox.com/preview/certifications/htb-certified-penetration-testing-specialist
 - Hack The Box Pro Labs: https://www.hackthebox.eu/
     - Dante: :white_check_mark:
-    - ZephyrL
+    - Zephyr
     - Offshore:
     - RastaLabs:
     - Cybernetics:
