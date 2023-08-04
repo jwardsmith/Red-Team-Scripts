@@ -129,6 +129,14 @@ word = "Python Cheat Sheet"
 print word.upper()
 >>> PYTHON CHEAT SHEET
 
+word = "PythonCheatSheet"
+print word.isalpha()
+>>> True
+
+word = "Python Cheat Sheet"
+print word.isalpha()
+>>> False
+
 pi = 3.14
 print str(pi)
 >>> 3.14
