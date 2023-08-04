@@ -12,6 +12,9 @@ Cheat
 Sheet"""
 
 print "There\'s"
+
+name = "Python"
+print "Hello %s" % (name)
 ```
 
 - VARIABLES
