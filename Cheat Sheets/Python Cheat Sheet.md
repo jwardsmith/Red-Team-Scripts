@@ -100,3 +100,33 @@ print float(numeric_int)
 >>> 10.0
 >>> 12.0
 ```
+
+- INDEX
+
+```
+p = "python"[0]
+a = "cheat"[3]
+```
+
+- STRING METHODS
+
+```
+word = "Python Cheat Sheet"
+print len(word)
+>>> 18
+
+word = "Python Cheat Sheet"
+print word.lower()
+>>> python cheat sheet
+
+word = "Python Cheat Sheet"
+print word.upper()
+>>> PYTHON CHEAT SHEET
+
+pi = 3.14
+print str(pi)
+>>> 3.14
+
+Methods that use dot notation only work with strings.
+On the other hand, len() and str() can work on other data types.
+```
