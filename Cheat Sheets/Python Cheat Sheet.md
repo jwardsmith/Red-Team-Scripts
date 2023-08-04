@@ -195,3 +195,18 @@ elif 8 < 9:
 else:
   print "I also don't get printed!"
 ```
+
+- FUNCTIONS
+
+```
+def square(n):
+  """Returns the square of a number."""
+  squared = n ** 2
+  print "%d squared is %d." % (n, squared)
+  return squared
+
+Typically, when you call a function, you should pass in the same number of arguments as there are parameters.
+
+When defining a function, placeholder [variables] are called parameters.
+When using, or calling, a function, inputs into the function are called arguments.
+```
