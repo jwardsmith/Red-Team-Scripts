@@ -40,3 +40,17 @@ sales_tax = .08 * price
 price += sales_tax
 money -= price
 ```
+
+- COMMENTS
+
+```
+# this is a comment
+```
+
+- NUMBERS
+
+```
+1 = integer
+0.1 = float
+5.6 = float
+```
