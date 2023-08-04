@@ -4,4 +4,6 @@
 
 ```
 print "Python Cheat Sheet"
+print 'Python Cheat Sheet'
+print "Python " + "Cheat Sheet"
 ```
