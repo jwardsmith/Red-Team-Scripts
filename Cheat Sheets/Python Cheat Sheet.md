@@ -6,6 +6,9 @@
 print "Python Cheat Sheet"
 print 'Python Cheat Sheet'
 print "Python " + "Cheat Sheet"
+print """Python
+Cheat
+Sheet"""
 ```
 
 - VARIABLES
@@ -53,4 +56,10 @@ money -= price
 1 = integer
 0.1 = float
 5.6 = float
+
+quotient = 7/2 = 3
+quotient1 = 7./2 = 3.5
+quotient2 = 7/2. = 3.5
+quotient3 = 7./2. = 3.5
+quotient4 = float(7)/2 = 3.5
 ```
