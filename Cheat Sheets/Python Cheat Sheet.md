@@ -10,6 +10,8 @@ print "Python " + "Cheat Sheet"
 print """Python
 Cheat
 Sheet"""
+
+print "There\'s"
 ```
 
 - VARIABLES
