@@ -15,6 +15,8 @@ print "There\'s"
 
 name = "Python"
 print "Hello %s" % (name)
+
+print "This is the %s %s %s" % ("Python", "Cheat", "Sheet")
 ```
 
 - VARIABLES
