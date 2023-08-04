@@ -204,9 +204,30 @@ def square(n):
   squared = n ** 2
   print "%d squared is %d." % (n, squared)
   return squared
+print square(10)
 
 Typically, when you call a function, you should pass in the same number of arguments as there are parameters.
-
 When defining a function, placeholder [variables] are called parameters.
 When using, or calling, a function, inputs into the function are called arguments.
+
+def one_good_turn(n):
+  return n + 1
+def deserves_another(n):
+  return one_good_turn(n) + 2
+```
+
+- MODULES
+
+```
+import math
+print math.sqrt(25)
+
+from math import sqrt
+print sqrt(25)
+
+from module import *
+
+import math # Imports the math module
+everything = dir(math) # Sets everything to a list of things from math
+print everything # Prints 'em all!
 ```
