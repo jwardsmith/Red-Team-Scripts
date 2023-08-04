@@ -1,6 +1,6 @@
 # Python Cheat Sheet
 
-- PRINT a statement
+- PRINT
 
 ```
 print "Python Cheat Sheet"
