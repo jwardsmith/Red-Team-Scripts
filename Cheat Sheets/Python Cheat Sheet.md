@@ -17,6 +17,7 @@ Sheet"""
 ```
 cheat_sheet = "Python"
 number = 5
+guess = True
 ```
 
 - ARITHMETIC
@@ -63,4 +64,37 @@ quotient1 = 7./2 = 3.5
 quotient2 = 7/2. = 3.5
 quotient3 = 7./2. = 3.5
 quotient4 = float(7)/2 = 3.5
+```
+
+- BOOLEANS
+
+```
+a = True
+b = False
+```
+
+- DATA TYPES
+
+```
+age = 28
+print "I am " + str(age) + " years old!"
+>>> "I am 28 years old!"
+
+number1 = "100"
+number2 = "10"
+string_addition = number1 + number2 
+# string_addition now has a value of "10010"
+int_addition = int(number1) + int(number2)
+# int_addition has a value of 110
+
+string_num = "7.5"
+print float(string_num)
+>>> 7.5
+
+string_int = "10"
+numeric_int = 12
+print float(string_int)
+print float(numeric_int)
+>>> 10.0
+>>> 12.0
 ```
