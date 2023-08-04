@@ -25,3 +25,18 @@ division = 540 / 45
 modulo = 15 % 2
 PEMDAS = 129 * 1345 + 120 / 6 - 12
 ```
+
+- UPDATING VARIABLES
+
+```
+number = 50
+print "This is a number"
+new_number = 10
+number = number - new_number
+
+money = 40
+price = 7.50
+sales_tax = .08 * price
+price += sales_tax
+money -= price
+```
