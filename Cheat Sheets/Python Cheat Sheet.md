@@ -7,3 +7,10 @@ print "Python Cheat Sheet"
 print 'Python Cheat Sheet'
 print "Python " + "Cheat Sheet"
 ```
+
+- VARIABLES
+
+```
+cheat_sheet = "Python"
+number = 5
+```
