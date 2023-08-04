@@ -168,3 +168,22 @@ not is evaluated first;
 and is evaluated next;
 or is evaluated last.
 ```
+
+- CONDITIONAL STATEMENT
+
+```
+if 8 < 9:
+  print "Eight is less than nine!"
+
+if 8 > 9:
+  print "I don't get printed!"
+else:
+  print "I get printed!"
+
+if 8 > 9:
+  print "I don't get printed!"
+elif 8 < 9:
+  print "I get printed!"
+else:
+  print "I also don't get printed!"
+```
