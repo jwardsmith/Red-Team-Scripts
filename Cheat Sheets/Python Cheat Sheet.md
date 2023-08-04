@@ -136,3 +136,35 @@ print str(pi)
 Methods that use dot notation only work with strings.
 On the other hand, len() and str() can work on other data types.
 ```
+
+- CONTROL FLOW
+
+```
+equal to ==
+not equal to !=
+less than <
+greater than >
+less than or equal to <=
+greater than or equal to>=
+```
+
+- AND/OR
+
+```
+True and True = True
+True and False = False
+False and True = False
+False and False = False
+
+True or True = True
+True or False = True
+False or True = True
+False or False = False
+
+not True = False
+not False = True
+
+not is evaluated first;
+and is evaluated next;
+or is evaluated last.
+```
