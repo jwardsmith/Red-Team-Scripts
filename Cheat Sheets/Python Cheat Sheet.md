@@ -25,6 +25,7 @@ print "This is the %s %s %s" % ("Python", "Cheat", "Sheet")
 cheat_sheet = "Python"
 number = 5
 guess = True
+answer = raw_input("What is your name?")
 ```
 
 - ARITHMETIC
