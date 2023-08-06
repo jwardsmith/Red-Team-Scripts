@@ -348,6 +348,12 @@ animals.insert(duck_index,"cobra")
 print animals # Observe what prints after the insert operation
 
 >>> ['aardvark', 'badger', 'cobra', 'duck', 'emu', 'fennec fox']
+
+backpack = ['xylophone', 'dagger', 'tent', 'bread loaf']
+backpack.remove('dagger')
+print backpack
+
+>>> ['xylophone', 'tent', 'bread loaf']
 ```
 
 ### Loops
@@ -375,11 +381,15 @@ print square_list
 
 >>> [1, 4, 9, 16, 25]
 
-backpack = ['xylophone', 'dagger', 'tent', 'bread loaf']
-backpack.remove('dagger')
-print backpack
+names = ["Adam","Alex","Mariah","Martine","Columbus"]
+for name in names:
+  print name
 
->>> ['xylophone', 'tent', 'bread loaf']
+>>> Adam
+>>> Alex
+>>> Mariah
+>>> Martine
+>>> Columbus
 ```
 
 ### Dictionaries
