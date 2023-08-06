@@ -316,4 +316,52 @@ print letters
 
 >>> 4
 >>> ['a', 'b', 'c', 'd']
+
+letters = ['a', 'b', 'c', 'd', 'e']
+slice = letters[1:3]
+print slice
+print letters
+
+>>> ['b', 'c']
+>>> ['a', 'b', 'c', 'd', 'e']
+
+suitcase = ["sunglasses", "hat", "passport", "laptop", "suit", "shoes"]
+# The first and second items (index zero and one)
+first = suitcase[0:2]
+# Third and fourth items (index two and three)
+middle = suitcase[2:4]
+# The last two items (index four and five)
+last = suitcase[4:6]
+
+animals = "catdogfrog"
+# The first three characters of animals
+cat = animals[:3]
+# The fourth through sixth characters
+dog = animals[3:6]
+# From the seventh character to the end
+frog = animals[6:]
+
+animals = ["aardvark", "badger", "duck", "emu", "fennec fox"]
+duck_index = animals.index("duck")# Use index() to find "duck"
+# Your code here!
+animals.insert(duck_index,"cobra")
+print animals # Observe what prints after the insert operation
+
+>>> ['aardvark', 'badger', 'cobra', 'duck', 'emu', 'fennec fox']
+```
+
+- Loops
+
+```
+my_list = [1,9,3,8,5,7]
+for number in my_list:
+  # Your code here
+  print 2 * number
+
+>>> 2
+>>> 18
+>>> 6
+>>> 16
+>>> 10
+>>> 14
 ```
