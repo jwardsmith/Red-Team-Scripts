@@ -143,6 +143,15 @@ print str(pi)
 
 Methods that use dot notation only work with strings.
 On the other hand, len() and str() can work on other data types.
+
+print type(42)
+print type(4.2)
+print type('spam')
+
+>>> <type 'int'>
+>>> <type 'float'>
+>>> <type 'str'>
+
 ```
 
 - CONTROL FLOW
@@ -247,8 +256,8 @@ smallest_number(-10, -5, 5, 10)
 distance_from_zero(-10)
 
 >>> 10
--10
-10
+>>> -10
+>>> 10
 ```
 
 - MODULES
