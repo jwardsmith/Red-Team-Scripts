@@ -301,3 +301,19 @@ import math # Imports the math module
 everything = dir(math) # Sets everything to a list of things from math
 print everything # Prints 'em all!
 ```
+
+- LISTS
+
+```
+names = ["python", "cheat", "sheet"]
+print names[1]
+>>> cheat
+
+letters = ['a', 'b', 'c']
+letters.append('d')
+print len(letters)
+print letters
+
+>>> 4
+>>> ['a', 'b', 'c', 'd']
+```
