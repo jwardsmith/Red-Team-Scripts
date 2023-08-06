@@ -1,6 +1,6 @@
 # Python Cheat Sheet
 
-- PRINT
+### Print
 
 ```
 print "Python Cheat Sheet"
@@ -19,7 +19,7 @@ print "Hello %s" % (name)
 print "This is the %s %s %s" % ("Python", "Cheat", "Sheet")
 ```
 
-- VARIABLES
+### Variables
 
 ```
 cheat_sheet = "Python"
@@ -28,7 +28,7 @@ guess = True
 answer = raw_input("What is your name?")
 ```
 
-- ARITHMETIC
+### Arithmetic
 
 ```
 addition = 12381 + 91817
@@ -39,7 +39,7 @@ modulo = 15 % 2
 PEMDAS = 129 * 1345 + 120 / 6 - 12
 ```
 
-- UPDATING VARIABLES
+### Updating Variables
 
 ```
 number = 50
@@ -54,13 +54,13 @@ price += sales_tax
 money -= price
 ```
 
-- COMMENTS
+### Comments
 
 ```
 # this is a comment
 ```
 
-- NUMBERS
+### Numbers
 
 ```
 1 = integer
@@ -74,14 +74,14 @@ quotient3 = 7./2. = 3.5
 quotient4 = float(7)/2 = 3.5
 ```
 
-- BOOLEANS
+### Booleans
 
 ```
 a = True
 b = False
 ```
 
-- DATA TYPES
+### Data Types
 
 ```
 age = 28
@@ -107,14 +107,14 @@ print float(numeric_int)
 >>> 12.0
 ```
 
-- INDEX
+### Index
 
 ```
 p = "python"[0]
 a = "cheat"[3]
 ```
 
-- STRING METHODS
+### String Methods
 
 ```
 word = "Python Cheat Sheet"
@@ -154,7 +154,7 @@ print type('spam')
 
 ```
 
-- CONTROL FLOW
+### Control Flow
 
 ```
 equal to ==
@@ -165,7 +165,7 @@ less than or equal to <=
 greater than or equal to>=
 ```
 
-- AND/OR
+### AND/OR
 
 ```
 True and True = True
@@ -186,7 +186,7 @@ and is evaluated next;
 or is evaluated last.
 ```
 
-- CONDITIONAL STATEMENT
+### Conditional Statement
 
 ```
 if 8 < 9:
@@ -205,7 +205,7 @@ else:
   print "I also don't get printed!"
 ```
 
-- FUNCTIONS
+### Functions
 
 ```
 def square(n):
@@ -286,7 +286,7 @@ def trip_cost(city, days, spending_money):
 print trip_cost("Los Angeles", 5, 600)
 ```
 
-- MODULES
+### Modules
 
 ```
 import math
@@ -302,7 +302,7 @@ everything = dir(math) # Sets everything to a list of things from math
 print everything # Prints 'em all!
 ```
 
-- LISTS
+### Lists
 
 ```
 names = ["python", "cheat", "sheet"]
@@ -350,7 +350,7 @@ print animals # Observe what prints after the insert operation
 >>> ['aardvark', 'badger', 'cobra', 'duck', 'emu', 'fennec fox']
 ```
 
-- Loops
+### Loops
 
 ```
 my_list = [1,9,3,8,5,7]
@@ -374,4 +374,71 @@ square_list.sort()
 print square_list
 
 >>> [1, 4, 9, 16, 25]
+
+backpack = ['xylophone', 'dagger', 'tent', 'bread loaf']
+backpack.remove('dagger')
+print backpack
+
+>>> ['xylophone', 'tent', 'bread loaf']
+```
+
+### Dictionaries
+
+```
+# Assigning a dictionary with three key-value pairs to residents:
+residents = {'Puffin' : 104, 'Sloth' : 105, 'Burmese Python' : 106}
+print residents['Puffin'] # Prints Puffin's room number
+# Your code here!
+print residents['Sloth']
+print residents['Burmese Python']
+
+>>> 104
+>>> 105
+>>> 106
+
+menu = {} # Empty dictionary
+menu['Chicken Alfredo'] = 14.50 # Adding new key-value pair
+print menu['Chicken Alfredo']
+# Your code here: Add some dish-price pairs to menu!
+menu['Hamburger'] = 8.50
+menu['Pizza Slice'] = 3.50
+menu['Salad'] = 10.00
+print "There are " + str(len(menu)) + " items on the menu."
+print menu
+
+>>> 14.5
+>>> There are 4 items on the menu.
+>>> {'Chicken Alfredo': 14.5, 'Pizza Slice': 3.5, 'Hamburger': 8.5, 'Salad': 10.0}
+
+# key - animal_name : value - location 
+zoo_animals = { 'Unicorn' : 'Cotton Candy House',
+'Sloth' : 'Rainforest Exhibit',
+'Bengal Tiger' : 'Jungle House',
+'Atlantic Puffin' : 'Arctic Exhibit',
+'Rockhopper Penguin' : 'Arctic Exhibit'}
+# A dictionary (or list) declaration may break across multiple lines
+# Removing the 'Unicorn' entry. (Unicorns are incredibly expensive.)
+del zoo_animals['Unicorn']
+# Your code here!
+del zoo_animals['Sloth']
+del zoo_animals['Bengal Tiger']
+zoo_animals['Rockhopper Penguin'] = 'Plains Exhibit'
+print zoo_animals
+
+>>> {'Atlantic Puffin': 'Arctic Exhibit', 'Rockhopper Penguin': 'Plains Exhibit'}
+
+inventory = {
+  'gold' : 500,
+  'pouch' : ['flint', 'twine', 'gemstone'], # Assigned a new list to 'pouch' key
+  'backpack' : ['xylophone','dagger', 'bedroll','bread loaf']
+}
+# Adding a key 'burlap bag' and assigning a list to it
+inventory['burlap bag'] = ['apple', 'small ruby', 'three-toed sloth']
+# Sorting the list found under the key 'pouch'
+inventory['pouch'].sort() 
+# Your code here
+inventory['pocket'] = ['seashell', 'strange berry', 'lint']
+inventory['backpack'].sort()
+inventory['backpack'].remove('dagger')
+inventory['gold'] = inventory['gold'] + 50
 ```
