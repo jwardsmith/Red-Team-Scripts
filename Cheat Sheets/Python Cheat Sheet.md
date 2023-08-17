@@ -2,20 +2,41 @@
 
 ### Print
 
+- Print a string
+
 ```
 print "Python Cheat Sheet"
 print 'Python Cheat Sheet'
-print "Python " + "Cheat Sheet"
+```
 
+- Print a concatenate string
+
+```
+print "Python " + "Cheat Sheet"
+```
+
+- Print a multi-line string
+
+```
 print """Python
 Cheat
 Sheet"""
+```
 
+- Escape backslashes
+
+```
 print "There\'s"
+```
 
+- Print a format string
+
+```
 name = "Python"
 print "Hello %s" % (name)
+```
 
+```
 print "This is the %s %s %s" % ("Python", "Cheat", "Sheet")
 ```
 
