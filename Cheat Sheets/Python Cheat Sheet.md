@@ -42,10 +42,27 @@ print "This is the %s %s %s" % ("Python", "Cheat", "Sheet")
 
 ### Variables
 
+- String
+
 ```
 cheat_sheet = "Python"
+```
+
+- Number
+
+```
 number = 5
+```
+
+- Boolean
+
+```
 guess = True
+```
+
+- Raw input
+
+```
 answer = raw_input("What is your name?")
 ```
 
