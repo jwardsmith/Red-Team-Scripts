@@ -23,7 +23,7 @@ Cheat
 Sheet"""
 ```
 
-- Escape backslashes
+- Print a string escaping backslashes
 
 ```
 print "There\'s"
