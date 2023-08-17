@@ -178,10 +178,12 @@ print "I am " + str(age) + " years old!"
 ```
 number1 = "100"
 number2 = "10"
-string_addition = number1 + number2 
-# string_addition now has a value of "10010"
+string_addition = number1 + number2
+print string_addition
+>>> "10010"
 int_addition = int(number1) + int(number2)
-# int_addition has a value of 110
+print int_addition
+>>> 110
 ```
 
 - Cast a string as a float
