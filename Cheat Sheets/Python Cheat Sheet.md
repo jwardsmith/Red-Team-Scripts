@@ -68,13 +68,46 @@ answer = raw_input("What is your name?")
 
 ### Arithmetic
 
+- Addition
+
 ```
-addition = 12381 + 91817
-subtraction = 981 - 312
-multiplication = 38 * 902
-division = 540 / 45
-modulo = 15 % 2
-PEMDAS = 129 * 1345 + 120 / 6 - 12
+12381 + 91817
+>>> 104198
+```
+
+- Subtraction
+
+```
+981 - 312
+>>> 669
+```
+
+- Multiplication
+
+```
+38 * 902
+>>> 34276
+```
+
+- Division
+
+```
+540 / 45
+>>> 12
+```
+
+- Modulo (remainder)
+
+```
+15 % 2
+>>> 1
+```
+
+- PEMDAS
+
+```
+129 * 1345 + 120 / 6 - 12
+>>> 173513
 ```
 
 ### Updating Variables
