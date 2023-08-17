@@ -121,22 +121,47 @@ b = False
 
 ### Data Types
 
+- String, Integer, Float data types
+
+```
+print type('spam')
+print type(42)
+print type(4.2)
+>>> <type 'str'>
+>>> <type 'int'>
+>>> <type 'float'>
+```
+
+- Cast a integer as a string
+
 ```
 age = 28
 print "I am " + str(age) + " years old!"
 >>> "I am 28 years old!"
+```
 
+- Cast a string as a integer
+
+```
 number1 = "100"
 number2 = "10"
 string_addition = number1 + number2 
 # string_addition now has a value of "10010"
 int_addition = int(number1) + int(number2)
 # int_addition has a value of 110
+```
 
+- Cast a string as a float
+
+```
 string_num = "7.5"
 print float(string_num)
 >>> 7.5
+```
 
+- Cast a string and integer as a float
+
+```
 string_int = "10"
 numeric_int = 12
 print float(string_int)
@@ -181,15 +206,6 @@ print str(pi)
 
 Methods that use dot notation only work with strings.
 On the other hand, len() and str() can work on other data types.
-
-print type(42)
-print type(4.2)
-print type('spam')
-
->>> <type 'int'>
->>> <type 'float'>
->>> <type 'str'>
-
 ```
 
 ### Control Flow
