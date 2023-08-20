@@ -174,19 +174,23 @@ b = False
 
 - AND/OR/NOT
 
+not is evaluated first;
+and is evaluated next;
+or is evaluated last.
+
 ```
-True AND True = True
-True AND False = False
-False AND True = False
-False AND False = False
+True and True = True
+True and False = False
+False and True = False
+False and False = False
 
-True OR True = True
-True OR False = True
-False OR True = True 
-False OR False = False
+True or True = True
+True or False = True
+False or True = True 
+False or False = False
 
-Not True = False
-Not False = True
+not True = False
+not False = True
 ```
 
 ## Data Types
@@ -338,7 +342,6 @@ print word.rjust(25)
 >>>                          Python Cheat Sheet
 ```
 
-
 ## Control Flow
 
 ```
@@ -348,27 +351,6 @@ less than <
 greater than >
 less than or equal to <=
 greater than or equal to>=
-```
-
-## AND/OR
-
-```
-True and True = True
-True and False = False
-False and True = False
-False and False = False
-
-True or True = True
-True or False = True
-False or True = True
-False or False = False
-
-not True = False
-not False = True
-
-not is evaluated first;
-and is evaluated next;
-or is evaluated last.
 ```
 
 ## Conditional Statement
