@@ -510,6 +510,7 @@ print everything # Prints 'em all!
 ```
 tuple = ("item1", "item2", "item3")
 print tuple
+>>> ("item1", "item2", "item3")
 ```
 
 ## Lists
