@@ -691,13 +691,13 @@ for number in a:
 - Create a dictionary
 
 ```
-residents = {'Puffin' : 104, 'Sloth' : 105, 'Burmese Python' : 106}
-print residents['Puffin']
->>> 104
-print residents['Sloth']
->>> 105
-print residents['Burmese Python']
->>> 106
+letters = {'a' : 1, 'b' : 2, 'c' : 3}
+print letters['a']
+>>> 1
+print letters['b']
+>>> 2
+print letters['c']
+>>> 3
 ```
 
 ```
