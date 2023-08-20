@@ -515,27 +515,37 @@ print tuple
 
 ## Lists
 
+- Create a list
+
 ```
 names = ["python", "cheat", "sheet"]
 print names[1]
 >>> cheat
+```
 
+- Append to a list
+
+```
 letters = ['a', 'b', 'c']
 letters.append('d')
 print len(letters)
-print letters
-
 >>> 4
+print letters
 >>> ['a', 'b', 'c', 'd']
+```
 
+- List slicing
+
+```
 letters = ['a', 'b', 'c', 'd', 'e']
 slice = letters[1:3]
 print slice
-print letters
-
 >>> ['b', 'c']
+print letters
 >>> ['a', 'b', 'c', 'd', 'e']
+```
 
+```
 suitcase = ["sunglasses", "hat", "passport", "laptop", "suit", "shoes"]
 # The first and second items (index zero and one)
 first = suitcase[0:2]
@@ -543,7 +553,9 @@ first = suitcase[0:2]
 middle = suitcase[2:4]
 # The last two items (index four and five)
 last = suitcase[4:6]
+```
 
+```
 animals = "catdogfrog"
 # The first three characters of animals
 cat = animals[:3]
@@ -551,21 +563,30 @@ cat = animals[:3]
 dog = animals[3:6]
 # From the seventh character to the end
 frog = animals[6:]
+```
 
+- Delete an item from a list
+
+```
 animals = ["aardvark", "badger", "duck", "emu", "fennec fox"]
 duck_index = animals.index("duck")# Use index() to find "duck"
-# Your code here!
 animals.insert(duck_index,"cobra")
 print animals # Observe what prints after the insert operation
-
 >>> ['aardvark', 'badger', 'cobra', 'duck', 'emu', 'fennec fox']
+```
 
+- Remove an item from a list
+
+```
 backpack = ['xylophone', 'dagger', 'tent', 'bread loaf']
 backpack.remove('dagger')
 print backpack
-
 >>> ['xylophone', 'tent', 'bread loaf']
+```
 
+- Pop/Remove/Delete
+
+```
 n = [1, 3, 5]
 n.pop(1)
 # Returns 3 (the item at index 1)
