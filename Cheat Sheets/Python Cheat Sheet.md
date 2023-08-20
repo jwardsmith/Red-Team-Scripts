@@ -503,6 +503,15 @@ everything = dir(math) # Sets everything to a list of things from math
 print everything # Prints 'em all!
 ```
 
+## Tuples
+
+- Create a tuple
+
+```
+tuple = ("item1", "item2", "item3")
+print tuple
+```
+
 ## Lists
 
 ```
