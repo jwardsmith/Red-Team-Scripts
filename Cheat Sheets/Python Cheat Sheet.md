@@ -1,6 +1,6 @@
 # Python Cheat Sheet
 
-# Print
+## Print
 
 - Print a string
 
