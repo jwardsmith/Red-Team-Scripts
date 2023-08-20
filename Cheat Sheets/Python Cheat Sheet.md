@@ -40,7 +40,7 @@ print "Hello %s" % (name)
 print "This is the %s %s %s" % ("Python", "Cheat", "Sheet")
 ```
 
-### Variables
+## Variables
 
 - String
 
@@ -66,7 +66,7 @@ guess = True
 answer = raw_input("What is your name?")
 ```
 
-### Arithmetic
+## Arithmetic
 
 - Addition
 
@@ -110,7 +110,7 @@ answer = raw_input("What is your name?")
 >>> 173513
 ```
 
-### Updating Variables
+## Updating Variables
 
 - Update a variable
 
@@ -131,7 +131,7 @@ price += sales_tax
 money -= price
 ```
 
-### Comments
+## Comments
 
 - Write a comment
 
@@ -139,7 +139,7 @@ money -= price
 # this is a comment
 ```
 
-### Numbers
+## Numbers
 
 - Integer
 
@@ -163,7 +163,7 @@ quotient3 = 7./2. = 3.5
 quotient4 = float(7)/2 = 3.5
 ```
 
-### Booleans
+## Booleans
 
 TRUE/FALSE
 
@@ -174,7 +174,7 @@ c = Not True
 d = Not False
 ```
 
-### Data Types
+## Data Types
 
 - String, Integer, Float data types
 
@@ -227,14 +227,14 @@ print float(numeric_int)
 >>> 12.0
 ```
 
-### Index
+## Index
 
 ```
 p = "python"[0]
 a = "cheat"[3]
 ```
 
-### String Methods
+## String Methods
 
 Methods that use dot notation only work with strings.
 On the other hand, len() and str() can work on other data types.
@@ -275,7 +275,7 @@ print word.isalpha()
 >>> False
 ```
 
-### Control Flow
+## Control Flow
 
 ```
 equal to ==
@@ -286,7 +286,7 @@ less than or equal to <=
 greater than or equal to>=
 ```
 
-### AND/OR
+## AND/OR
 
 ```
 True and True = True
@@ -307,7 +307,7 @@ and is evaluated next;
 or is evaluated last.
 ```
 
-### Conditional Statement
+## Conditional Statement
 
 ```
 if 8 < 9:
@@ -326,7 +326,7 @@ else:
   print "I also don't get printed!"
 ```
 
-### Functions
+## Functions
 
 ```
 def square(n):
@@ -407,7 +407,7 @@ def trip_cost(city, days, spending_money):
 print trip_cost("Los Angeles", 5, 600)
 ```
 
-### Modules
+## Modules
 
 ```
 import math
@@ -423,7 +423,7 @@ everything = dir(math) # Sets everything to a list of things from math
 print everything # Prints 'em all!
 ```
 
-### Lists
+## Lists
 
 ```
 names = ["python", "cheat", "sheet"]
@@ -494,7 +494,7 @@ print n
 # prints [1, 5]
 ```
 
-### Loops
+## Loops
 
 ```
 my_list = [1,9,3,8,5,7]
@@ -559,7 +559,7 @@ for number in a:
 >>> 12
 ```
 
-### Dictionaries
+## Dictionaries
 
 ```
 # Assigning a dictionary with three key-value pairs to residents:
