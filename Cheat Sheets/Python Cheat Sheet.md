@@ -236,19 +236,36 @@ a = "cheat"[3]
 
 ### String Methods
 
+Methods that use dot notation only work with strings.
+On the other hand, len() and str() can work on other data types.
+
+- Length
+
 ```
 word = "Python Cheat Sheet"
 print len(word)
 >>> 18
+```
 
+- Lowercase
+
+```
 word = "Python Cheat Sheet"
 print word.lower()
 >>> python cheat sheet
+```
 
+- Uppercase
+
+```
 word = "Python Cheat Sheet"
 print word.upper()
 >>> PYTHON CHEAT SHEET
+```
 
+- Alpha
+
+```
 word = "PythonCheatSheet"
 print word.isalpha()
 >>> True
@@ -256,13 +273,6 @@ print word.isalpha()
 word = "Python Cheat Sheet"
 print word.isalpha()
 >>> False
-
-pi = 3.14
-print str(pi)
->>> 3.14
-
-Methods that use dot notation only work with strings.
-On the other hand, len() and str() can work on other data types.
 ```
 
 ### Control Flow
