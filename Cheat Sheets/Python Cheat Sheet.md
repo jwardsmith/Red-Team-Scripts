@@ -275,6 +275,55 @@ print word.isalpha()
 >>> False
 ```
 
+- Startswith
+
+```
+word = "Python Cheat Sheet"
+print word.startswith(P)
+>>> True
+```
+
+- Index
+
+```
+word = "Python Cheat Sheet"
+print word.index("Cheat")
+>>> 7
+```
+
+- Strip
+
+```
+word = "Python Cheat Sheet"
+print word.strip()
+>>> Python Cheat Sheet
+```
+
+- Replace
+
+```
+word = "Python Cheat Sheet!"
+print word.replace("!","?")
+>>> Python Cheat Sheet?
+```
+
+- Encode
+
+```
+word = "Python Cheat Sheet"
+print word.encode("utf-8")
+>>> b'Python Cheat Sheet'
+```
+
+Rjust/Ljust
+
+```
+word = "Python Cheat Sheet"
+print word.rjust(25)
+>>>                          Python Cheat Sheet
+```
+
+
 ## Control Flow
 
 ```
