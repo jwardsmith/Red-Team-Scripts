@@ -112,12 +112,18 @@ answer = raw_input("What is your name?")
 
 ### Updating Variables
 
+- Update a variable
+
 ```
 number = 50
 print "This is a number"
 new_number = 10
 number = number - new_number
+```
 
+- Update a variable (short-hand)
+
+```
 money = 40
 price = 7.50
 sales_tax = .08 * price
@@ -127,17 +133,29 @@ money -= price
 
 ### Comments
 
+- Write a comment
+
 ```
 # this is a comment
 ```
 
 ### Numbers
 
+- Integer
+
 ```
 1 = integer
-0.1 = float
-5.6 = float
+```
 
+- Float
+
+```
+0.1 = float
+```
+
+- Rounding
+
+```
 quotient = 7/2 = 3
 quotient1 = 7./2 = 3.5
 quotient2 = 7/2. = 3.5
@@ -147,9 +165,13 @@ quotient4 = float(7)/2 = 3.5
 
 ### Booleans
 
+TRUE/FALSE
+
 ```
 a = True
 b = False
+c = Not True
+d = Not False
 ```
 
 ### Data Types
