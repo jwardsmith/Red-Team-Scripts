@@ -165,13 +165,28 @@ quotient4 = float(7)/2 = 3.5
 
 ## Booleans
 
-TRUE/FALSE
+- TRUE/FALSE
 
 ```
 a = True
 b = False
-c = Not True
-d = Not False
+```
+
+- AND/OR/NOT
+
+```
+True AND True = True
+True AND False = False
+False AND True = False
+False AND False = False
+
+True OR True = True
+True OR False = True
+False OR True = True 
+False OR False = False
+
+Not True = False
+Not False = True
 ```
 
 ## Data Types
