@@ -96,6 +96,13 @@ answer = raw_input("What is your name?")
 >>> 12
 ```
 
+- Exponent
+
+```
+10 ** 2
+>>> 100
+```
+
 - Modulo (remainder)
 
 ```
