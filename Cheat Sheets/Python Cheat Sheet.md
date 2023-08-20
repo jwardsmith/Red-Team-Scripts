@@ -389,6 +389,8 @@ print word.rjust(25)
 
 ## Conditional Statement
 
+- If/Elif/Else
+
 ```
 if 8 < 9:
   print "Eight is less than nine!"
@@ -489,18 +491,32 @@ print trip_cost("Los Angeles", 5, 600)
 
 ## Modules
 
+- Import a module
+
 ```
 import math
 print math.sqrt(25)
+```
 
+- Import a function from a module
+
+```
 from math import sqrt
 print sqrt(25)
+```
 
+- Import everything from a module
+
+```
 from module import *
+```
 
-import math # Imports the math module
-everything = dir(math) # Sets everything to a list of things from math
-print everything # Prints 'em all!
+- List all functions within a module
+
+```
+import math
+everything = dir(math)
+print everything
 ```
 
 ## Tuples
