@@ -632,6 +632,30 @@ print n
 >>> [1, 5]
 ```
 
+- Print the max of a list
+
+```
+letters = ['a', 'b', 'c', 'd', 'e']
+print max(letters)
+>>> e
+```
+
+- Print the min of a list
+
+```
+letters = ['a', 'b', 'c', 'd', 'e']
+print min(letters)
+>>> a
+```
+
+- Reverse a list
+
+```
+letters = ['a', 'b', 'c', 'd', 'e']
+print letters.reverse()
+>>> ['e', 'd', 'c', 'b', 'a']
+```
+
 ## Loops
 
 ```
