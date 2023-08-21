@@ -785,55 +785,29 @@ print letters.items()
 >>> letters{'a' : 1, 'b' : 2, 'c' : 3}
 ```
 
-```
-zoo_animals = { 'Unicorn' : 'Cotton Candy House',
-'Sloth' : 'Rainforest Exhibit',
-'Bengal Tiger' : 'Jungle House',
-'Atlantic Puffin' : 'Arctic Exhibit',
-'Rockhopper Penguin' : 'Arctic Exhibit'}
-del zoo_animals['Unicorn']
-del zoo_animals['Sloth']
-del zoo_animals['Bengal Tiger']
-zoo_animals['Rockhopper Penguin'] = 'Plains Exhibit'
-print zoo_animals
->>> {'Atlantic Puffin': 'Arctic Exhibit', 'Rockhopper Penguin': 'Plains Exhibit'}
-```
+- Update a dictionary
 
 ```
-inventory = {
-  'gold' : 500,
-  'pouch' : ['flint', 'twine', 'gemstone'], # Assigned a new list to 'pouch' key
-  'backpack' : ['xylophone','dagger', 'bedroll','bread loaf']
-}
-inventory['burlap bag'] = ['apple', 'small ruby', 'three-toed sloth']
-inventory['pouch'].sort() 
-inventory['pocket'] = ['seashell', 'strange berry', 'lint']
-inventory['backpack'].sort()
-inventory['backpack'].remove('dagger')
-inventory['gold'] = inventory['gold'] + 50
+letters = {'a' : 1, 'b' : 2, 'c' : 3}
+letters.update({"a": 0})
+print letters
+>>> {'a' : 0, 'b' : 2, 'c' : 3}
 ```
 
+- Pop an item from a dictionary
+
 ```
-shopping_list = ["banana", "orange", "apple"]
-stock = {
-  "banana": 6,
-  "apple": 0,
-  "orange": 32,
-  "pear": 15
-}
-prices = {
-  "banana": 4,
-  "apple": 2,
-  "orange": 1.5,
-  "pear": 3
-}
-def compute_bill(food):
-  total = 0
-  for item in food:
-    if stock[item] > 0:
-      total = total + prices[item]
-      stock[item] = stock[item] - 1
-  return total
-print compute_bill(shopping_list)
->>> 5.5
+letters = {'a' : 1, 'b' : 2, 'c' : 3}
+letters.pop("a")
+print letters
+>>> {'b' : 2, 'c' : 3}
+```
+
+- Delete an item from a dictionary
+
+```
+letters = {'a' : 1, 'b' : 2, 'c' : 3}
+del letters['a']
+print letters
+>>> {'b' : 2, 'c' : 3}
 ```
