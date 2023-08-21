@@ -684,67 +684,31 @@ print list(map(float, numbers))
 
 ## Loops
 
-```
-my_list = [1,9,3,8,5,7]
-for number in my_list:
-  # Your code here
-  print 2 * number
+- For Loop
 
+```
+my_list = [1, 9, 3, 8, 5, 7]
+for number in my_list:
+  print 2 * number
 >>> 2
 >>> 18
 >>> 6
 >>> 16
 >>> 10
 >>> 14
+```
 
-start_list = [5, 3, 1, 2, 4]
-square_list = []
-# Your code here!
-for number in start_list:
-  square_list.append(number ** 2)
-square_list.sort()
-print square_list
+- While Loop
 
->>> [1, 4, 9, 16, 25]
-
-names = ["Adam","Alex","Mariah","Martine","Columbus"]
-for name in names:
-  print name
-
->>> Adam
->>> Alex
->>> Mariah
->>> Martine
->>> Columbus
-
-webster = {
-  "Aardvark" : "A star of a popular children's cartoon show.",
-  "Baa" : "The sound a goat makes.",
-  "Carpet": "Goes on the floor.",
-  "Dab": "A small amount."
-}
-
-# Add your code below!
-for word in webster:
-  print webster[word]
-
->>> A star of a popular children's cartoon show.
->>> Goes on the floor.
->>> A small amount.
->>> The sound a goat makes.
-
-a = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
-for number in a:
-  if number % 2 == 0:
-    print number
-
->>> 0
+```
+a = 1
+while a < 5:
+  a += 1
+  print a
 >>> 2
+>>> 3
 >>> 4
->>> 6
->>> 8
->>> 10
->>> 12
+>>> 5
 ```
 
 ## Dictionaries
