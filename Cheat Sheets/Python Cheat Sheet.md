@@ -656,6 +656,32 @@ print letters.reverse()
 >>> ['e', 'd', 'c', 'b', 'a']
 ```
 
+- Clear a list
+
+```
+letters = ['a', 'b', 'c', 'd', 'e']
+letters.clear()
+print letters
+>>> []
+```
+
+- Sort a list
+
+```
+numbers = [18, 34, 1, 4, 98]
+numbers.sort()
+print numbers
+>>> [1, 4, 18, 34, 98]
+```
+
+- Map a list
+
+```
+numbers = ["1", "2", "3"]
+print list(map(float, numbers))
+>>> [1.0, 2.0, 3.0]
+```
+
 ## Loops
 
 ```
