@@ -562,42 +562,42 @@ print letters
 ```
 
 ```
-suitcase = ["sunglasses", "hat", "passport", "laptop", "suit", "shoes"]
+soc = ["security", "analyst", "siem", "edr", "tip", "soar"]
 # The first and second items (index zero and one)
-first = suitcase[0:2]
+first = soc[0:2]
 # Third and fourth items (index two and three)
-middle = suitcase[2:4]
+middle = soc[2:4]
 # The last two items (index four and five)
-last = suitcase[4:6]
+last = soc[4:6]
 ```
 
 ```
-animals = "catdogfrog"
-# The first three characters of animals
-cat = animals[:3]
+name = "pythoncheatsheet"
+# The first three characters of name
+pyt = name[:3]
 # The fourth through sixth characters
-dog = animals[3:6]
+hon = name[3:6]
 # From the seventh character to the end
-frog = animals[6:]
+cheatsheet = name[6:]
 ```
 
 - Insert an item to a list
 
 ```
-animals = ["aardvark", "badger", "duck", "emu", "fennec fox"]
-duck_index = animals.index("duck")
-animals.insert(duck_index,"cobra")
-print animals
->>> ['aardvark', 'badger', 'cobra', 'duck', 'emu', 'fennec fox']
+soc = ["security", "analyst", "siem", "edr", "tip"]
+siem_index = soc.index("siem")
+soc.insert(siem_index,"soar")
+print soc
+>>> ["security", "analyst", "tip", "siem", "edr", "tip"]
 ```
 
 - Remove an item from a list
 
 ```
-backpack = ['xylophone', 'dagger', 'tent', 'bread loaf']
-backpack.remove('dagger')
-print backpack
->>> ['xylophone', 'tent', 'bread loaf']
+soc = ['security', 'analyst', 'siem', 'edr']
+soc.remove('siem')
+print soc
+>>> ['security', 'analyst', 'edr']
 ```
 
 - Pop/Remove/Delete
