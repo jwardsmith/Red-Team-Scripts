@@ -761,18 +761,28 @@ print letters['c']
 >>> 3
 ```
 
+- Print the keys of a dictionary
+
 ```
-menu = {}
-menu['Chicken Alfredo'] = 14.50 # Adding new key-value pair
-print menu['Chicken Alfredo']
->>> 14.5
-menu['Hamburger'] = 8.50
-menu['Pizza Slice'] = 3.50
-menu['Salad'] = 10.00
-print "There are " + str(len(menu)) + " items on the menu."
->>> There are 4 items on the menu.
-print menu
->>> {'Chicken Alfredo': 14.5, 'Pizza Slice': 3.5, 'Hamburger': 8.5, 'Salad': 10.0}
+letters = {'a' : 1, 'b' : 2, 'c' : 3}
+print letters.keys()
+>>> letters{'a', 'b', 'c'}
+```
+
+- Print the values of a dictionary
+
+```
+letters = {'a' : 1, 'b' : 2, 'c' : 3}
+print letters.values()
+>>> letters{1, 2, 3}
+```
+
+- Print the items of a dictionary
+
+```
+letters = {'a' : 1, 'b' : 2, 'c' : 3}
+print letters.items()
+>>> letters{'a' : 1, 'b' : 2, 'c' : 3}
 ```
 
 ```
