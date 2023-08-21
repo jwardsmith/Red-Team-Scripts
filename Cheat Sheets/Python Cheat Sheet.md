@@ -711,6 +711,18 @@ while a < 5:
 >>> 5
 ```
 
+- Range
+
+```
+for i in range(5):
+  print i+6
+>>> 6
+>>> 7
+>>> 8
+>>> 9
+>>> 10
+```
+
 ## Dictionaries
 
 - Create a dictionary
