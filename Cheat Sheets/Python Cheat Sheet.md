@@ -787,3 +787,35 @@ del letters['a']
 print letters
 >>> {'b' : 2, 'c' : 3}
 ```
+
+## Files
+
+- Read a file
+
+```
+f = open("top-100.txt")
+print f.read()
+```
+
+- Readline a file
+
+```
+f = open("top-100.txt")
+print f.readlines()
+```
+
+- Write a file
+
+```
+f = open("top-100.txt", "w")
+print f.write("Python Cheat Sheet!")
+f.close()
+```
+
+- Append a file
+
+```
+f = open("top-100.txt", "1")
+print f.write("Python Cheat Sheet!")
+f.close()
+```
