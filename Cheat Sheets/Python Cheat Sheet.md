@@ -819,3 +819,18 @@ f = open("top-100.txt", "1")
 print f.write("Python Cheat Sheet!")
 f.close()
 ```
+
+## Exceptions & Error Handling
+
+- Try/Except/Finally
+
+```
+try:
+  f = open("top-100.txt")
+except FileNotFoundError:
+  print "The file does not exist"
+except Exception as e:
+  print e
+finally:
+  print "this message"
+```
