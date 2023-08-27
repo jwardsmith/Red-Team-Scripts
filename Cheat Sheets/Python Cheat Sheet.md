@@ -410,6 +410,12 @@ else:
 
 ## Functions
 
+Typically, when you call a function, you should pass in the same number of arguments as there are parameters.
+When defining a function, placeholder [variables] are called parameters.
+When using, or calling, a function, inputs into the function are called arguments.
+
+- Create a function
+
 ```
 def square(n):
   """Returns the square of a number."""
@@ -417,76 +423,7 @@ def square(n):
   print "%d squared is %d." % (n, squared)
   return squared
 print square(10)
-
-def power(base, exponent):  # Add your parameters here!
-  result = base ** exponent
-  print "%d to the power of %d is %d." % (base, exponent, result)
-
-power(37, 4)  # Add your arguments here!
-
-Typically, when you call a function, you should pass in the same number of arguments as there are parameters.
-When defining a function, placeholder [variables] are called parameters.
-When using, or calling, a function, inputs into the function are called arguments.
-
-def one_good_turn(n):
-  return n + 1
-def deserves_another(n):
-  return one_good_turn(n) + 2
-
-def cube(number):
-  return number * number * number
-
-def by_three(number):
-  if number % 3 == 0:
-    return cube(number)
-  else:
-    return False
-
-def biggest_number(*args):
-  print max(args)
-  return max(args)
-    
-def smallest_number(*args):
-  print min(args)
-  return min(args)
-
-def distance_from_zero(arg):
-  print abs(arg)
-  return abs(arg)
-
-biggest_number(-10, -5, 5, 10)
-smallest_number(-10, -5, 5, 10)
-distance_from_zero(-10)
-
->>> 10
->>> -10
->>> 10
-
-def hotel_cost(nights):
-  return 140 * nights
-
-def plane_ride_cost(city):
-  if city == "Charlotte":
-    return 183
-  elif city == "Tampa":
-    return 220
-  elif city == "Pittsburgh":
-    return 222
-  elif city == "Los Angeles":
-    return 475
-
-def rental_car_cost(days):
-  cost = days * 40
-  if days >= 7:
-    cost -= 50
-  elif days >= 3:
-    cost -= 20
-  return cost
-
-def trip_cost(city, days, spending_money):
-  return rental_car_cost(days) + hotel_cost(days) + plane_ride_cost(city) + spending_money
-
-print trip_cost("Los Angeles", 5, 600)
+>>> 100
 ```
 
 ## Modules
