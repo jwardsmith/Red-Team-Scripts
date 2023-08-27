@@ -146,6 +146,14 @@ money -= price
 # this is a comment
 ```
 
+- Write a multi-line comment
+
+```
+"""this is
+a
+multi-line comment"""
+```
+
 ## Numbers
 
 - Integer
