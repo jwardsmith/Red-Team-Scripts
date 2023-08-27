@@ -305,7 +305,7 @@ print word.isalpha()
 
 ```
 word = "Python Cheat Sheet"
-print word.startswith(P)
+print word.startswith("P")
 >>> True
 ```
 
