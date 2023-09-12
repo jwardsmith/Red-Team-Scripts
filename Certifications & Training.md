@@ -10,10 +10,10 @@ Penetration Testing
 - Certified Red Team Operator 2 (CRTO 2): https://training.zeropointsecurity.co.uk/courses/red-team-ops-ii
 - PentesterAcademy Certified Enterprise Security Specialist (PACES): https://www.pentesteracademy.com/gcb
 - Offensive Security Evasion Professional (OSEP): https://www.offensive-security.com/pen300-osep/
-- Hack The Box Certified Penetration Testing Specialist (HTB CPTS): https://academy.hackthebox.com/preview/certifications/htb-certified-penetration-testing-specialist
+- Hack The Box Certified Penetration Testing Specialist (HTB CPTS): :warning: https://academy.hackthebox.com/preview/certifications/htb-certified-penetration-testing-specialist
 - Hack The Box Pro Labs: https://www.hackthebox.eu/
     - Dante: :white_check_mark:
-    - Zephyr
+    - Zephyr :warning:
     - Offshore:
     - RastaLabs:
     - Cybernetics:
@@ -22,7 +22,7 @@ Penetration Testing
 Web Penetration Testing
 ------------------------
 - Pentesterlab: :warning: https://pentesterlab.com/
-- Codecademy Python 2.7: https://www.codecademy.com/ :warning:
+- Codecademy Python 2.7: https://www.codecademy.com/ :white_check_mark:
 - Portswigger Academy: https://portswigger.net/web-security :warning:
 - DVWA: https://dvwa.co.uk/
 - Hack The Box Certified Bug Bounty Hunter (HTB CBBH): https://academy.hackthebox.com/preview/certifications/htb-certified-bug-bounty-hunter
