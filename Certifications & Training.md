@@ -22,8 +22,8 @@ Penetration Testing
 Web Penetration Testing
 ------------------------
 - Pentesterlab: :warning: https://pentesterlab.com/
-- Codecademy Python 2.7: https://www.codecademy.com/ :white_check_mark:
-- Portswigger Academy: https://portswigger.net/web-security :warning:
+- Codecademy Python 2.7: :white_check_mark: https://www.codecademy.com/
+- Portswigger Academy: :warning: https://portswigger.net/web-security
 - DVWA: https://dvwa.co.uk/
 - Hack The Box Certified Bug Bounty Hunter (HTB CBBH): https://academy.hackthebox.com/preview/certifications/htb-certified-bug-bounty-hunter
 - Offensive Security Web Expert (OSWE): https://www.offensive-security.com/awae-oswe/
