@@ -52,7 +52,7 @@ Wireless Penetration Testing
 
 Cloud
 --------------------
-- Certified Azure Red Team Professional (CARTP): https://bootcamps.pentesteracademy.com/certifications
+- Certified Azure Red Team Professional (CARTP): https://www.alteredsecurity.com/azureadlab
 - Certified Azure Web Application Security Professional (CAWASP): https://www.alteredsecurity.com/azureappsec
 - AZ-500: https://docs.microsoft.com/en-us/learn/certifications/exams/az-500
 
