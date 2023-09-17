@@ -7,9 +7,6 @@ Penetration Testing
 - Attacking Active Directory with Linux: :white_check_mark: https://www.pentesteracademy.com/linuxad
 - Certified Red Team Expert (CRTE): :white_check_mark: https://www.pentesteracademy.com/redteamlab
 - Certified Red Team Operator (CRTO): :white_check_mark: https://www.zeropointsecurity.co.uk/red-team-ops
-- Certified Red Team Operator 2 (CRTO 2): https://training.zeropointsecurity.co.uk/courses/red-team-ops-ii
-- PentesterAcademy Certified Enterprise Security Specialist (PACES): https://www.pentesteracademy.com/gcb
-- Offensive Security Evasion Professional (OSEP): https://www.offensive-security.com/pen300-osep/
 - Hack The Box Certified Penetration Testing Specialist (HTB CPTS): :warning: https://academy.hackthebox.com/preview/certifications/htb-certified-penetration-testing-specialist
 - Hack The Box Pro Labs: https://www.hackthebox.eu/
     - Dante: :white_check_mark:
@@ -18,13 +15,13 @@ Penetration Testing
     - RastaLabs:
     - Cybernetics:
     - APTLabs:
+- Certified Red Team Operator 2 (CRTO 2): https://training.zeropointsecurity.co.uk/courses/red-team-ops-ii
+- PentesterAcademy Certified Enterprise Security Specialist (PACES): https://www.pentesteracademy.com/gcb
+- Offensive Security Evasion Professional (OSEP): https://www.offensive-security.com/pen300-osep/
 
-Web Penetration Testing
+Web Application Penetration Testing
 ------------------------
-- Pentesterlab: :warning: https://pentesterlab.com/
-- Codecademy Python 2.7: :white_check_mark: https://www.codecademy.com/
 - Portswigger Academy: :warning: https://portswigger.net/web-security
-- DVWA: https://dvwa.co.uk/
 - Hack The Box Certified Bug Bounty Hunter (HTB CBBH): https://academy.hackthebox.com/preview/certifications/htb-certified-bug-bounty-hunter
 - Offensive Security Web Expert (OSWE): https://www.offensive-security.com/awae-oswe/
 - Hackerone: https://www.hackerone.com/
@@ -47,12 +44,17 @@ Cloud
 - Certified Az AD Red Team Professional (CARTP): https://bootcamps.pentesteracademy.com/certifications
 - AZ-500: https://docs.microsoft.com/en-us/learn/certifications/exams/az-500
 
+Coding
+--------------------
+- Codecademy Python 2.7: :white_check_mark: https://www.codecademy.com/
+
 Training
 ----------
 - Hack The Box: https://www.hackthebox.com/
 - Hack The Box Academy: https://academy.hackthebox.com/
 - Tryhackme: https://tryhackme.com/ 
 - Pentester Academy: https://www.pentesteracademy.com/
+- Pentesterlab: :warning: https://pentesterlab.com/
 - Offensive Security Proving Grounds: https://www.offensive-security.com/labs/
 - eLearnSecurity: https://elearnsecurity.com/
 - OSINT Courses Tracelabs: https://academy.osintcombine.com/
@@ -66,3 +68,4 @@ Training
 - SANS Holiday Hack Challenges: https://www.holidayhackchallenge.com/past-challenges/
 - OverTheWire: https://overthewire.org/wargames/
 - AttackDefense Labs: https://attackdefense.com/
+- DVWA: https://dvwa.co.uk/
