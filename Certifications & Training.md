@@ -17,7 +17,10 @@ Penetration Testing
     - APTLabs:
 - Certified Red Team Operator 2 (CRTO 2): https://training.zeropointsecurity.co.uk/courses/red-team-ops-ii
 - PentesterAcademy Certified Enterprise Security Specialist (PACES): https://www.pentesteracademy.com/gcb
-- Offensive Security Evasion Professional (OSEP): https://www.offensive-security.com/pen300-osep/
+- Offensive Security Experienced Penetration Tester (OSEP): https://www.offensive-security.com/pen300-osep/
+- Sektor7 Windows Evasion Course: https://institute.sektor7.net/rto-win-evasion
+- Sektor7 Windows Persistence Course: https://institute.sektor7.net/rto-windows-persistence
+- Sektor7 Privilege Escalation in Windows Course: https://institute.sektor7.net/rto-lpe-windows
 
 Web Application Penetration Testing
 ------------------------
@@ -30,11 +33,14 @@ Web Application Penetration Testing
 
 Exploit Development
 --------------------
+- Sektor7 Malware Development Essentials Course: https://institute.sektor7.net/red-team-operator-malware-development-essentials
+- Sektor7 Malware Development Intermediate Course: https://institute.sektor7.net/rto-maldev-intermediate
+- Sektor7 Malware Development Advanced - Vol.1: https://institute.sektor7.net/rto-maldev-adv1
 - SLAE (x86): https://www.pentesteracademy.com/course?id=3
 - SLAE (x64): https://www.pentesteracademy.com/course?id=7
-- Offensive Security Exploit Developer (OSED): https://www.offensive-security.com/exp301-osed/
 - Corelan: https://www.corelan-training.com/
-- Malware Development Essentials Course: https://institute.sektor7.net/red-team-operator-malware-development-essentials
+- Offensive Security Exploit Developer (OSED): https://www.offensive-security.com/exp301-osed/
+- Offensive Security Exploitation Expert (OSEE): https://www.offsec.com/courses/exp-401/
 
 Wireless Penetration Testing
 -----------------------------
@@ -58,6 +64,7 @@ Training
 - Pentesterlab: :warning: https://pentesterlab.com/
 - Offensive Security Proving Grounds: https://www.offensive-security.com/labs/
 - eLearnSecurity: https://elearnsecurity.com/
+- SANS; https://www.sans.org/cyber-security-certifications/
 - OSINT Courses Tracelabs: https://academy.osintcombine.com/
 - TCM Security: https://certifications.tcm-sec.com/
 - Hacker101: https://www.hacker101.com/
