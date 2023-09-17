@@ -16,11 +16,12 @@ Penetration Testing
     - Cybernetics:
     - APTLabs:
 - Certified Red Team Operator 2 (CRTO 2): https://training.zeropointsecurity.co.uk/courses/red-team-ops-ii
-- PentesterAcademy Certified Enterprise Security Specialist (PACES): https://www.pentesteracademy.com/gcb
+- Certified Red Team Master (CRTM): https://www.alteredsecurity.com/gcb
 - Offensive Security Experienced Penetration Tester (OSEP): https://www.offensive-security.com/pen300-osep/
 - Sektor7 Windows Evasion Course: https://institute.sektor7.net/rto-win-evasion
 - Sektor7 Windows Persistence Course: https://institute.sektor7.net/rto-windows-persistence
 - Sektor7 Privilege Escalation in Windows Course: https://institute.sektor7.net/rto-lpe-windows
+- Certified Enterprise Security Professional - AD CS (CESP - ADCS): https://www.alteredsecurity.com/adcs
 
 Web Application Penetration Testing
 ------------------------
@@ -38,6 +39,9 @@ Exploit Development
 - Sektor7 Malware Development Advanced - Vol.1: https://institute.sektor7.net/rto-maldev-adv1
 - SLAE (x86): https://www.pentesteracademy.com/course?id=3
 - SLAE (x64): https://www.pentesteracademy.com/course?id=7
+- DevOps for Pentesters: https://training.zeropointsecurity.co.uk/courses/devops-for-pentesters
+- Offensive Driver Development: https://training.zeropointsecurity.co.uk/courses/offensive-driver-development
+- C2 Development in C#: https://training.zeropointsecurity.co.uk/courses/c2-development-in-csharp
 - Corelan: https://www.corelan-training.com/
 - Offensive Security Exploit Developer (OSED): https://www.offensive-security.com/exp301-osed/
 - Offensive Security Exploitation Expert (OSEE): https://www.offsec.com/courses/exp-401/
@@ -48,12 +52,15 @@ Wireless Penetration Testing
 
 Cloud
 --------------------
-- Certified Az AD Red Team Professional (CARTP): https://bootcamps.pentesteracademy.com/certifications
+- Certified Azure Red Team Professional (CARTP): https://bootcamps.pentesteracademy.com/certifications
+- Certified Azure Web Application Security Professional (CAWASP): https://www.alteredsecurity.com/azureappsec
 - AZ-500: https://docs.microsoft.com/en-us/learn/certifications/exams/az-500
 
 Coding
 --------------------
 - Codecademy Python 2.7: :white_check_mark: https://www.codecademy.com/
+- C# for n00bs: https://training.zeropointsecurity.co.uk/courses/csharp-for-n00bs
+- Rust for n00bs: https://training.zeropointsecurity.co.uk/courses/rust-for-n00bs
 
 Training
 ----------
