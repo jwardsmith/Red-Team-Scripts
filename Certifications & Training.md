@@ -68,7 +68,7 @@ Training
 - Hack The Box Academy: https://academy.hackthebox.com/
 - Tryhackme: https://tryhackme.com/ 
 - Pentester Academy: https://www.pentesteracademy.com/
-- Pentesterlab: :warning: https://pentesterlab.com/
+- Pentesterlab: https://pentesterlab.com/
 - Offensive Security Proving Grounds: https://www.offensive-security.com/labs/
 - eLearnSecurity: https://elearnsecurity.com/
 - SANS; https://www.sans.org/cyber-security-certifications/
