@@ -446,7 +446,9 @@ Console.WriteLine(i1 ^ i2); // XOR
 Console.WriteLine(i1 << i2); // Left Shift
 Console.WriteLine(i1 >> i2); // Right Shift
 
-## If / Else
+## Control Flow
+
+### If / Else
 
 We've already seen examples of the if statement in a previous module, although it was not explained.  The construct of the statement goes if "condition", followed by the code to execute.  The code inside the curly braces only executes if the condition evaluates to true.
 
@@ -484,4 +486,61 @@ else
 Each condition is evaluated from top to bottom.  If one is true, the relevant code will execute, the flow will break out and no other conditions will be evaluated.  This allows the final else case to be a kind of "catch all" in the event that every condition evaluates to false.
 
 Multiple logical operators can be combined but this can lead to unexpected results if they're not evaluated in the proper order.  Consider the following example and make a prediction of the outcome.
+
+using System;
+
+var condition1 = true;
+var condition2 = false;
+var condition3 = false;
+
+if (condition1 || condition2 && condition3)
+  Console.WriteLine("Good to go");
+
+It seems that what we're trying to say is that condition1 OR condition2 needs to be true AND condition3 needs to be true as well.  Since condition3 is set to false, the entire expression should come out as false, right?  But it doesn't.
+
+This is due to the order in which the conditions are evaluated - the AND statement is evaluated first, followed by the OR.
+
+"condition2 && condition3" evaluates to "false" because condition2 and condition3 are both currently set to false.  This would also be the case if one of them was true - because it's an AND operator, both condition2 and condition3 would have to be true for that portion to come out as true overall.
+
+The next part of the expression is then evaluated, which is "condition1 || condition2".  Since condition1 is true, this expression comes out as true and the code inside the braces is executed.
+
+To address this, we need to put parenthesise around the OR expression to force it to be evaluated first.
+
+if ((condition1 || condition2) && condition3)
+  Console.WriteLine("Good to go");
+
+Now it will evaluate "condition1 || condition2", which is true because condition1 is true.  But then true && condition3 comes out as false, because condition3 is false.  So this time, we don't see the "Good to go" message.  Rider has already correctly evaluated the condition to false.  It has greyed out the line to show that this code is not currently reachable, since as there's no code that changes the state of the conditions.
+
+### Switch
+
+The switch keyword is a pattern-matching construct which allows you to add cases for certain conditions.  This is generally nicer to use than multiple else if statements.  Take the following example:
+
+var animal = "Dog";
+
+if (animal == "Dog")
+{
+  Console.WriteLine("Woof");
+}
+else if (animal == "Cat")
+{
+  Console.WriteLine("Meow");
+}
+else
+{
+  Console.WriteLine("Unknown");
+}
+
+This can be condensed down into:
+
+var animal = "Dog";
+var sound:string = animal switch
+{
+  "Dog" => "Woof",
+  "Cat" => "Meow",
+  _ => "Unknown"
+};
+
+Console.WriteLine(sound);
+
+The comparison is fairly self-explanatory and to my eye, nicer to read.  The _ => is used as a "catch all" in case none of the cases match.
 
