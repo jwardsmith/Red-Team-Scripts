@@ -74,3 +74,31 @@ A character is defined with single quotes.
 
 bool myBool = true;
 char myChar = 'A';
+
+### Arrays and Tuples
+
+The array and tuple are both types of collections.  An array can hold multiple values of a single data type; whereas a tuple can hold multiple values but of various data types.  Both types are fast to use at runtime, but they are fixed size.  To initialise an array with values, we can do something like:
+
+int[] intArray = {1, 2, 3, 4, 5};
+
+You can also create an empty array by declaring the number of elements you want to have.  The values in the array are assigned the default value for the relevant data type.  For an integer, that would be 0.
+
+int[] intArray = new int[5];
+
+An element in an array can be accessed by its index.  Arrays are "zero-indexed" which means the first element is index 0, the second is index 1 and so on.  The index of an array is accessed using square brackets, e.g. array[0].
+
+To print the 3rd element:
+
+int[] intArray = {1, 2, 3, 4, 5};
+Console.WriteLine("{0}", intArray[2]);
+
+A tuple is declared using parenthesise for both the data types and initial values; and instead of accessing a tuple index via square brackets, we use the period, ..  Each item is given a name like Item1, Item2, etc.
+
+(string, string, int) tuple = ("Charles", "Dickens", 1812);
+Console.WriteLine("{0} {1} was born in {2}.", tuple.Item1, tuple.Item2, tuple.Item3);
+
+You may also use a concept called "deconstruction" to assign friendly variable names to your elements.
+
+(string, string, int) tuple = ("Charles", "Dickens", 1812);
+(string firstName, string lastName, int dob) = tuple;
+Console.WriteLine("{0} {1} was born in {2}.", firstName, lastName, dob);
