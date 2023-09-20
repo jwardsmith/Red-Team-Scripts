@@ -8,7 +8,7 @@ C# and .NET are often used synonymously, but they are different things.  .NET is
 
 ## Data Types
 
-# Value vs Reference
+### Value vs Reference
 
 Data types in C# are referred to as "value types" and "reference types".
 
