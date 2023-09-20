@@ -445,3 +445,43 @@ Console.WriteLine(i1 | i2); // OR
 Console.WriteLine(i1 ^ i2); // XOR
 Console.WriteLine(i1 << i2); // Left Shift
 Console.WriteLine(i1 >> i2); // Right Shift
+
+## If / Else
+
+We've already seen examples of the if statement in a previous module, although it was not explained.  The construct of the statement goes if "condition", followed by the code to execute.  The code inside the curly braces only executes if the condition evaluates to true.
+
+if (condition)
+{
+  // do something
+}
+
+You can add an additional code block that will execute if the condition is false, rather than true.  This is done with the else keyword.
+
+if (condition)
+{
+  // do something
+}
+else
+{
+  // do something else
+}
+
+You can also add additional branches using else if.
+
+if (condition)
+{
+  // do something
+}
+else if (condition2)
+{
+  // do something else
+}
+else
+{
+  // catch all
+}
+
+Each condition is evaluated from top to bottom.  If one is true, the relevant code will execute, the flow will break out and no other conditions will be evaluated.  This allows the final else case to be a kind of "catch all" in the event that every condition evaluates to false.
+
+Multiple logical operators can be combined but this can lead to unexpected results if they're not evaluated in the proper order.  Consider the following example and make a prediction of the outcome.
+
