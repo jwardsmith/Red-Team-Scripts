@@ -395,3 +395,53 @@ Console.WriteLine(32 - 12); //subtraction
 Console.WriteLine(4 * 5); // multiplication
 Console.WriteLine(321 / 44); // division
 Console.WriteLine(798 % 8); // modulus
+
+### Logical Operators
+
+Logical operators are used when we want to evaluate an expression in order to obtain a true or false outcome.  This could be as simple as comparing the size of two numbers.  The most common operators are:
+
+== for equals.
+> for greater than.
+< for less than.
+>= for greater than or equal to.
+<= for less than or equal to.
+
+The bang ! is used to flip the logic of an operator, most commonly paired with equals.
+!= for not equal.
+
+using System;
+
+// generate some random numbers between 0 and 100
+var rand = new Random();
+var i1:int = rand.Next(0,100);
+var i2:int = rand.Next(0,100);
+
+if (i1 == i2) Console.WriteLine("Values are equal");
+if (i1 != i2) Console.WriteLine("Values are not equal");
+if (i1 > i2) Console.WriteLine("i1 is greater than i2");
+if (i1 < i2) Console.WriteLine("i1 is less than i2");
+if (i1 >= i2) Console.WriteLine("i1 is greater or equal to i2");
+if (i1 <= i2) Console.WriteLine("i1 is less or equal to i2");
+
+### Bitwise Operators
+
+A bitwise operators changes a value at the binary level.   The common bitwise operators are
+
+& for AND.
+| for OR.
+^ for XOR.
+<< for left shift.
+>> for right shift.
+
+using System;
+
+// generate some random numbers between 0 and 100
+var rand = new Random();
+var i1:int = rand.Next(0,100);
+var i2:int = rand.Next(0,100)
+
+Console.WriteLine(i1 & i2); // AND
+Console.WriteLine(i1 | i2); // OR
+Console.WriteLine(i1 ^ i2); // XOR
+Console.WriteLine(i1 << i2); // Left Shift
+Console.WriteLine(i1 >> i2); // Right Shift
