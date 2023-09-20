@@ -131,3 +131,93 @@ string fullName = string.Concat(firstName, " ", lastName);
 Console.WriteLine(fullName);
 
 In fact, string has lots of really useful methods including Split, Join, Equals, and IsNullOrEmpty/IsNullOrWhiteSpace.
+
+## Variables
+
+### Declaring
+
+A variable is simply a "place to hold and use data".  C# allows you to declare a variable in a few different ways.  The method we've been using up until now is to declare the data type keyword, a variable name, and its value.  Declaring the data type tells the compiler specifically what type of data the variable will hold, which is called "explicit typing".
+
+// explicit
+int i1 = 10;
+
+However, you may have noticed the green dotted line underneath the keywords, such as int above.  The tooltip in Rider suggests that we use the var keyword instead.  This is "implicit typing" where the compiler infers the data type based on the value assigned to it.
+
+// implicit
+var i2 = 10;
+
+One of the main benefits of using implicit typing is that it can shorten your code and make it more readable.
+
+// explicit
+(string, string, int) t1 = ("Charles", "Dickens", 1812);
+
+// implicit
+var t2 = ("Charles", "Dickens", 1812);
+
+// implicit with deconstruction
+
+var (firstName:string, lastName:string, dob:int) = ("Charles", "Dickens", 1812);
+
+There are instances where var cannot be used.  One is when declaring a variable without assigning it a value, and another is when the compiler cannot infer from context what the data type is meant to be.
+
+// ok
+int i1;
+
+// not ok
+var i2;
+
+Every variable declared in C# is mutable, which means it can be changed.  To make a variable immutable, prepend it with the const keyword.
+
+var i1 = 10;
+i1 = 20;
+
+const int i2 = 10;
+i2 = 20;
+
+### Name Conventions
+
+C# uses different text casing depending on where it's being declared.  Here is a summary of the conventions:
+
+
+Object | Casing
+Classes |	PascalCase
+Public Members |	PascalCase
+Private Members |	_camelCase
+Methods	| PascalCase
+Variables	| camelCase
+Enums	| PascalCase
+
+We'll see many of these other types as we progress through the course.
+
+### Casting
+
+Casting is the process of converting one data type to another, which comes in two flavours:  "implicit" and "explicit".  In this example, we're declaring an int and then casting it to a double.  This is an implicit cast.
+
+// implicit cast
+var i = 20;
+double d = i;
+
+However, you cannot implicitly cast a double to an integer - it must be explicitly cast:
+
+// invalid cast
+double d1 = 3.14D;
+int i1 = d1;
+
+// explicit cast
+double d2 = 3.14D;
+int i2 = (int)d2;
+
+These two methods exist because explicit casting is typically more "dangerous", as it can result in a loss of data precision.  An integer is a whole number and cannot hold decimal places.  Converting 20 from an integer simply results in 20 as a double.  But converting 3.14 from a double results in 3 as an integer - we lose the .14 precision on the conversion.
+
+Explicit casting exists because the compiler is forcing you to think about (and acknowledge) the conversion, rather than having it handled automatically for you.
+
+Other data types can be cast to each other where it makes sense.  For example, because a char is a really just a Unicode value, you can cast between char's and int's.
+
+var c = 'A';
+int i = c;
+Console.WriteLine($"{c} == {i}");
+
+c = (char)i;
+Console.WriteLine($"{i} == {c}");
+
+However, you cannot convert nonsensically such as a string to a float.
