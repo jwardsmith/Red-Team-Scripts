@@ -375,3 +375,23 @@ while (stack.TryPop(out var value:int))
   Console.WriteLine(value);
   
 This time, the printed order is 3, 2, and 1.
+
+## Operators
+
+### Mathematical Operators
+
+I'm sure we've all come across mathematical operators before.  There is not much interesting to say about them.  Common ones include:
+
++ for add.
+- for subtract.
+* for multiply.
+/ for divide.
+% for modulus.
+
+using System;
+
+Console.WriteLine(23 + 54); // addition
+Console.WriteLine(32 - 12); //subtraction
+Console.WriteLine(4 * 5); // multiplication
+Console.WriteLine(321 / 44); // division
+Console.WriteLine(798 % 8); // modulus
