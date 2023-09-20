@@ -676,3 +676,49 @@ For example, the following code will throw the error "cannot find value `foo` in
   // "outer" scope
   Console.WriteLine(foo);
 }
+
+### Command Line Arguments
+
+In old versions of C#, you were required to structure the entry of your program with an explicit namespace, class and Main method.  The command line arguments were read in Main as a string array called args.  
+
+namespace HelloWorld;
+
+internal static class Program
+{
+  public static void Main(string[] args)
+  {
+    // do stuff
+  }
+}
+
+All of this boilerplate code is no longer required, but the args variable still exists and can be used as normal.
+
+using System;
+
+for (var i = 0; i < args.Length; i++)
+  Console.WriteLine($"Argument {i} is {args[i]}");
+
+PS C:\> dotnet run arg1 arg2 arg3
+Argument 0 is arg1
+Argument 1 is arg2
+Argument 2 is arg3
+
+If your application has mandatory arguments, it's common to do a length check and exit from the program if not enough are provided.
+
+using System;
+
+if (args.Length < 2)
+{
+  Console.WriteLine("Not enough arguments");
+  ShowUsage();
+  return;
+}
+
+void ShowUsage()
+{
+  Console.WriteLine("Usage: app.exe <arg1> <arg2>");
+}
+
+PS C:\> dotnet run arg1
+Not enough arguments
+Usage: app.exe <arg1> <arg2>
