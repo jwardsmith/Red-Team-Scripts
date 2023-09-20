@@ -102,3 +102,32 @@ You may also use a concept called "deconstruction" to assign friendly variable n
 (string, string, int) tuple = ("Charles", "Dickens", 1812);
 (string firstName, string lastName, int dob) = tuple;
 Console.WriteLine("{0} {1} was born in {2}.", firstName, lastName, dob);
+
+### Strings
+
+C# has made it very easy to work and manage strings.  A string can be declared using double quotes.
+
+string name = "Rasta Mouse";
+
+There are multiple ways to concatenate strings.  One way is via interpolation, denoted by a prepended $.
+
+string firstName = "Rasta";
+string lastName = "Mouse";
+string fullName = $"{firstName} {lastName}";
+Console.WriteLine(fullName);
+
+Another is by using the + operator.
+
+string firstName = "Rasta";
+string lastName = "Mouse";
+string fullName = firstName + " " + lastName;
+Console.WriteLine(fullName);
+
+Or by using the string.Concat() method.
+
+string firstName = "Rasta";
+string lastName = "Mouse";
+string fullName = string.Concat(firstName, " ", lastName);
+Console.WriteLine(fullName);
+
+In fact, string has lots of really useful methods including Split, Join, Equals, and IsNullOrEmpty/IsNullOrWhiteSpace.
