@@ -283,3 +283,95 @@ Note that if the value does not exist, the method returns the default value for 
 
 A dictionary stores data in key-value pairs.  The key and value do not need to be of the same type.  In this example, I'm creating a dictionary that will use an int for the keys and a string for the data.
 
+using System;
+using System.Collections.Generic;
+
+var dict = new Dictionary<int, string>();
+
+dict.Add(0, "Charles Dickens");
+dict.Add(1, "George Orwell");
+dict.Add(2, "Mark Twain");
+
+foreach(var kvp:KeyValuePair<int,string> in dict)
+  Console.WriteLine($"Key: {kvp.Key} contains: {kvp.Value}.");
+
+Even though I've done it here, the keys do not need to be sequential - they can be any arbitrary values.  Values are usually found by a known key.  The safest way is by using the TryGetValue method, which will return a bool and the associated value.
+
+if (dict.TryGetValue(2, out var value:string))
+  Console.WriteLine(value);
+
+Each key in a dictionary must be unique - the program will throw an exception if you attempt to add the same key twice.
+
+var dict = new Dictionary<int, string>();
+
+dict.Add(0, "Charles Dickens");
+dict.Add(1, "George Orwell");
+dict.Add(2, "Mark Twain");
+
+// this will throw an exception
+dict.Add(2, "Jane Austen");
+
+The value associated with a key can be changed:
+
+var dict = new Dictionary<int, string>();
+
+dict.Add(0, "Charles Dickens");
+dict.Add(1, "George Orwell");
+dict.Add(2, "Mark Twain");
+
+if (dict.ContainsKey(2))
+  dict[2] = "Jane Austen";
+
+Note that in this example, 2 is not an "index" it's the literal value of the key.
+
+### Hashtable
+
+The Hashtable is like a stripped-down dictionary that is designed for pure performance.  It does not maintain any order in the collection and allows values to be looked up very quickly.  It's a good candidate when computing against large data sets but for general use, the dictionary is friendlier.
+
+using System;
+using System.Collections;
+
+var table = new Hashtable
+{
+  { 0, "Charles Dickens" },
+  { 1, "George Orwell" },
+  { 2, "Mark Twain" },
+  { 3, "Jane Austen" }
+};
+
+foreach(DictionaryEntry entry in table)
+  Console.WriteLine($"{entry.Key} : {entry.Value}");
+
+### Queue
+
+There are two main types of queue:  the Queue and the Stack.  The queue is a first-in-first-out (FIFO) collection and the stack is last-in-first-out (LIFO).  These are useful when the order of data is of the strictest importance and can be used in places such as message queues.
+
+To push an object into a queue, use the Enqueue method.  To remove and return the next object, use  Dequeue.
+
+var queue = new Queue<int>();
+
+// add items
+queue.Enqueue(item:1);
+queue.Enqueue(item:2);
+queue.Enqueue(item:3);
+
+// dequeue them all
+while (queue.TryDequeue(out var value:int))
+  Console.WriteLine(value);
+
+In this example, the printed order is 1, 2, and 3.
+
+The stack functions in the same way using the Push and Pop methods.
+
+var stack = new Stack<int>();
+
+// add items
+stack.Push(item:1);
+stack.Push(item:2);
+stack.Push(item:3);
+
+// remove them all
+while (stack.TryPop(out var value:int))
+  Console.WriteLine(value);
+  
+This time, the printed order is 3, 2, and 1.
