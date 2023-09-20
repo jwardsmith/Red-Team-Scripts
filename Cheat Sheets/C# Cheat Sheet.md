@@ -221,3 +221,65 @@ c = (char)i;
 Console.WriteLine($"{i} == {c}");
 
 However, you cannot convert nonsensically such as a string to a float.
+
+## Collections
+
+### Lists
+
+A List<T> is a collection of generic data types (we'll cover generics in more detail later) that can be accessed by index.  It also contains methods for adding, inserting, removing, searching and sorting the values.  A list can only hold one type of data at a time.
+
+We can create an empty list, or create one with values.
+
+using System.Collections.Generic;
+
+var list1 = new List<int>();
+var list2 = new List<int> {1, 2, 3, 4, 5 };
+
+Adding new values can be done with the Add method.
+
+using System;
+using System.Collections.Generic;
+
+var integers = new List<int>();
+
+integers.Add(item:1);
+integers.Add(item:2);
+integers.Add(item:3);
+integers.Add(item:4);
+integers.Add(item:5);
+
+Console.WriteLine($"The value at index 2 is {integers[2]}.");
+
+Items can be removed based on their known value, or from a given index.
+
+var integers = new List<int> {1, 2, 3, 4, 5 };
+
+// remove a known value
+integers.Remove(item:1);
+
+// remove from a given index
+integers.RemoveAt(index:3);
+
+foreach(var i:int in integers)
+  Console.WriteLine(i);
+
+The Contains method returns a bool if the given value is in the list.
+
+var integers = new List<int> {1, 2, 3, 4, 5 };
+
+if (integers.Contains(item:1))
+  Console.WriteLine(1 is present);
+
+And Find can be used to search the list for a value.  The method takes a "predicate" which is written as a lambda expression.  We won't dive into that too much here, but we'll see it again in the LINQ module.  Here I'm searching for the value 3.
+
+var integers = new List<int> {1, 2, 3, 4, 5 };
+var item:int = integers.Find(match:v:int => v == 3);
+
+Console.WriteLine(item);
+
+Note that if the value does not exist, the method returns the default value for the list's data type, T.  Another aspect to watch out for is that a list does allow you to add the same value multiple times, and methods such as Remove, Find, and IndexOf return the first occurrence of that data.
+
+### Dictionary
+
+A dictionary stores data in key-value pairs.  The key and value do not need to be of the same type.  In this example, I'm creating a dictionary that will use an int for the keys and a string for the data.
+
