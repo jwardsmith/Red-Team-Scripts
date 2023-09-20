@@ -20,7 +20,7 @@ Reference types are always allocated in heap memory, but value types can be allo
 
 Value types include int, byte, bool, and char.  Reference types include string, arrays and class.
 
-## Integers and Floating Points
+### Integers and Floating Points
 
 An integer is whole number, -2, -1, 0, 1, 2, etc.
 
@@ -63,3 +63,14 @@ Console.WriteLine("pi as double: {0}", piDouble);
 
 pi as float: 3.1415927
 pi as double: 3.14159265359
+
+### Booleans and Characters
+
+A bool is a true or false value.  It's a fundamental type as most "decisions" in a program are made based on a boolean expression (something that evaluates to true or false).
+
+A char is a single letter or number, represented by an integer.  Those "integers" are standardised in the ASCII and Unicode tables.  Different languages allow different byte sizes for characters, from 1 to 4 bytes.  C# uses 2 bytes, which allows it to use any character in UTF-16.
+
+A character is defined with single quotes.
+
+bool myBool = true;
+char myChar = 'A';
