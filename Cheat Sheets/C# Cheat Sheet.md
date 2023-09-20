@@ -722,3 +722,42 @@ void ShowUsage()
 PS C:\> dotnet run arg1
 Not enough arguments
 Usage: app.exe <arg1> <arg2>
+
+### Prompting for Input
+
+In addition to reading command line arguments when the program first runs, you may want to prompt the user for additional input whilst the program is running.  C# makes this unbelievably easy.
+
+using System;
+
+while (true)
+{
+  // print a pseudo prompt
+  Console.Write("> ");
+
+  // read from stdin
+  var input:string = Console.ReadLine();
+
+  // loop again if the string was empty
+  if (string.IsNullOrWhiteSpace(input))
+    continue;
+
+  // print to stdout
+  Console.WriteLine($"You said: {input}");
+}
+
+PS C:\> dotnet run
+> hello world
+You said: hello world
+>
+
+String comparisons can be used to take action on certain input.  For example, typing "exit" to break out of the loop and close the program.  The string type has an Equals() method which is perfect for this.
+
+// break if "exit"
+if (input.Equals("exit"))
+  break;
+
+By default, this method is case-sensitive which means "EXIT", "eXiT", etc would not match.  You can provide a StringComparison enum to make it case-insensitive.
+
+// break if "exit"
+if (input.Equals(value:"exit", StringComparison.OrdinalIgnoreCase))
+  break;
