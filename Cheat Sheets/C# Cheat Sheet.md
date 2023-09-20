@@ -574,3 +574,105 @@ switch (status)
     throw new ArgumentOutOfRangeException();
 }
 
+internal enum Status
+{
+  Dead,
+  Alive
+}
+
+### Loops
+
+There are two main types of general purpose loops called for and while.  In almost all cases, we want to perform some loop until a pre-determined condition has been met.
+
+A for loop is made up of three statements:
+
+Statement 1 is executed one time at the start of the loop.
+Statement 2 defines the condition for executing the loop code.
+Statement 3 is executed after every loop.
+
+using System;
+
+for (var i = 0; i < 10; i++)
+  Console.WriteLine($"i is {i}");
+
+In this example:
+Statement 1: Initialises the starting value of a counter, i to 0.
+Statement 2: states that if i is less than 10, then execute the code.
+Statement 3: increments i by 1 after each loop
+
+Once i is no longer less than 10, the loop will break.  These loops are commonly used to iterate over elements in a collection, using the length of the collection.
+
+var array = new[] {1,2,3,4,5};
+for (var i = 0; i < array.Length; i++)
+  Console.WriteLine(array[i]);
+
+A while loop can be more flexible than a for loop, because we do not need a predetermined range to iterate over (although they can be written like that).  A while loop will loop forever whilst the condition is met.  This condition is usually defined outside of the loop itself but can be manipulated from inside the loop.
+
+var i = 0;
+while (i < 10)
+{
+  Console.WriteLine(i);
+  i++;
+}
+
+Another way to write this could be.
+
+var i = 0;
+while (true)
+{
+  if (i > 10)
+    break;
+    
+  Console.WriteLine(i);
+  i++;
+}
+
+The break keyword can be used to break out of a loop at any time, regardless of whether its condition is met or not.  The continue keyword can be used to skip the remaining code in a loop and move immediately onto the next loop iteration.
+
+var i = 0;
+while (i < 10)
+{
+  if (i == 5)
+    continue;
+    
+  Console.WriteLine(i);
+  i++;
+}
+
+You must be careful however, as this can introduce unexpected runtime bugs.  The code above will actually loop infinitely, because we continue before incrementing the counter.  Therefore never allowing it to go beyond 5.
+
+The foreach loop provides an easier way to loop over a collection without having to have a counter.
+
+var list = new List<int> { 1, 2, 3, 4, 5 };
+foreach(var i:int in list)
+  Console.WriteLine(i);
+
+### Scopes
+
+Variables only exist and are accessible within a given scope hierarchy.  A scope is created any time the curly braces, { } are used.  That means every loop and method has their own scope.  I used the word hierarchy, because as we've seen with loops, some scopes can exist inside other scopes.
+
+{
+  // "outer" scope
+
+  {
+    // "inner" scope
+  }
+
+  // "outer" scope
+}
+
+Variable accessibility is relatively simple in these cases.  Anything declared in an "outer" scope is accessible from an "inner" scope.  This must be possible, otherwise loops would not function.  However, variables declared within an "inner" scope cannot be accessed in an "outer" scope.
+
+For example, the following code will throw the error "cannot find value `foo` in this scope" and will not compile.
+
+{
+  // "outer" scope
+
+  {
+    // "inner" scope
+    var foo = "foo";
+  }
+
+  // "outer" scope
+  Console.WriteLine(foo);
+}
