@@ -544,3 +544,33 @@ Console.WriteLine(sound);
 
 The comparison is fairly self-explanatory and to my eye, nicer to read.  The _ => is used as a "catch all" in case none of the cases match.
 
+### Enums
+
+An enum (or enumeration) is a set of pre-defined constants (i.e. values that cannot be changed).  For example, we could have a "status" enum to indicate whether a person is dead or alive.
+
+var (firstName:string, lastName:string, status) = ("Charles", "Dickens", Status.Dead);
+
+internal enum Status
+{
+  Dead,
+  Alive
+}
+
+Under the hood, enums are referenced by integer values by default rather than strings or anything else.  In this case "Dead" is 0 and "Alive" is 1.  But this isn't actually a hard limitation - an enum can be based on other data types as well.
+
+You can also use enums with switch.
+
+var (firstName:string, lastName:string, status) = ("Charles", "Dickens", Status.Dead);
+
+switch (status)
+{
+  case Status.Dead:
+    Console.WriteLine($"{firstName} {lastName} is dead.");
+    break;
+  case Status.Alive:
+    Console.WriteLine($"{firstName} {lastName} is alive.");
+    break;
+  default:
+    throw new ArgumentOutOfRangeException();
+}
+
