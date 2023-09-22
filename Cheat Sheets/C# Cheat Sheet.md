@@ -761,3 +761,32 @@ By default, this method is case-sensitive which means "EXIT", "eXiT", etc would 
 // break if "exit"
 if (input.Equals(value:"exit", StringComparison.OrdinalIgnoreCase))
   break;
+
+## Classes & Methods
+
+### Classes
+
+Classes in C# are the heart of how it handles object-oriented programming and can be thought of as templates to store and/or operate on data.  For example, let's create a class to represent a person and the properties of a person that we want to work with.
+
+internal class Person
+{
+  public string FirstName { get; set; }
+  public string LastName { get; set; }
+  public DateOnly DateOfBirth { get; set; }
+}
+
+After the class has been defined, we can create an instance of a person.
+
+var person = new Person
+{
+  FirstName = "Charles",
+  LastName = "Dickens",
+  DateOfBirth = new DateOnly(year:1812, month:2, day:7)
+};
+
+internal class Person
+{
+  public string FirstName { get; set; }
+  public string LastName { get; set; }
+  public DateOnly DateOfBirth { get; set; }
+}
