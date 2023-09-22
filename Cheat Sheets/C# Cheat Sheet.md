@@ -450,10 +450,10 @@ This time, the printed order is 3, 2, and 1.
 
 I'm sure we've all come across mathematical operators before.  There is not much interesting to say about them.  Common ones include:
 
-- + for add.
-- - for subtract.
-- * for multiply.
-- // for divide.
+- \+ for add.
+- \- for subtract.
+- \* for multiply.
+- / for divide.
 - % for modulus.
 
 ```
