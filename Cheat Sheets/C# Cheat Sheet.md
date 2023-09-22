@@ -60,14 +60,18 @@ There are three types (all of which are signed):
 
 When declaring a float or double, the letter F or D should be appended to the value.  You can declare a value that is more precise than the specified data type, but it will only "use" the range that it is able when carrying out any mathematics, etc.
 
+```
 float piFloat = 3.14159265359F
 double piDouble = 3.14159265359D;
 
 Console.WriteLine("pi as float: {0}", piFloat);
 Console.WriteLine("pi as double: {0}", piDouble);
+```
 
+```
 pi as float: 3.1415927
 pi as double: 3.14159265359
+```
 
 ### Booleans and Characters
 
@@ -77,63 +81,83 @@ A char is a single letter or number, represented by an integer.  Those "integers
 
 A character is defined with single quotes.
 
+```
 bool myBool = true;
 char myChar = 'A';
+```
 
 ### Arrays and Tuples
 
 The array and tuple are both types of collections.  An array can hold multiple values of a single data type; whereas a tuple can hold multiple values but of various data types.  Both types are fast to use at runtime, but they are fixed size.  To initialise an array with values, we can do something like:
 
+```
 int[] intArray = {1, 2, 3, 4, 5};
+```
 
 You can also create an empty array by declaring the number of elements you want to have.  The values in the array are assigned the default value for the relevant data type.  For an integer, that would be 0.
 
+```
 int[] intArray = new int[5];
+```
 
 An element in an array can be accessed by its index.  Arrays are "zero-indexed" which means the first element is index 0, the second is index 1 and so on.  The index of an array is accessed using square brackets, e.g. array[0].
 
 To print the 3rd element:
 
+```
 int[] intArray = {1, 2, 3, 4, 5};
 Console.WriteLine("{0}", intArray[2]);
+```
 
 A tuple is declared using parenthesise for both the data types and initial values; and instead of accessing a tuple index via square brackets, we use the period, ..  Each item is given a name like Item1, Item2, etc.
 
+```
 (string, string, int) tuple = ("Charles", "Dickens", 1812);
 Console.WriteLine("{0} {1} was born in {2}.", tuple.Item1, tuple.Item2, tuple.Item3);
+```
 
 You may also use a concept called "deconstruction" to assign friendly variable names to your elements.
 
+```
 (string, string, int) tuple = ("Charles", "Dickens", 1812);
 (string firstName, string lastName, int dob) = tuple;
 Console.WriteLine("{0} {1} was born in {2}.", firstName, lastName, dob);
+```
 
 ### Strings
 
 C# has made it very easy to work and manage strings.  A string can be declared using double quotes.
 
+```
 string name = "Rasta Mouse";
+```
 
 There are multiple ways to concatenate strings.  One way is via interpolation, denoted by a prepended $.
 
+```
 string firstName = "Rasta";
 string lastName = "Mouse";
 string fullName = $"{firstName} {lastName}";
 Console.WriteLine(fullName);
+```
 
 Another is by using the + operator.
 
+```
 string firstName = "Rasta";
 string lastName = "Mouse";
 string fullName = firstName + " " + lastName;
 Console.WriteLine(fullName);
+```
 
 Or by using the string.Concat() method.
 
+```
 string firstName = "Rasta";
 string lastName = "Mouse";
 string fullName = string.Concat(firstName, " ", lastName);
 Console.WriteLine(fullName);
+```
 
 In fact, string has lots of really useful methods including Split, Join, Equals, and IsNullOrEmpty/IsNullOrWhiteSpace.
 
@@ -143,16 +167,21 @@ In fact, string has lots of really useful methods including Split, Join, Equals,
 
 A variable is simply a "place to hold and use data".  C# allows you to declare a variable in a few different ways.  The method we've been using up until now is to declare the data type keyword, a variable name, and its value.  Declaring the data type tells the compiler specifically what type of data the variable will hold, which is called "explicit typing".
 
+```
 // explicit
 int i1 = 10;
+```
 
 However, you may have noticed the green dotted line underneath the keywords, such as int above.  The tooltip in Rider suggests that we use the var keyword instead.  This is "implicit typing" where the compiler infers the data type based on the value assigned to it.
 
+```
 // implicit
 var i2 = 10;
+```
 
 One of the main benefits of using implicit typing is that it can shorten your code and make it more readable.
 
+```
 // explicit
 (string, string, int) t1 = ("Charles", "Dickens", 1812);
 
@@ -160,37 +189,41 @@ One of the main benefits of using implicit typing is that it can shorten your co
 var t2 = ("Charles", "Dickens", 1812);
 
 // implicit with deconstruction
-
 var (firstName:string, lastName:string, dob:int) = ("Charles", "Dickens", 1812);
+```
 
 There are instances where var cannot be used.  One is when declaring a variable without assigning it a value, and another is when the compiler cannot infer from context what the data type is meant to be.
 
+```
 // ok
 int i1;
 
 // not ok
 var i2;
+```
 
 Every variable declared in C# is mutable, which means it can be changed.  To make a variable immutable, prepend it with the const keyword.
 
+```
 var i1 = 10;
 i1 = 20;
 
 const int i2 = 10;
 i2 = 20;
+```
 
 ### Name Conventions
 
 C# uses different text casing depending on where it's being declared.  Here is a summary of the conventions:
 
-
-Object | Casing
-Classes |	PascalCase
-Public Members |	PascalCase
-Private Members |	_camelCase
-Methods	| PascalCase
-Variables	| camelCase
-Enums	| PascalCase
+| Object | Casing |
+|--------|-----------|
+| Classes |	PascalCase |
+| Public Members |	PascalCase |
+| Private Members |	_camelCase |
+| Methods	| PascalCase |
+| Variables	| camelCase |
+| Enums	| PascalCase |
 
 We'll see many of these other types as we progress through the course.
 
