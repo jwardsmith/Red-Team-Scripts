@@ -979,3 +979,63 @@ public string FullName
 ```
 
 An Age property is another good candidate for a computed property, as it could be calculated from the current date and the date of birth.
+
+### Constructors
+
+One potential issue with our code is that it's possible to create a person without setting any of the property values.  We have a "person" but without a name or date of birth.
+
+```
+var person = new Person();
+```
+
+Constructors can be used to force us to pass data to the object before it can be fully instantiated.  Every class has an implied "empty constructor" which would look like this:
+
+```
+internal class Person
+{
+
+  public Person()
+  {
+  }
+```
+
+Mandatory parameters can be added to the parentheses, like so:
+
+```
+internal class Person
+{
+  public Person(string firstName, string lastName, DateOnly dateOfBirth)
+  {
+
+  }
+```
+
+Those parameter values can then be set on the class properties.
+
+```
+public Person(string firstName, string lastName, DateOnly dateOfBirth)
+{
+  FirstName = firstName;
+  LastName= lastName;
+  DateOfBirth = dateOfBirth;
+}
+```
+
+We'll now see that a new Person cannot be created without passing this data in on the constructor.
+
+```
+var person = new Person();
+> Constructor 'Person' has 3 parameter(s) but is invoked with 0 argument(s)
+```
+
+```
+var person = new Person(
+  firstName:"Charles",
+  lastName:"Dickens",
+  dateOfBirth:new DateOnly(year:1812, month:2, day:7)
+  );
+```
+
+It's worth noting that C# often doesn't care if something is split across multiple lines and it is often preferable to improve readability.
+
+A class can also have multiple constructors if you want to allow different ways to instantiate the class.
