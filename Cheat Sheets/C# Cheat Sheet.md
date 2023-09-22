@@ -39,20 +39,24 @@ The naming of these types can be a little hard to remember - they are:
 | long |	Signed 64-bit |
 | ulong |	Unsigned 64-bit |
 
+```
 int SInt = -20;
 uint UInt = 20;
 
 byte sByte = 256;
+```
+
 Most IDEs will know if you're trying to assign an invalid value to these types.  Since byte is only 8-bits (and unsigned), it cannot accommodate a value larger than 255.
 
 A floating point is a number that can have decimal places, 8.2, 3.14, etc.
 
 There are three types (all of which are signed):
 
-Keyword |	Size
-float |	4 bytes
-double |	8 bytes
-decimal |	16 bytes
+| Keyword |	Size |
+|---------|---------|
+| float |	4 bytes |
+| double |	8 bytes |
+| decimal |	16 bytes |
 
 When declaring a float or double, the letter F or D should be appended to the value.  You can declare a value that is more precise than the specified data type, but it will only "use" the range that it is able when carrying out any mathematics, etc.
 
