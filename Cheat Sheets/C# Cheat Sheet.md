@@ -29,8 +29,8 @@ If we want an integer to be negative, it should be declared as a "signed" intege
 The naming of these types can be a little hard to remember - they are:
 
 |Keyword | Size|
-|----------------|
-|sbyte |	Signed 8-bit|
+|--------|-------|
+|sbyte | Signed 8-bit|
 |byte |	Unsigned 8-bit|
 |short |	Signed 16-bit|
 |ushort |	Unsigned 16-bit|
