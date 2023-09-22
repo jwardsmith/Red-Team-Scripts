@@ -28,16 +28,16 @@ If we want an integer to be negative, it should be declared as a "signed" intege
 
 The naming of these types can be a little hard to remember - they are:
 
-|Keyword | Size|
+| Keyword | Size |
 |--------|-------|
-|sbyte | Signed 8-bit|
-|byte |	Unsigned 8-bit|
-|short |	Signed 16-bit|
-|ushort |	Unsigned 16-bit|
-|int	| Signed 32-bit|
-|uint |	Unsigned 32-bit|
-|long |	Signed 64-bit|
-|ulong |	Unsigned 64-bit|
+| sbyte | Signed 8-bit |
+| byte |	Unsigned 8-bit |
+| short |	Signed 16-bit |
+| ushort |	Unsigned 16-bit |
+| int	| Signed 32-bit |
+| uint |	Unsigned 32-bit |
+| long |	Signed 64-bit |
+| ulong |	Unsigned 64-bit |
 
 int SInt = -20;
 uint UInt = 20;
