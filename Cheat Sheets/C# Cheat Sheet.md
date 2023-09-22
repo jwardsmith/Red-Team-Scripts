@@ -499,11 +499,11 @@ if (i1 <= i2) Console.WriteLine("i1 is less or equal to i2");
 
 A bitwise operators changes a value at the binary level.   The common bitwise operators are
 
-& for AND.
-| for OR.
-^ for XOR.
-<< for left shift.
-\>> for right shift.
+- & for AND.
+- | for OR.
+- ^ for XOR.
+- << for left shift.
+- \>> for right shift.
 
 ```
 using System;
