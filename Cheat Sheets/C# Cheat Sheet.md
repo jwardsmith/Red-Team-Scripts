@@ -231,12 +231,15 @@ We'll see many of these other types as we progress through the course.
 
 Casting is the process of converting one data type to another, which comes in two flavours:  "implicit" and "explicit".  In this example, we're declaring an int and then casting it to a double.  This is an implicit cast.
 
+```
 // implicit cast
 var i = 20;
 double d = i;
+```
 
 However, you cannot implicitly cast a double to an integer - it must be explicitly cast:
 
+```
 // invalid cast
 double d1 = 3.14D;
 int i1 = d1;
@@ -244,6 +247,7 @@ int i1 = d1;
 // explicit cast
 double d2 = 3.14D;
 int i2 = (int)d2;
+```
 
 These two methods exist because explicit casting is typically more "dangerous", as it can result in a loss of data precision.  An integer is a whole number and cannot hold decimal places.  Converting 20 from an integer simply results in 20 as a double.  But converting 3.14 from a double results in 3 as an integer - we lose the .14 precision on the conversion.
 
@@ -251,12 +255,14 @@ Explicit casting exists because the compiler is forcing you to think about (and 
 
 Other data types can be cast to each other where it makes sense.  For example, because a char is a really just a Unicode value, you can cast between char's and int's.
 
+```
 var c = 'A';
 int i = c;
 Console.WriteLine($"{c} == {i}");
 
 c = (char)i;
 Console.WriteLine($"{i} == {c}");
+```
 
 However, you cannot convert nonsensically such as a string to a float.
 
@@ -268,13 +274,16 @@ A List<T> is a collection of generic data types (we'll cover generics in more de
 
 We can create an empty list, or create one with values.
 
+```
 using System.Collections.Generic;
 
 var list1 = new List<int>();
 var list2 = new List<int> {1, 2, 3, 4, 5 };
+```
 
 Adding new values can be done with the Add method.
 
+```
 using System;
 using System.Collections.Generic;
 
@@ -287,9 +296,11 @@ integers.Add(item:4);
 integers.Add(item:5);
 
 Console.WriteLine($"The value at index 2 is {integers[2]}.");
+```
 
 Items can be removed based on their known value, or from a given index.
 
+```
 var integers = new List<int> {1, 2, 3, 4, 5 };
 
 // remove a known value
@@ -300,20 +311,25 @@ integers.RemoveAt(index:3);
 
 foreach(var i:int in integers)
   Console.WriteLine(i);
+```
 
 The Contains method returns a bool if the given value is in the list.
 
+```
 var integers = new List<int> {1, 2, 3, 4, 5 };
 
 if (integers.Contains(item:1))
   Console.WriteLine(1 is present);
+```
 
 And Find can be used to search the list for a value.  The method takes a "predicate" which is written as a lambda expression.  We won't dive into that too much here, but we'll see it again in the LINQ module.  Here I'm searching for the value 3.
 
+```
 var integers = new List<int> {1, 2, 3, 4, 5 };
 var item:int = integers.Find(match:v:int => v == 3);
 
 Console.WriteLine(item);
+```
 
 Note that if the value does not exist, the method returns the default value for the list's data type, T.  Another aspect to watch out for is that a list does allow you to add the same value multiple times, and methods such as Remove, Find, and IndexOf return the first occurrence of that data.
 
@@ -321,6 +337,7 @@ Note that if the value does not exist, the method returns the default value for 
 
 A dictionary stores data in key-value pairs.  The key and value do not need to be of the same type.  In this example, I'm creating a dictionary that will use an int for the keys and a string for the data.
 
+```
 using System;
 using System.Collections.Generic;
 
@@ -332,14 +349,18 @@ dict.Add(2, "Mark Twain");
 
 foreach(var kvp:KeyValuePair<int,string> in dict)
   Console.WriteLine($"Key: {kvp.Key} contains: {kvp.Value}.");
+```
 
 Even though I've done it here, the keys do not need to be sequential - they can be any arbitrary values.  Values are usually found by a known key.  The safest way is by using the TryGetValue method, which will return a bool and the associated value.
 
+```
 if (dict.TryGetValue(2, out var value:string))
   Console.WriteLine(value);
+```
 
 Each key in a dictionary must be unique - the program will throw an exception if you attempt to add the same key twice.
 
+```
 var dict = new Dictionary<int, string>();
 
 dict.Add(0, "Charles Dickens");
@@ -348,9 +369,11 @@ dict.Add(2, "Mark Twain");
 
 // this will throw an exception
 dict.Add(2, "Jane Austen");
+```
 
 The value associated with a key can be changed:
 
+```
 var dict = new Dictionary<int, string>();
 
 dict.Add(0, "Charles Dickens");
@@ -359,6 +382,7 @@ dict.Add(2, "Mark Twain");
 
 if (dict.ContainsKey(2))
   dict[2] = "Jane Austen";
+```
 
 Note that in this example, 2 is not an "index" it's the literal value of the key.
 
@@ -366,6 +390,7 @@ Note that in this example, 2 is not an "index" it's the literal value of the key
 
 The Hashtable is like a stripped-down dictionary that is designed for pure performance.  It does not maintain any order in the collection and allows values to be looked up very quickly.  It's a good candidate when computing against large data sets but for general use, the dictionary is friendlier.
 
+```
 using System;
 using System.Collections;
 
@@ -379,6 +404,7 @@ var table = new Hashtable
 
 foreach(DictionaryEntry entry in table)
   Console.WriteLine($"{entry.Key} : {entry.Value}");
+```
 
 ### Queue
 
@@ -386,6 +412,7 @@ There are two main types of queue:  the Queue and the Stack.  The queue is a fir
 
 To push an object into a queue, use the Enqueue method.  To remove and return the next object, use  Dequeue.
 
+```
 var queue = new Queue<int>();
 
 // add items
@@ -396,11 +423,13 @@ queue.Enqueue(item:3);
 // dequeue them all
 while (queue.TryDequeue(out var value:int))
   Console.WriteLine(value);
+```
 
 In this example, the printed order is 1, 2, and 3.
 
 The stack functions in the same way using the Push and Pop methods.
 
+```
 var stack = new Stack<int>();
 
 // add items
@@ -411,7 +440,8 @@ stack.Push(item:3);
 // remove them all
 while (stack.TryPop(out var value:int))
   Console.WriteLine(value);
-  
+```
+
 This time, the printed order is 3, 2, and 1.
 
 ## Operators
@@ -426,6 +456,7 @@ I'm sure we've all come across mathematical operators before.  There is not much
 / for divide.
 % for modulus.
 
+```
 using System;
 
 Console.WriteLine(23 + 54); // addition
@@ -433,6 +464,7 @@ Console.WriteLine(32 - 12); //subtraction
 Console.WriteLine(4 * 5); // multiplication
 Console.WriteLine(321 / 44); // division
 Console.WriteLine(798 % 8); // modulus
+```
 
 ### Logical Operators
 
@@ -447,6 +479,7 @@ Logical operators are used when we want to evaluate an expression in order to ob
 The bang ! is used to flip the logic of an operator, most commonly paired with equals.
 != for not equal.
 
+```
 using System;
 
 // generate some random numbers between 0 and 100
@@ -460,6 +493,7 @@ if (i1 > i2) Console.WriteLine("i1 is greater than i2");
 if (i1 < i2) Console.WriteLine("i1 is less than i2");
 if (i1 >= i2) Console.WriteLine("i1 is greater or equal to i2");
 if (i1 <= i2) Console.WriteLine("i1 is less or equal to i2");
+```
 
 ### Bitwise Operators
 
@@ -471,6 +505,7 @@ A bitwise operators changes a value at the binary level.   The common bitwise op
 << for left shift.
 >> for right shift.
 
+```
 using System;
 
 // generate some random numbers between 0 and 100
@@ -483,6 +518,7 @@ Console.WriteLine(i1 | i2); // OR
 Console.WriteLine(i1 ^ i2); // XOR
 Console.WriteLine(i1 << i2); // Left Shift
 Console.WriteLine(i1 >> i2); // Right Shift
+```
 
 ## Control Flow
 
@@ -490,13 +526,16 @@ Console.WriteLine(i1 >> i2); // Right Shift
 
 We've already seen examples of the if statement in a previous module, although it was not explained.  The construct of the statement goes if "condition", followed by the code to execute.  The code inside the curly braces only executes if the condition evaluates to true.
 
+```
 if (condition)
 {
   // do something
 }
+```
 
 You can add an additional code block that will execute if the condition is false, rather than true.  This is done with the else keyword.
 
+```
 if (condition)
 {
   // do something
@@ -505,9 +544,11 @@ else
 {
   // do something else
 }
+```
 
 You can also add additional branches using else if.
 
+```
 if (condition)
 {
   // do something
@@ -520,11 +561,13 @@ else
 {
   // catch all
 }
+```
 
 Each condition is evaluated from top to bottom.  If one is true, the relevant code will execute, the flow will break out and no other conditions will be evaluated.  This allows the final else case to be a kind of "catch all" in the event that every condition evaluates to false.
 
 Multiple logical operators can be combined but this can lead to unexpected results if they're not evaluated in the proper order.  Consider the following example and make a prediction of the outcome.
 
+```
 using System;
 
 var condition1 = true;
@@ -533,6 +576,7 @@ var condition3 = false;
 
 if (condition1 || condition2 && condition3)
   Console.WriteLine("Good to go");
+```
 
 It seems that what we're trying to say is that condition1 OR condition2 needs to be true AND condition3 needs to be true as well.  Since condition3 is set to false, the entire expression should come out as false, right?  But it doesn't.
 
@@ -544,8 +588,10 @@ The next part of the expression is then evaluated, which is "condition1 || condi
 
 To address this, we need to put parenthesise around the OR expression to force it to be evaluated first.
 
+```
 if ((condition1 || condition2) && condition3)
   Console.WriteLine("Good to go");
+```
 
 Now it will evaluate "condition1 || condition2", which is true because condition1 is true.  But then true && condition3 comes out as false, because condition3 is false.  So this time, we don't see the "Good to go" message.  Rider has already correctly evaluated the condition to false.  It has greyed out the line to show that this code is not currently reachable, since as there's no code that changes the state of the conditions.
 
@@ -553,6 +599,7 @@ Now it will evaluate "condition1 || condition2", which is true because condition
 
 The switch keyword is a pattern-matching construct which allows you to add cases for certain conditions.  This is generally nicer to use than multiple else if statements.  Take the following example:
 
+```
 var animal = "Dog";
 
 if (animal == "Dog")
@@ -567,9 +614,11 @@ else
 {
   Console.WriteLine("Unknown");
 }
+```
 
 This can be condensed down into:
 
+```
 var animal = "Dog";
 var sound:string = animal switch
 {
@@ -579,6 +628,7 @@ var sound:string = animal switch
 };
 
 Console.WriteLine(sound);
+```
 
 The comparison is fairly self-explanatory and to my eye, nicer to read.  The _ => is used as a "catch all" in case none of the cases match.
 
@@ -586,6 +636,7 @@ The comparison is fairly self-explanatory and to my eye, nicer to read.  The _ =
 
 An enum (or enumeration) is a set of pre-defined constants (i.e. values that cannot be changed).  For example, we could have a "status" enum to indicate whether a person is dead or alive.
 
+```
 var (firstName:string, lastName:string, status) = ("Charles", "Dickens", Status.Dead);
 
 internal enum Status
@@ -593,11 +644,13 @@ internal enum Status
   Dead,
   Alive
 }
+```
 
 Under the hood, enums are referenced by integer values by default rather than strings or anything else.  In this case "Dead" is 0 and "Alive" is 1.  But this isn't actually a hard limitation - an enum can be based on other data types as well.
 
 You can also use enums with switch.
 
+```
 var (firstName:string, lastName:string, status) = ("Charles", "Dickens", Status.Dead);
 
 switch (status)
@@ -617,6 +670,7 @@ internal enum Status
   Dead,
   Alive
 }
+```
 
 ### Loops
 
@@ -628,10 +682,12 @@ Statement 1 is executed one time at the start of the loop.
 Statement 2 defines the condition for executing the loop code.
 Statement 3 is executed after every loop.
 
+```
 using System;
 
 for (var i = 0; i < 10; i++)
   Console.WriteLine($"i is {i}");
+```
 
 In this example:
 Statement 1: Initialises the starting value of a counter, i to 0.
@@ -640,21 +696,26 @@ Statement 3: increments i by 1 after each loop
 
 Once i is no longer less than 10, the loop will break.  These loops are commonly used to iterate over elements in a collection, using the length of the collection.
 
+```
 var array = new[] {1,2,3,4,5};
 for (var i = 0; i < array.Length; i++)
   Console.WriteLine(array[i]);
+```
 
 A while loop can be more flexible than a for loop, because we do not need a predetermined range to iterate over (although they can be written like that).  A while loop will loop forever whilst the condition is met.  This condition is usually defined outside of the loop itself but can be manipulated from inside the loop.
 
+```
 var i = 0;
 while (i < 10)
 {
   Console.WriteLine(i);
   i++;
 }
+```
 
 Another way to write this could be.
 
+```
 var i = 0;
 while (true)
 {
@@ -664,9 +725,11 @@ while (true)
   Console.WriteLine(i);
   i++;
 }
+```
 
 The break keyword can be used to break out of a loop at any time, regardless of whether its condition is met or not.  The continue keyword can be used to skip the remaining code in a loop and move immediately onto the next loop iteration.
 
+```
 var i = 0;
 while (i < 10)
 {
@@ -676,19 +739,23 @@ while (i < 10)
   Console.WriteLine(i);
   i++;
 }
+```
 
 You must be careful however, as this can introduce unexpected runtime bugs.  The code above will actually loop infinitely, because we continue before incrementing the counter.  Therefore never allowing it to go beyond 5.
 
 The foreach loop provides an easier way to loop over a collection without having to have a counter.
 
+```
 var list = new List<int> { 1, 2, 3, 4, 5 };
 foreach(var i:int in list)
   Console.WriteLine(i);
+```
 
 ### Scopes
 
 Variables only exist and are accessible within a given scope hierarchy.  A scope is created any time the curly braces, { } are used.  That means every loop and method has their own scope.  I used the word hierarchy, because as we've seen with loops, some scopes can exist inside other scopes.
 
+```
 {
   // "outer" scope
 
@@ -698,11 +765,13 @@ Variables only exist and are accessible within a given scope hierarchy.  A scope
 
   // "outer" scope
 }
+```
 
 Variable accessibility is relatively simple in these cases.  Anything declared in an "outer" scope is accessible from an "inner" scope.  This must be possible, otherwise loops would not function.  However, variables declared within an "inner" scope cannot be accessed in an "outer" scope.
 
 For example, the following code will throw the error "cannot find value `foo` in this scope" and will not compile.
 
+```
 {
   // "outer" scope
 
@@ -714,11 +783,13 @@ For example, the following code will throw the error "cannot find value `foo` in
   // "outer" scope
   Console.WriteLine(foo);
 }
+```
 
 ### Command Line Arguments
 
 In old versions of C#, you were required to structure the entry of your program with an explicit namespace, class and Main method.  The command line arguments were read in Main as a string array called args.  
 
+```
 namespace HelloWorld;
 
 internal static class Program
@@ -728,21 +799,27 @@ internal static class Program
     // do stuff
   }
 }
+```
 
 All of this boilerplate code is no longer required, but the args variable still exists and can be used as normal.
 
+```
 using System;
 
 for (var i = 0; i < args.Length; i++)
   Console.WriteLine($"Argument {i} is {args[i]}");
+```
 
+```
 PS C:\> dotnet run arg1 arg2 arg3
 Argument 0 is arg1
 Argument 1 is arg2
 Argument 2 is arg3
+```
 
 If your application has mandatory arguments, it's common to do a length check and exit from the program if not enough are provided.
 
+```
 using System;
 
 if (args.Length < 2)
@@ -756,15 +833,19 @@ void ShowUsage()
 {
   Console.WriteLine("Usage: app.exe <arg1> <arg2>");
 }
+```
 
+```
 PS C:\> dotnet run arg1
 Not enough arguments
 Usage: app.exe <arg1> <arg2>
+```
 
 ### Prompting for Input
 
 In addition to reading command line arguments when the program first runs, you may want to prompt the user for additional input whilst the program is running.  C# makes this unbelievably easy.
 
+```
 using System;
 
 while (true)
@@ -782,23 +863,30 @@ while (true)
   // print to stdout
   Console.WriteLine($"You said: {input}");
 }
+```
 
+```
 PS C:\> dotnet run
 > hello world
 You said: hello world
 >
+```
 
 String comparisons can be used to take action on certain input.  For example, typing "exit" to break out of the loop and close the program.  The string type has an Equals() method which is perfect for this.
 
+```
 // break if "exit"
 if (input.Equals("exit"))
   break;
+```
 
 By default, this method is case-sensitive which means "EXIT", "eXiT", etc would not match.  You can provide a StringComparison enum to make it case-insensitive.
 
+```
 // break if "exit"
 if (input.Equals(value:"exit", StringComparison.OrdinalIgnoreCase))
   break;
+```
 
 ## Classes & Methods
 
@@ -806,15 +894,18 @@ if (input.Equals(value:"exit", StringComparison.OrdinalIgnoreCase))
 
 Classes in C# are the heart of how it handles object-oriented programming and can be thought of as templates to store and/or operate on data.  For example, let's create a class to represent a person and the properties of a person that we want to work with.
 
+```
 internal class Person
 {
   public string FirstName { get; set; }
   public string LastName { get; set; }
   public DateOnly DateOfBirth { get; set; }
 }
+```
 
 After the class has been defined, we can create an instance of a person.
 
+```
 var person = new Person
 {
   FirstName = "Charles",
@@ -828,3 +919,4 @@ internal class Person
   public string LastName { get; set; }
   public DateOnly DateOfBirth { get; set; }
 }
+```
