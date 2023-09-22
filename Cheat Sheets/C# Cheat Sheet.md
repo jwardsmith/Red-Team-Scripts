@@ -450,11 +450,11 @@ This time, the printed order is 3, 2, and 1.
 
 I'm sure we've all come across mathematical operators before.  There is not much interesting to say about them.  Common ones include:
 
-+ for add.
-- for subtract.
-* for multiply.
-/ for divide.
-% for modulus.
+- + for add.
+- - for subtract.
+- * for multiply.
+- / for divide.
+- % for modulus.
 
 ```
 using System;
@@ -470,11 +470,11 @@ Console.WriteLine(798 % 8); // modulus
 
 Logical operators are used when we want to evaluate an expression in order to obtain a true or false outcome.  This could be as simple as comparing the size of two numbers.  The most common operators are:
 
-== for equals.
-> for greater than.
-< for less than.
->= for greater than or equal to.
-<= for less than or equal to.
+- == for equals.
+- > for greater than.
+- < for less than.
+- >= for greater than or equal to.
+- <= for less than or equal to.
 
 The bang ! is used to flip the logic of an operator, most commonly paired with equals.
 != for not equal.
