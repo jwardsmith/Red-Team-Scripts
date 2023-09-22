@@ -453,7 +453,7 @@ I'm sure we've all come across mathematical operators before.  There is not much
 - + for add.
 - - for subtract.
 - * for multiply.
-- / for divide.
+- // for divide.
 - % for modulus.
 
 ```
