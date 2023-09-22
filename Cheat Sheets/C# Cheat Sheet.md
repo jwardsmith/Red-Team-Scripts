@@ -920,3 +920,62 @@ internal class Person
   public DateOnly DateOfBirth { get; set; }
 }
 ```
+
+### Properties
+
+FirstName, LastName and DateOfBirth are all "properties" on this class.  The get and set methods define how the data can be read or modified.  The accessibility on the properties is marked as public, which allows access from outside of the class.  This makes sense in most cases, but not others.  For example, the date of birth of a person does not change, so we may not want this data to be modified after it has been set.
+
+To that end, we can replace set with init.  This prevents us from changing the data after the initial value has been set.
+
+```
+var person = new Person
+{
+  FirstName = "Charles",
+  LastName = "Dickens",
+  DateOfBirth = new DateOnly(year:1812, month:2, day:7)
+};
+
+person.DateOfBirth = new DateOnly(year:0000, month:0, day:0);
+
+internal class Person
+{
+  public string FirstName { get; set; }
+  public string LastName { get; set; }
+  public DateOnly DateOfBirth { get; init; }
+}
+```
+
+We can also define "computed" properties that can be made up of data from existing properties.  For example, we have FirstName and LastName, but what if we wanted a FullName as well?  No problem.
+
+```
+var person = new Person
+{
+  FirstName = "Charles",
+  LastName = "Dickens",
+  DateOfBirth = new DateOnly(year:1812, month:2, day:7)
+};
+
+Console.WriteLine(person.FullName);
+
+internal class Person
+{
+  public string FirstName { get; set; }
+  public string LastName { get; set; }
+  public string FullName => $"{FirstName} {LastName}";
+  public DateOnly DateOfBirth { get; init; }
+}
+```
+
+The lamba acts as a shorthand for:
+
+```
+public string FullName
+{
+  get
+  {
+    return $"{FirstName} {LastName}";
+  }
+}
+```
+
+An Age property is another good candidate for a computed property, as it could be calculated from the current date and the date of birth.
