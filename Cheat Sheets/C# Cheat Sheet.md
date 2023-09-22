@@ -471,9 +471,9 @@ Console.WriteLine(798 % 8); // modulus
 Logical operators are used when we want to evaluate an expression in order to obtain a true or false outcome.  This could be as simple as comparing the size of two numbers.  The most common operators are:
 
 - == for equals.
-- > for greater than.
+- \> for greater than.
 - < for less than.
-- >= for greater than or equal to.
+- \>= for greater than or equal to.
 - <= for less than or equal to.
 
 The bang ! is used to flip the logic of an operator, most commonly paired with equals.
@@ -500,7 +500,7 @@ if (i1 <= i2) Console.WriteLine("i1 is less or equal to i2");
 A bitwise operators changes a value at the binary level.   The common bitwise operators are
 
 & for AND.
-| for OR.
+\| for OR.
 ^ for XOR.
 << for left shift.
 >> for right shift.
