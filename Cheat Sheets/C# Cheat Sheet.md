@@ -1039,3 +1039,40 @@ var person = new Person(
 It's worth noting that C# often doesn't care if something is split across multiple lines and it is often preferable to improve readability.
 
 A class can also have multiple constructors if you want to allow different ways to instantiate the class.
+
+### Methods
+
+A class can contain methods (sometimes also called functions), that are useful when needing to get or set data associated with a particular instance of a class.  Let's go back to the DateOfBirth property again.  Let's say we do want to allow it to be changed (in case there was a data input error the first time), but we want some data validation logic around it.  For example, we may not want a date of birth to be set to a date in the future.
+
+The first step is to change the accessibility of the DateOfBirth property.  We previously set it to init, but now we want it to change.  It needs to be private set to ensure the data can only be set from inside the class (i.e. the method we're going to write).
+
+```
+public DateOnly DateOfBirth { get; private set; }
+
+public bool SetDateOfBirth(DateOnly dob)
+{
+  if (dob > DateOnly.FromDateTime(DateTime.UtcNow))
+    return false;
+
+  DateOfBirth = dob;
+  return true;
+}
+```
+
+This SetDateOfBirth method takes a DateOnly value and return a bool to indicate whether the property was set or not.  It will simply convert the current UTC time to a DateOnly format and compare it with the dob parameter supplied.  If dob is greater, then it must be in the future - in which case the method will return false without changing the property.  Otherwise, it will set the property and return true.
+
+```
+// create person with "wrong" dob
+var person = new Person(firstName:"Charles", lastName"Dickens", DateOnly.MinValue);
+
+// this should fail
+var success:bool = person.SetDateOfBirth(dob:new DateOnly(year:2030, month:1, day:1));
+Console.WriteLine(success ? "Successfully set DOB" : "Setting DOB failed");
+
+// this should succeed
+success = person.SetDateOfBirth(dob:new DateOnly(year:1812, month:2, day:7));
+Console.WriteLine(success ? "Successfully set DOB" : "Setting DOB failed");
+
+//confirm
+Console.WriteLine(person.DateOfBirth);
+```
