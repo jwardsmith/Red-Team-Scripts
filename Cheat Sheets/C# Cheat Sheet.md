@@ -1900,3 +1900,45 @@ internal enum ProcessAccessRights : uint
   PROCESS_VM_OPERATION = 0x0008
 }
 ```
+
+## NuGet
+
+### NuGet
+
+NuGet is the .NET package manager, which allows you to bring external code into your project.  The most popular NuGet repository is https://www.nuget.org/, where anybody can write and publish libraries.  These packages can be mind-bogglingly useful and can save you a tonne of time as a developer.  Why re-invent the wheel if you don't need to?
+
+One popular package is RestSharp which is a REST API client.  You can search for and install NuGet packages directly in Rider by going to Tools > NuGet > Show NuGet Tool Window.
+
+Packages can also be installed directly from the command line.
+
+```
+PS C:\> dotnet add package RestSharp
+```
+
+As a test, we can call the CoinGecko API to get the current Bitcoin prices.
+
+```
+var client = new RestClient(baseUrl:new Uri("https://api.coingecko.com/api/v3/"));
+var req = new RestRequest(resource:"simple/price?ids=bitcoin&vs_currencies=GBP%2CUSD");
+
+Console.WriteLine("Current BTC Price:");
+Console.WriteLine($"GBP : ${resp.Bitcoin.Gbp}");
+Console.WriteLine($"USD : ${resp.Bitcoin.Usd}");
+
+internal class Bitcoin
+{
+  [JsonPropertyName("gbp")] public double Gbp { get; set; }
+  [JsonPropertyName("usd")] public double Usd { get; set; }
+}
+
+internal class Root
+{
+  [JsonPropertyName("bitcoin")] public Bitcoin Bitcoin { get; set; }
+}
+```
+
+```
+Current BTC Price:
+GBP : $17899.03
+USD : $21666
+```
