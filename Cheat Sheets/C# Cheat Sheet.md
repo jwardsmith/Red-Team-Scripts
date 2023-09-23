@@ -1481,3 +1481,43 @@ T DeserializePerson<T>(byte[] json)
   return JsonSerializer.Deserialize<T>(ms);
 }
 ```
+
+### Constraints
+
+One concern that generics introduce is passing a nonsensical data type into the method.  These methods are designed for serializing/deserializing objects to/from JSON, but not everything is serializable.  For example - the compiler allows us to pass an empty memory span which builds just fine, but will throw an InvalidOperationException at runtime.
+
+```
+var json:byte[] Serialize(obj:new Memory<string>());
+Console.WriteLine(Encoding.Default.GetString(json));
+```
+
+```
+byte[] Serialize<T>(T obj)
+{
+  using var ms = new MemoryStream();
+  JsonSerializer.Serialize(ms, obj);
+
+> Unhandled exception
+> InvalidOperationException
+```
+
+We could (and perhaps should) implement a try/catch which will return an empty byte array, but it would also be useful if we could prevent a developer from passing in this data type in the first place.  These are called constraints.
+
+Constraints are declared using the where keyword and are usually found on methods or classes.  The syntax is where T :, followed by a comma-separated list of constraints.
+
+```
+byte[] Serialize<T>(T obj) where T : class
+```
+
+In this example, the class constraint means that T must be a reference type (classes are reference types, and structs are value types).  All the possible constraints are documented by Microsoft.
+
+Now the compiler won't allow us to build the code.
+
+```
+var json:byte[] Serialize(obj:new Memory<string>());
+Console.WriteLine(Encoding.Default.GetString(json));
+
+byte[] Serialize<T>(T obj) where T : class
+
+> The type 'System.Memory<string>' must be a reference type in order to use it as paramter 'T'
+```
