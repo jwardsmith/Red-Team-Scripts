@@ -1942,3 +1942,48 @@ Current BTC Price:
 GBP : $17899.03
 USD : $21666
 ```
+
+### dotnet pack
+
+You can create your own libraries and publish them as NuGet packages.  First, create a new .NET Class Library project and implement a simple calculator.
+
+```
+using System.Numerics;
+
+namespace Calculator;
+
+public class Calculator<T> where T: IBinaryInteger<T>
+{
+  public T Add(T i1, T 12)
+    => i1 + i2;
+
+  public T Subtract(T i1, T 12)
+    => i1 - i2;
+
+  public T Multiply(T i1, T 12)
+    => i1 * i2;
+
+  public T Divide(T i1, T 12)
+    => i1 / i2;
+)
+```
+
+The usual build process to output a DLL would be something like:
+
+```
+PS C:\> dotnet build -c Release
+  Calculator -> C:\Users\James\source\repos\Calculator\Calculator\bin\Release\net7.0\Calculator.dll
+```
+
+However, to produce a NuGet package:
+
+```
+PS C:\> dotnet pack
+    Successfully created package 'C:\Users\James\source\repos\Calculator\Calculator\bin\Debug\Calculator.1.0.0.nupkg'.
+```
+
+The resulting nupkg package can be shared as-is, at nuget.org or your own NuGet package server.
+
+## Testing
+
+### Unit Tests
