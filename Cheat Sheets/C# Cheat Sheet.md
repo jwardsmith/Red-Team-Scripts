@@ -1218,3 +1218,37 @@ cat.MakeNoise();
 Woof
 Meow
 ```
+
+### Interfaces
+
+An interface is another form of abstraction - it's like an abstract class, but can only contain methods and properties.  You cannot define methods that also have implementations.
+
+The naming convention for an interface is to have it begin with an "I".
+
+```
+internal interface IAnimal
+{
+  string Name { get; }
+  void MakeNoise();
+}
+```
+
+A class can inherit from an interface in the same way as an abstract class.
+
+```
+public class Dog : IAnimal
+{
+
+  public string Name { get; }
+
+  public Dog(string name)
+  {
+    Name = name;
+  }
+
+  public void MakeNoise()
+  {
+    Console.WriteLine($"Woof, my name is {Name}.");
+  }
+}
+```
