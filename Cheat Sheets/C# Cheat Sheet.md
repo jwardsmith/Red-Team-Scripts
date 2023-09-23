@@ -1448,3 +1448,36 @@ internal class Person
 ```
 
 Here we have a Person class that has been decorated with the Serializable attribute and each property in that class has the JsonPropertyName attribute.  The SerializePerson method takes in a Person and uses the .NET System.Text.Json.JsonSerializer to convert it to a JSON string (encoded as bytes).  The DeserializePerson method then does the opposite - it takes in the encoded JSON string and returns a Person object.
+
+```
+var person = new Person
+{
+  FirstName = "Rasta",
+  LastName = "Mouse"
+};
+
+var json:byte[] = SerializePerson(person);
+Console.WriteLine(Encoding.Default.GetString(json));
+```
+
+```
+{"first_name":"Rasta","last_name":"Mouse"}
+```
+
+Now imagine that we have multiple classes that we want to serialize and deserialize - having separate methods for every class is clearly not very efficient and would be a maintenance nightmare.  What we can do instead is refactor these methods to accept generics.  We can do this by replacing the concrete type of Person, with T.
+
+```
+byte[] SerializePerson<T>(T obj)
+{
+  using var ms = new MemoryStream();
+  JsonSerializer.Serialize(ms, obj);
+
+  return ms.ToArray();
+}
+
+T DeserializePerson<T>(byte[] json)
+{
+  using var ms = new MemoryStream(json);
+  return JsonSerializer.Deserialize<T>(ms);
+}
+```
