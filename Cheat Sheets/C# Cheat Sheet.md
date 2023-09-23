@@ -1081,6 +1081,7 @@ Console.WriteLine(person.DateOfBirth);
 
 Polymorphism is a trait of object oriented programming which makes them very versatile by allowing classes to become related by inheritance.  In this example, I have an Animal class which has a single property, Name; and two further classes, Dog and Cat which inherit from Animal (declared using :).
 
+```
 internal class Animal
 {
   public string Name { get; set; }
@@ -1103,3 +1104,53 @@ We can then instantiate an instance of Dog and Cat, and they will automatically 
 var dog = new Dog { Name = "Lassie" };
 var cat = new Cat { Name = "Salem" };
 ```
+
+### Abstraction
+
+By default, every (non-static) class can be instantiated, which is not always desirable.  We created some classes to represent different animals in the previous example, but it may not make sense to be able to create an instance of the Animal class itself.
+
+In this case, we can mark the class as abstract.
+
+```
+// now we cannot do this
+var animal = new Animal();
+
+internal abstract class Animal
+{
+
+  public string Name { get; set; }
+}
+```
+
+As well as properties, classes can inherit methods from their parents.
+
+```
+internal abstract class Animal
+{
+
+  public string Name { get; set; }
+
+  public void SayYourName()
+  {
+    Console.WriteLine($"My name is {Name}");
+  }
+}
+```
+
+Even though this method is declared on the Animal class, we can call it on our instance of Dog and Cat, and it will print their own names respectively.
+
+```
+var dog = new Dog { Name = "Lassie" };
+dog.SayYourName();
+
+var cat = new Cat { Name = "Salem" };
+cat.SayYourName();
+```
+
+```
+My name is Lassie
+My name is Salem
+```
+
+### Overrides
+
