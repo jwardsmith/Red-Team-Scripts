@@ -1774,3 +1774,68 @@ Dianne Soria, born on 26/07/1979, age 44.
 ```
 
 Over the next few sections, we'll cover some common LINQ methods.
+
+### Where
+
+Where filters the collection based on the provided predicate and returns an IEnumerable<T>.  In the example shown previously, we used this to find people where the Year property of their DateOfBirth was greater than 1975.  The predicate can contain one or multiple conditions and be a combination of AND's, ORs, and so on.
+
+Here, we're looking for people 50 or younger and born on a Monday.
+
+```
+// find everyone 50 or younger, born on a Monday
+var persons:Person[] = people.Where(p:Person => p.DateOfBirth.DayOfWeek == DayOfWeek.Monday && p.Age <= 50).ToArray();
+```
+
+Predicates that have multiple conditions can look a bit unwieldly when written in this way.  You may also extract the code in to a separate method, which is also useful if you need to use it multiple times.
+
+```
+var persons:Person[] = people.Where(FiftyOrYoungerBornOnMonday).ToArray();
+
+bool FiftyOrYoungerBornOnMonday(Person person)
+{
+  return person.Age <= 50 &&
+    person.DateOfBirth.DayOfWeek == DayOfWeek.Monday;
+}
+```
+
+### Any
+
+Any returns a bool, indicating whether a collection has any elements matching the predicate.  If no predicate is provided, it indicates whether or not the collection is empty.
+
+```
+if (people.Any())
+  Console.WriteLine("People has elements");
+
+if (!people.Any(p:Person => p.Age < 20))
+  Console.WriteLine("Nobody is under the age of 20");
+```
+
+### First(OrDefault)
+
+First returns the first element of a collection that matches the predicate.  If no predicate is provided, it will just return the first element of the collection.
+
+```
+var person = people.First(p:Person => p.LastName.StartsWith("F"));
+Console.WriteLine(person.FullName);
+```
+
+If no element matches the predicate, an InvalidOperationException, "sequence contains no matching element" exception will be thrown.  FirstOrDefault can be used to return null if no elements are found.  This saves the program from throwing an exception, but a null reference check should be performed on the returned object.
+
+```
+var person = people.FirstOrDefault(p:Person => p.LastName.StartsWith("D"));
+Console.WriteLine(person is null ? "No matching person found" : person.FullName);
+```
+
+### OrderBy(Descending)
+
+OrderBy and OrderByDescending allow you to order a collection based on a key.  It uses the equality comparer for the specific data type.
+
+```
+// youngest to oldest
+var ascending:|OrderedEnumerable<Person> = people.OrderBy(p:Person => p.Age);
+
+// oldest to youngest
+var descending:|OrderedEnumerable<Person> = people.OrderByDescending(p:Person => p.Age);
+```
+
+You can implement your own comparer (inherit from IComparer) to compare custom data types.
