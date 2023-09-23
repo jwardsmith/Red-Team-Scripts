@@ -1521,3 +1521,63 @@ byte[] Serialize<T>(T obj) where T : class
 
 > The type 'System.Memory<string>' must be a reference type in order to use it as paramter 'T'
 ```
+
+## Concurrency
+
+### Concurrency
+
+A single-core CPU has a single physical core that is designed to run at a given frequency (clock speed), with a single thread.  These CPUs are slow when handling multiple tasks, because each task has to wait for the previous one to finish before it can be dealt with.
+
+CPU architecture began to drastically change in the early 2000's with the introduction of multi-core CPUs and in the mid-2000's, products such as the AMD Athlon 64 X2 and Intel Core 2 duo brought this to the regular desktop-computing space.  Multi-core CPUs contain multiple physical cores on the same die that are linked together, which allow for concurrent tasks to be handled in parallel.
+
+As you can imagine, programming languages that were developed prior to multi-core CPUs were not optimised (or even able) to run concurrent tasks.  There are quite a few ways to run code and methods concurrently in C#.  The three we're going to look at are Thread, Task and Parallel.
+
+### Threads
+
+New threads are easy to create from the System.Threading namespace, with either a ThreadStart or ParameterizedThreadStart delegate.  The former is a method that does not have input parameters, and the later is a method that has one input parameter.  In both cases, the return type is always void.
+
+A new thread will not run until Start is called.
+
+```
+using System;
+using System.Threading;
+
+var t1 = new Thread(RunLoop);
+var t2 = new Thread(RunLoop);
+
+t1.Start();
+t2.Start();
+
+void RunLoop()
+{
+  for (var i = 1; i <= 10; i++)
+    Console.WriteLine(i);
+}
+```
+
+A thread is run in the foreground by default, but can be made to run in the background by setting the IsBackground property to true.
+
+```
+var t1 = new Thread(RunLoop)
+{
+  IsBackground = true
+};
+```
+
+The only difference being that a program will not automatically close if there are any foreground threads running.  Backgrounds threads will not keep the program alive if all foregrounds threads finish.
+
+A single parameter can be passed to a thread via it's Start method.  The parameter on the method must be declared as an object, which means a type check should be performed on it before use.
+
+```
+t1.Start(parameter:10);
+t2.Start(parameter:5);
+
+void RunLoop(object obj)
+{
+  if (obj is not int counter)
+    return;
+
+  for (var i = 1; i <= counter; i++)
+    Console.WriteLine(i);
+}
+```
