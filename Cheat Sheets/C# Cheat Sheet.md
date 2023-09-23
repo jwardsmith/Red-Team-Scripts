@@ -1581,3 +1581,83 @@ void RunLoop(object obj)
     Console.WriteLine(i);
 }
 ```
+
+### Task
+
+The Task.Run methods looks the same as when dealing with the thread, but returns a Task<TResult>.  These tasks must be awaited somewhere to prevent the program from closing before they're finished.  A Task can be waited on with the await keyword and execution flow will be blocked until the task is complete.
+
+```
+using System;
+using System.Threading.Tasks;
+
+var t1:Task = Task.Run(PrintLoop);
+var t2:Task = Task.Run(PrintLoop);
+
+await Task.WhenAll(t1, t2);
+
+void PrintLoop()
+{
+  for (var i = 0; i <= 10; i++)
+    Console.WriteLine(i);
+}
+```
+
+The return value of a Task can be accessed upon completion.
+
+```
+var result:int = await Task.Run(RunLoop);
+Console.WriteLine(result);
+
+int RunLoop()
+{
+  var total = 0;
+
+  for (var i = 1; i <= 10; i++)
+    total += i;
+
+  return total;
+}
+```
+
+### Parallel
+
+The Parallel class has a few interesting methods that are designed to run concurrently over a range or collection - like the for and foreach loops.  Parallel.For takes a starting and ending integer, and a method to execute.  The method accepts the integer as a parameter.
+
+```
+using System;
+using System.Threading.Tasks;
+
+Parallel.For(fromInclusive:1, toExclusive:10, Print);
+
+void Print(int i)
+{
+  Console.WriteLine($"This is loop #{i}");
+}
+```
+ 
+Parallel.ForEach takes a collection and a method - the method accepts the datatype, T, of the collection.
+
+```
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
+var people = new List<Person>
+{
+  new(name:"Stephen King"),
+  new(name:"George Orwell"),
+  new(name:"Charles Dickens"),
+  new(name:"Mark Twain")
+};
+
+Parallel.ForEach(people, PrintPeople);
+
+void PrintPeople(Person person)
+{
+  Console.WriteLine(person.Name);
+}
+```
+
+In each case, you'll see that the values are printed to the console in a seemingly random order.  This is because every loop iteration is run at exactly the same time.
+
+### Channels
