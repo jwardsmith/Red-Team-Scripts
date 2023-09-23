@@ -1715,3 +1715,12 @@ This is loop 8
 This is loop 9
 Channel has been closed
 ```
+
+## LINQ
+
+### LINQ
+
+LINQ is short for Language-Integrated Query and allows you to write queries against strongly typed collections using C# keywords and operators.  It's especially useful when querying objects that have multiple properties.  LINQ can be complicated to explain, so here's a quick example to get started.
+
+We have our Person class again and a collection of random people.
+
