@@ -1410,3 +1410,41 @@ This is the only exception the method will catch, because it's the only error it
 
 We've seen instances where letters such as T are used to represent a data type, such as List<T>.  This allows you to create a list containing any data type, even custom classes that you create.  For example, we could have a List<Person>.
 
+```
+using System.Collections.Generic;
+
+var people = new List<Person>();
+
+internal class Person
+{
+
+}
+```
+
+This is far more flexible than having specific concrete implementations only for C#'s default data types.  You can also leverage generics in your own classes and methods.  Let's use (de)serialization as a working example.
+
+```
+byte[] SerializePerson(Person person)
+{
+  using var ms = new MemoryStream();
+  JsonSerializer.Serialize(ms, person);
+
+  return ms.ToArray();
+}
+
+Person DeserializePerson(byte[] json)
+{
+  using var ms = new MemoryStream(json);
+  return JsonSerializer.Deserialize<Person>(ms);
+}
+
+[Serialize]
+
+internal class Person
+{
+  [JsonPropertyName("first_name")] public string FirstName { get; set; }
+  [JsonPropertyName("last_name")] public string LastName { get; set; }
+}
+```
+
+Here we have a Person class that has been decorated with the Serializable attribute and each property in that class has the JsonPropertyName attribute.  The SerializePerson method takes in a Person and uses the .NET System.Text.Json.JsonSerializer to convert it to a JSON string (encoded as bytes).  The DeserializePerson method then does the opposite - it takes in the encoded JSON string and returns a Person object.
