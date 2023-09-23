@@ -1252,3 +1252,17 @@ public class Dog : IAnimal
   }
 }
 ```
+
+## Error Handling
+
+### Exception
+
+When bad things happen in C#, they can cause exceptions to be thrown.  If those exceptions are not caught and dealt with, the program will crash.  For example - the following code will throw an IndexOutOfRangeException because we're trying to access the 6th element of an array that only has 5 elements.
+
+It will then crash before it gets to the second Console.WriteLine().
+
+```
+var array = new[] {1, 2, 3, 4, 5 };
+Console.WriteLine(array[5]);
+Console.WriteLine("I'm still alive...");
+```
