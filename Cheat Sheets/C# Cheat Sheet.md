@@ -1154,3 +1154,67 @@ My name is Salem
 
 ### Overrides
 
+We can also declare abstract methods on a class, which will force those inheriting it to provide their own implementation.
+
+```
+internal abstract class Animal
+{
+
+  public string Name { get; set; }
+
+  public void SayYourName()
+  {
+    Console.WriteLine($"My name is {Name}");
+  }
+
+  public abstract void MakeNoise();
+}
+```
+
+We don't want to define the body of the method on the abstract class, because each inheriting type (Dog, Cat, etc) will want to do this in a different way.  Methods marked as abstract are mandatory, so Rider will alert us that Dog and Cat are not currently implementing them.
+
+```
+internal class Dog : Animal
+{
+
+}
+> Abstract inherited member 'void Animal.MakeNoise()' is not implemented
+internal class Cat : Animal
+{
+
+}
+> Abstract inherited member 'void Animal.MakeNoise()' is not implemented
+```
+
+```
+internal class Dog : Animal
+{
+  public override void MakeNoise()
+  {
+    Console.WriteLine("Woof");
+  }
+}
+
+internal class Cat : Animal
+{
+  public override void MakeNoise()
+  {
+    Console.WriteLine("Meow");
+  }
+}
+```
+
+When called, we'll see the different output for each.
+
+```
+var dog = new Dog { Name = "Lassie" };
+dog.MakeNoise();
+
+var cat = new Cat { Name = "Salem" };
+cat.MakeNoise();
+```
+
+```
+Woof
+Meow
+```
