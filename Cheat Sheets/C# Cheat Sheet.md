@@ -1661,3 +1661,57 @@ void PrintPeople(Person person)
 In each case, you'll see that the values are printed to the console in a seemingly random order.  This is because every loop iteration is run at exactly the same time.
 
 ### Channels
+
+Channels can be used as a means of communicating directly between threads and tasks.  They are effectively a thread-safe queue that allows a "producer" to write message into and a "consumer" to read messages from.  There are two main types of channel - unbounded and bounded.  An unbound channel allows for infinite message capacity, whilst a bounded channel explicitly sets a maximum message capacity.
+
+When creating a channel, you must provide a data type, T depending on what you want the channel to handle.
+
+```
+using System;
+using System.Threading.Channels;
+using System.Threading.Tasks;
+
+var channel = Channel.CreateUnbounded<string>();
+
+var task = Task.Run(async () =>
+{
+  for (var i = 0; i < 10; i++)
+    await channel.Writer.WriteAsync(item:$"This is loop {i}");
+
+  channel.Writer.Complete();
+});
+```
+
+Here, we're creating a new unbounded channel of type string, then dropping into a Task.Run.  Within that task, we're calling WriteAsync on the channel's Writer with a message.  One we've finished writing we call Complete() on the writer, after which, no more messages can be sent.
+
+```
+while (!task.IsCompleted)
+{
+  try
+  {
+    var message:string = await channel.Reader.ReadAsync();
+    Console.WriteLine(message);
+  }
+  catch (ChannelClosedException)
+  {
+    Console.WriteLine("Channel has been closed");
+    break;
+  }
+}
+```
+
+Outside of the task, we drop into another loop for as long as our task is not complete.  We continuously attempt to read messages from the channel's Reader, using ReadAsync() and write them to the console.  We're catching the ChannelClosedException, which is triggered once Complete is called on the writer.  We use this as a signal to break out of the loop and continue execution flow.
+
+```
+This is loop 0
+This is loop 1
+This is loop 2
+This is loop 3
+This is loop 4
+This is loop 5
+This is loop 6
+This is loop 7
+This is loop 8
+This is loop 9
+Channel has been closed
+```
