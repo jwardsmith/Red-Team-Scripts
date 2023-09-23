@@ -1266,3 +1266,79 @@ var array = new[] {1, 2, 3, 4, 5 };
 Console.WriteLine(array[5]);
 Console.WriteLine("I'm still alive...");
 ```
+
+### Try/Catch
+
+Exceptions can be handled using the try / catch keywords.  If we structure the code this way, the exception will be handled safely and we will see the second line get printed, as the program will no longer crash.
+
+```
+var array = new[] {1, 2, 3, 4, 5 };
+
+try
+{
+  Console.WriteLine(array[5]);
+}
+catch (Exception e)
+{
+  Console.WriteLine($"Something went wrong: {e.Message}");
+}
+
+Console.WriteLine("I'm still alive...");
+```
+
+The try/catch blocks add quite a lot of bulk to the code, so instead of being over-reliant on them you should really write your code more safely in the first place.
+
+In addition to try / catch, there's the finally keyword.  Code inside the finally block is always executed, regardless of whether an exception was thrown or not.  This is useful for scenarios such as database access because we would likely want to close the connection in either case.  Failure to do so could lead to connection exhaustion or database locks, etc.
+
+```
+var conn = new SqlConnection("blah");
+conn.Open();
+
+var command = new SqlCommand(cmdtext:"insert whatever into something...");
+
+try
+{
+  // execute db query
+  command.ExecuteNonQuery();
+}
+catch
+{
+  // catch any exceptions
+  // raise error to user
+}
+finally
+{
+  conn.Close();
+}
+```
+
+### Catching Specific Exceptions
+
+There are multiple types of exception in C#, all of which inherit from the base Exception class.  The IndexOutOfRangeException mentioned earlier inherits from SystemException, which in turn inherits from Exception.  By putting Exception in the catch block, we're catching every single type of exception that C# can produce.
+
+This is useful in terms of accounting for all possibilities, but there may be cases where we actually want to know what kind of exception is being thrown and act accordingly.  For example, if we're working with threads and cancellation tokens, there are a few exceptions that we could potentially see.
+
+Declaring multiple catch blocks allows us to handle each case.
+
+```
+try
+{
+  // do something
+}
+catch (TaskCanceledException)
+{
+  // handle task cancelled
+}
+catch (ThreadAbortException)
+{
+  // handle thread aborted
+}
+catch (OperationCanceledException)
+{
+  // handle operation cancelled
+}
+catch (Exception)
+{
+  // catch all
+}
+```
