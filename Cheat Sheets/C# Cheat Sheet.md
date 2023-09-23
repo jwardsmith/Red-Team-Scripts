@@ -1765,3 +1765,12 @@ Console.WriteLine($"Found {persons.Length} people. They are: ");
 foreach (var person in persons)
   Console.WriteLine($"{person.FullName}, born on {person.DateOfBirth}, age {person.Age}.");
 ```
+
+```
+Found 3 people. They are:
+Rosemarie Pickens, born on 17/05/1993, age 30.
+Hester Funk, born on 01/11/1986, age 37.
+Dianne Soria, born on 26/07/1979, age 44.
+```
+
+Over the next few sections, we'll cover some common LINQ methods.
