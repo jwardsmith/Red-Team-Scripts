@@ -1076,3 +1076,30 @@ Console.WriteLine(success ? "Successfully set DOB" : "Setting DOB failed");
 //confirm
 Console.WriteLine(person.DateOfBirth);
 ```
+
+### Polymorphism
+
+Polymorphism is a trait of object oriented programming which makes them very versatile by allowing classes to become related by inheritance.  In this example, I have an Animal class which has a single property, Name; and two further classes, Dog and Cat which inherit from Animal (declared using :).
+
+internal class Animal
+{
+  public string Name { get; set; }
+}
+
+internal class Dog : Animal
+{
+
+}
+
+internal class Cat : Animal
+{
+
+}
+```
+
+We can then instantiate an instance of Dog and Cat, and they will automatically have a Name property.
+
+```
+var dog = new Dog { Name = "Lassie" };
+var cat = new Cat { Name = "Salem" };
+```
