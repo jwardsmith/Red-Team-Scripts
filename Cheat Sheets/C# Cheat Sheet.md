@@ -1342,3 +1342,71 @@ catch (Exception)
   // catch all
 }
 ```
+
+### Error Propagation
+
+It's quite common to structure code in such a way that functions will call other functions.  This is generally because modular code is more usable and leads to less code repetition.  In this example, I have a program that opens a file and reads the content as a string.
+
+```
+using System;
+using System.IO;
+
+var content:string = ReadFile(path:"C:\\test.txt");
+Console.WriteLine(content);
+
+string ReadFile(string path)
+{
+  using var fs:FileStream = OpenFileStream(path);
+  using var sr = new StreamReader(fs);
+
+  return sr.ReadToEnd();
+}
+
+FileStream OpenFileStream(string path)
+{
+  return File.OpenRead(path);
+}
+```
+
+When I run this code, OpenFileStream throws a FileNotFoundException because the path C:\test.txt does not exist on my computer.  So how do we handle such a case?  We could wrap the call to File.OpenRead() in a try/catch block, but the method still has to return a FileStream and we don't have one.
+
+If we return null, ReadFile will then throw an ArgumentNullException because you can't pass null into a StreamReader.  That would force us to implement another try/catch and then figure out how to return data back to the main caller.
+
+All this gets very messy and is really not necessary as exceptions in C# are automatically propagated up the call stack.  This means if any method along the chain throws an exception, it is automatically passed back to the original caller.
+
+```
+try
+{
+  var content:string = ReadFile(path:"C:\\test.txt");
+  Console.WriteLine(content);
+}
+catch (IOException e)
+{
+  Console.WriteLine(e.Message);
+}
+```
+
+You should only catch exceptions in a method if that method can reasonably recover from the error.  In this example, maybe we would want OpenFileStream to catch the FileNotFoundException, create a new file and return that FileStream back.
+
+```
+FileStream OpenFileStream(string path)
+{
+  try
+  {
+    return File.OpenRead(path);
+  }
+  catch (FileNotFoundException)
+  {
+    return File.Create(path);
+  }
+}
+```
+
+This is the only exception the method will catch, because it's the only error it can recover from.  Any other exception will still be thrown up the call stack.  Do not catch exceptions in a method that cannot recover it - allow the error to propagate up the stack until it reaches a point where it can be recovered, or the error presented to an end user.
+
+## Generics
+
+### Generic Types
+
+We've seen instances where letters such as T are used to represent a data type, such as List<T>.  This allows you to create a list containing any data type, even custom classes that you create.  For example, we could have a List<Person>.
+
