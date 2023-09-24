@@ -27,7 +27,7 @@ Web Application Penetration Testing
 ------------------------
 - Portswigger Academy: :warning: https://portswigger.net/web-security
 - Hack The Box Certified Bug Bounty Hunter (HTB CBBH): https://academy.hackthebox.com/preview/certifications/htb-certified-bug-bounty-hunter
-- Offensive Security Web Expert (OSWE): https://www.offensive-security.com/awae-oswe/
+- Offensive Security Web Expert (OSWE): :warning: https://www.offensive-security.com/awae-oswe/
 - Hackerone: https://www.hackerone.com/
 - Bugcrowd: https://www.bugcrowd.com/
 - Synack Red Team: https://www.synack.com/red-team/
@@ -40,8 +40,8 @@ Exploit Development
 - SLAE (x86): https://www.pentesteracademy.com/course?id=3
 - SLAE (x64): https://www.pentesteracademy.com/course?id=7
 - DevOps for Pentesters: https://training.zeropointsecurity.co.uk/courses/devops-for-pentesters
-- Offensive Driver Development: https://training.zeropointsecurity.co.uk/courses/offensive-driver-development
-- C2 Development in C#: https://training.zeropointsecurity.co.uk/courses/c2-development-in-csharp
+- Offensive Driver Development: :warning: https://training.zeropointsecurity.co.uk/courses/offensive-driver-development
+- C2 Development in C#: :warning: https://training.zeropointsecurity.co.uk/courses/c2-development-in-csharp
 - Corelan: https://www.corelan-training.com/
 - Offensive Security Exploit Developer (OSED): https://www.offensive-security.com/exp301-osed/
 - Offensive Security Exploitation Expert (OSEE): https://www.offsec.com/courses/exp-401/
@@ -59,7 +59,7 @@ Cloud
 Coding
 --------------------
 - Codecademy Python 2.7: :white_check_mark: https://www.codecademy.com/
-- C# for n00bs: https://training.zeropointsecurity.co.uk/courses/csharp-for-n00bs
+- C# for n00bs: :white_check_mark: https://training.zeropointsecurity.co.uk/courses/csharp-for-n00bs
 - Rust for n00bs: https://training.zeropointsecurity.co.uk/courses/rust-for-n00bs
 
 Training
