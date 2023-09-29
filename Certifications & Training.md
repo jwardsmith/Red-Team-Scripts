@@ -39,6 +39,7 @@ Exploit Development
 - Sektor7 Malware Development Advanced - Vol.1: https://institute.sektor7.net/rto-maldev-adv1
 - SLAE (x86): https://www.pentesteracademy.com/course?id=3
 - SLAE (x64): https://www.pentesteracademy.com/course?id=7
+- MalDev Academy: https://maldevacademy.com/
 - DevOps for Pentesters: https://training.zeropointsecurity.co.uk/courses/devops-for-pentesters
 - Offensive Driver Development: :warning: https://training.zeropointsecurity.co.uk/courses/offensive-driver-development
 - C2 Development in C#: :warning: https://training.zeropointsecurity.co.uk/courses/c2-development-in-csharp
