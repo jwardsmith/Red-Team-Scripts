@@ -733,6 +733,42 @@ print letters
 >>> {'b' : 2, 'c' : 3}
 ```
 
+## Classes
+
+- Create a class
+
+```
+class Person(object):
+  def __init__(self, name, age, is_hungry):
+    self.name = name
+    self.age = age
+    self.is_hungry = is_hungry
+
+man = Person("James", 2, True)
+woman = Person("Splunk", 1, False)
+baby = Person("Defender", 7, True)
+
+print man.name, man.age, man.is_hungry
+print woman.name, woman.age, woman.is_hungry
+print baby.name, baby.age, baby.is_hungry
+```
+
+- Create a class with functions (methods)
+
+```
+class Person(object):
+  is_alive = True
+  def __init__(self, name, age):
+    self.name = name
+    self.age = age
+  def description(self):
+    print self.name
+    print self.age
+    
+man = Person("James", 36)
+man.description()
+```
+
 ## Files
 
 - Read a file
