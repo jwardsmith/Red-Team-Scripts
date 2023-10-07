@@ -326,3 +326,43 @@ string result = (color == "blue") ? "blue" : "NOT blue";
 
 Console.WriteLine(result);
 ```
+
+## Methods
+
+- Create a method
+
+```
+static void YourMethodName()
+{
+  Console.WriteLine("Hi there!");
+}
+```
+
+- Create a method with parameters
+
+```
+ static void Main(string[] args)
+    {
+      YourMethodName("James", 28);
+    }
+
+static void YourMethodName(string identity, int age)
+{
+  Console.WriteLine($"{identity} is {age} years old.");
+}
+```
+
+- Create a method with optional parameters
+
+```
+static void Main(string[] args)
+{
+  YourMethodName("I'm hungry", "!"); // prints "I'm hungry!"
+  YourMethodName("I'm hungry");  // prints "I'm hungry."
+}
+
+static void YourMethodName(string message, string punctuation = ".")
+{
+  Console.WriteLine(message + punctuation);
+}
+```
