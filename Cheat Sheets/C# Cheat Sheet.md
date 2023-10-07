@@ -113,6 +113,36 @@ double variableName = 39.76876;
 decimal variableName = 489872.76m;
 ```
 
+## Booleans
+
+- TRUE/FALSE
+
+```
+bool a = True;
+bool b = False;
+```
+
+- AND/OR/NOT
+
+not is evaluated first;
+and is evaluated next;
+or is evaluated last.
+
+```
+True && True = True
+True && False = False
+False && True = False
+False && False = False
+
+True || True = True
+True || False = True
+False || True = True 
+False || False = False
+
+!True = False
+!False = True
+```
+
 ## Arithmetic
 
 - Addition
@@ -206,4 +236,42 @@ Console.WriteLine(shouting);
 string shouting = "I'M NOT SHOUTING, YOU'RE SHOUTING".ToLower();
 Console.WriteLine(shouting);
 // prints I'm not shouting, you're shouting.
+```
+
+## Control Flow
+
+- Equal to
+
+```
+==
+```
+
+- Not equal to
+
+```
+!=
+```
+
+- Less than
+
+```
+<
+```
+
+- Greater than
+
+```
+>
+```
+
+- Less than or equal to
+
+```
+<=
+```
+
+- Greater than or equal to
+
+```
+>=
 ```
