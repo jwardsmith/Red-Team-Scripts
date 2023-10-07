@@ -73,3 +73,55 @@ myAge = 28;
 
 string countryName = "Australia";
 ```
+
+## Numbers
+
+- Integer
+
+```
+int variableName = 7;
+```
+
+- Double (A double is usually the best choice of the three because it is more precise than a float, but faster to process than a decimal)
+
+```
+double variableName = 39.76876;
+```
+
+- Decimal (make sure to use a decimal for financial applications, since it is the most precise)
+
+```
+decimal variableName = 489872.76m;
+```
+
+## Arithmetic
+
+- Addition
+
+```
+Console.WriteLine(4 + 19);
+```
+
+- Subtraction
+
+```
+Console.WriteLine(18 - 3);
+```
+
+- Multiplication
+
+```
+Console.WriteLine(23 * 4);
+```
+
+- Division
+
+```
+Console.WriteLine(5 / 3);
+```
+
+- PEMDAS
+
+```
+Console.WriteLine(8 + (9 * 3));
+```
