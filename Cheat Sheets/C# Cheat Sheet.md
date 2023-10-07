@@ -10,6 +10,25 @@ https://learn.microsoft.com/en-us/dotnet/csharp/
 Console.WriteLine("Hello World!");
 ```
 
+- Print a concatenate string
+
+```
+Console.WriteLine("My name is " + "James" );
+```
+
+- Print a interpolation string
+
+```
+string name = "James"
+Console.WriteLine($"My name is {name}.");
+```
+
+- Print a string escaping backslashes
+
+```
+string withSlash = "Ifemelu said, \"Hello!\"";
+```
+
 ## Input
 
 - Read a string
@@ -148,4 +167,12 @@ Console.Write(apple);
 int apple = 0;
 apple += 3;
 Console.Write(apple);
+```
+
+## String Methods
+
+
+
+```
+
 ```
