@@ -275,3 +275,54 @@ Console.WriteLine(shouting);
 ```
 >=
 ```
+
+## Conditional Statement
+
+- If/Elif/Else
+
+```
+string color = "red";
+
+if (color == "blue")
+{
+  Console.WriteLine("color is blue");
+} 
+else if (color == "red")
+{
+  Console.WriteLine("color is NOT blue");
+} 
+else
+{
+  Console.WriteLine("color is NOT blue OR red");
+}
+```
+
+- Switch statements
+
+```
+string color;
+
+switch (color)
+{
+   case "blue":
+      Console.WriteLine("color is blue");
+      break;
+   case "red":
+      Console.WriteLine("color is red");
+      break;
+   case "green":
+      Console.WriteLine("color is green");
+      break;
+   default:
+      break;
+}
+```
+
+- Ternary opeators
+
+```
+string color = "blue";
+string result = (color == "blue") ? "blue" : "NOT blue";
+
+Console.WriteLine(result);
+```
