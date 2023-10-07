@@ -120,8 +120,32 @@ Console.WriteLine(23 * 4);
 Console.WriteLine(5 / 3);
 ```
 
+- Modulo
+
+```
+Console.WriteLine(4 % 2);
+```
+
 - PEMDAS
 
 ```
 Console.WriteLine(8 + (9 * 3));
+```
+
+## Updating Variables
+
+- Update a variable
+
+```
+int apple = 0;
+apple++;
+Console.Write(apple);
+```
+
+- Update a variable by 3
+
+```
+int apple = 0;
+apple += 3;
+Console.Write(apple);
 ```
