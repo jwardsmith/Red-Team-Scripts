@@ -171,8 +171,39 @@ Console.Write(apple);
 
 ## String Methods
 
-
+- Find how many characters in a string
 
 ```
+string userTweet = Console.ReadLine();
+userTweet.Length;
+```
 
+- Find the position of a character in a string
+
+```
+string word = "radio";
+word.IndexOf("a"); // returns 1
+```
+
+- Grab part of a string using the specified character position, continues until the end of the string, and returns a new string
+
+```
+string plantName = "Cactaceae, Cactus";
+string commonName = plantName.Substring(charPosition); // returns Cactus
+```
+
+- Change a string to uppercase
+
+```
+string shouting = "I'm not shouting, you're shouting".ToUpper();
+Console.WriteLine(shouting);
+// prints I'M NOT SHOUTING, YOU'RE SHOUTING.
+```
+
+- Change a string to lowercase
+
+```
+string shouting = "I'M NOT SHOUTING, YOU'RE SHOUTING".ToLower();
+Console.WriteLine(shouting);
+// prints I'm not shouting, you're shouting.
 ```
