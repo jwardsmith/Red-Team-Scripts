@@ -1,5 +1,7 @@
 # C# Cheat Sheet
 
+https://learn.microsoft.com/en-us/dotnet/csharp/
+
 ## Print
 
 - Print a string
@@ -47,3 +49,27 @@ Console.WriteLine($"You are {input} years old!");
 | DateTime | Moments in time | 8 | System.DateTime | 0:0:00 on 01/01/0001 to 23:59:59 on 12/31/9999 |
 | string | Sequence of characters | 2 per character | System.String | N/A |
 
+- Implicit conversion (happens automatically if no data will be lost in the conversion. That’s why it’s possible to convert an int (which can hold less data) to a double (which can hold more), but not the other way around)
+
+```
+int myInt = 3;
+double myDouble = myInt;
+```
+
+- Explicit conversion (requires a cast operator to convert a data type into another one. So if we do want to convert a double to an int, we could use the operator (int))
+
+```
+double myDouble = 3.2;
+int myInt = (int)myDouble;
+```
+
+## Variables
+
+- Assign a variable
+
+```
+int myAge;
+myAge = 28;
+
+string countryName = "Australia";
+```
