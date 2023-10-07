@@ -366,3 +366,106 @@ static void YourMethodName(string message, string punctuation = ".")
   Console.WriteLine(message + punctuation);
 }
 ```
+
+## Alternate Expressions
+
+- Rewrite a method
+
+```
+bool IsEven(int num)
+{
+  return num % 2 == 0;
+}
+
+bool isEven(int num) => num % 2 == 0;
+```
+
+- Lambda
+
+```
+int[] numbers = {1, 3, 5, 6, 7, 8};
+
+public static bool IsEven(int num)
+{
+  return num % 2 == 0;
+}
+
+bool hasEvenNumber = Array.Exists(numbers, IsEven);
+
+bool hasEvenNumber = Array.Exists(numbers, (int num) => num % 2 == 0 );
+```
+
+## Arrays
+
+- Create an array
+
+```
+int[] plantHeights = { 3, 4, 6 };
+```
+
+- Create and initialise an array
+
+```
+int[] plantHeights = new int[] { 3, 4, 6 };
+```
+
+- Get an array length
+
+```
+int[] plantHeights = { 3, 4, 6 };
+
+// arrayLength will be 3
+int arrayLength = plantHeights.Length 
+```
+
+- Access an array item
+
+```
+int[] plantHeights = {3, 4, 6};
+
+// plantTwoHeight will be 4
+int plantTwoHeight = plantHeights[1];
+```
+
+## Loops
+
+- Create a while loop
+
+```
+while (spacebar == "down") 
+{
+ RiseUp();
+}
+```
+
+- Create a do...while loop
+
+```
+bool startGame = false;
+
+do
+{
+  ShowStartScreen();
+} while (!startGame);
+```
+
+- Create a for loop
+
+```
+for (int i = 0; i < 10; i++)
+{
+  DisplayFlag();
+}
+```
+
+- Create a for each loop
+
+```
+string[] melody = { "a", "b", "c", "c", "b" };
+
+foreach (string note in melody)
+{
+  PlayMusic(note);
+}
+
+```
