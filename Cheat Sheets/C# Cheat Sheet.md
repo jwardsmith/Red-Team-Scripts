@@ -16,3 +16,17 @@ Console.WriteLine("Hello World!");
 string input = Console.ReadLine();
 Console.WriteLine($"You are {input} years old!");
 ```
+
+## Comments
+
+- Write a comment
+
+```
+// This is a another comment
+```
+
+- Write a multi-line comment
+
+```
+/* This is a comment */
+```
