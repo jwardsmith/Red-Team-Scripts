@@ -469,3 +469,26 @@ foreach (string note in melody)
 }
 
 ```
+
+## Classes
+
+- Create a class
+
+```
+class Forest {
+  public string name;
+  public int trees;
+}
+```
+
+- Make an instance of a class
+
+```
+Forest f = new Forest();
+f.name = "Amazon";
+Console.WriteLine(f.name); // Prints "Amazon"
+
+Forest f2 = new Forest();
+f2.name = "Congo";
+Console.WriteLine(f2.name); // Prints "Congo"
+```
