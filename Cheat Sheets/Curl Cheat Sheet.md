@@ -1,4 +1,4 @@
-# Curl
+# Curl Cheat Sheet
 
 - GET request with curl
 
