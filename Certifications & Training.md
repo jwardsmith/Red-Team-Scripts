@@ -44,6 +44,7 @@ Exploit Development
 - Offensive Driver Development: :warning: https://training.zeropointsecurity.co.uk/courses/offensive-driver-development
 - C2 Development in C#: :warning: https://training.zeropointsecurity.co.uk/courses/c2-development-in-csharp
 - Corelan: https://www.corelan-training.com/
+- Zero2Automated: https://courses.zero2auto.com/
 - Offensive Security Exploit Developer (OSED): https://www.offensive-security.com/exp301-osed/
 - Offensive Security Exploitation Expert (OSEE): https://www.offsec.com/courses/exp-401/
 
