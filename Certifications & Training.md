@@ -15,7 +15,7 @@ Penetration Testing
     - RastaLabs:
     - Cybernetics:
     - APTLabs:
-- Certified Red Team Operator 2 (CRTO 2): https://training.zeropointsecurity.co.uk/courses/red-team-ops-ii
+- Certified Red Team Lead (CRTL): https://training.zeropointsecurity.co.uk/courses/red-team-ops-ii
 - Certified Red Team Master (CRTM): https://www.alteredsecurity.com/gcb
 - Offensive Security Experienced Penetration Tester (OSEP): https://www.offensive-security.com/pen300-osep/
 - Sektor7 Windows Evasion Course: https://institute.sektor7.net/rto-win-evasion
@@ -56,6 +56,7 @@ Wireless Penetration Testing
 Cloud
 --------------------
 - Certified Azure Red Team Professional (CARTP): https://www.alteredsecurity.com/azureadlab
+- Certified Azure Red Team Expert (CARTE): https://www.alteredsecurity.com/azureadvanced
 - Certified Azure Web Application Security Professional (CAWASP): https://www.alteredsecurity.com/azureappsec
 - AZ-500: https://docs.microsoft.com/en-us/learn/certifications/exams/az-500
 
