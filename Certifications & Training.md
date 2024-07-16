@@ -15,7 +15,7 @@ Penetration Testing
     - RastaLabs:
     - Cybernetics:
     - APTLabs:
-- Certified Red Team Lead (CRTL): https://training.zeropointsecurity.co.uk/courses/red-team-ops-ii
+- Certified Red Team Lead (CRTL): https://training.zeropointsecurity.co.uk/courses/red-team-ops-ii :white_check_mark:
 - Certified Red Team Master (CRTM): https://www.alteredsecurity.com/gcb
 - Offensive Security Experienced Penetration Tester (OSEP): https://www.offensive-security.com/pen300-osep/
 - Sektor7 Windows Evasion Course: https://institute.sektor7.net/rto-win-evasion
