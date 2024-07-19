@@ -75,7 +75,7 @@ Training
 - Pentesterlab: https://pentesterlab.com/
 - Offensive Security Proving Grounds: https://www.offensive-security.com/labs/
 - eLearnSecurity: https://elearnsecurity.com/
-- SANS; https://www.sans.org/cyber-security-certifications/
+- SANS: https://www.sans.org/cyber-security-certifications/
 - OSINT Courses Tracelabs: https://academy.osintcombine.com/
 - TCM Security: https://certifications.tcm-sec.com/
 - Hacker101: https://www.hacker101.com/
