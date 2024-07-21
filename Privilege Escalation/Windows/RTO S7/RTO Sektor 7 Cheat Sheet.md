@@ -2,7 +2,7 @@
 
 ### Credentials
 
-- Search for password
+- Search for passwords
 
 ```
 C:\> dir /b /a /s c:\ > c:\rto\c-dirs.txt
