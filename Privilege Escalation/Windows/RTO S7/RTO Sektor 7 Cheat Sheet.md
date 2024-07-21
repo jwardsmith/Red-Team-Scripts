@@ -47,7 +47,7 @@ C:\> reg query HKLM /f password /t REG_SZ /s
 C:\> reg query HKCU /f password /t REG_SZ /s
 ```
 
-- Abuse Credential Manager
+- Abuse Credential Manager to run a application as another user using saved credentials
 
 ```
 C:\> cmdkey /list
