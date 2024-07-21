@@ -108,7 +108,7 @@ C:\> reg add HKLM\SYSTEM\CurrentControlSet\services\IKEEXT /v ImagePath /t REG_E
 
 ### Execution Flow Hijacking
 
-- Search for files with weak permissions
+- Search for files with weak permissions that we can replace with backdoored version e.g. Putty.exe
 
 ```
 C:\> c:\rto\tools\si\accesschk.exe -accepteula -wus "Users" c:\*.* > c:\rto\fld-usr.txt
