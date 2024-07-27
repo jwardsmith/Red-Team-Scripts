@@ -18,7 +18,6 @@ Penetration Testing
 - Certified Red Team Lead (CRTL): :white_check_mark: https://training.zeropointsecurity.co.uk/courses/red-team-ops-ii
 - Certified Red Team Master (CRTM): https://www.alteredsecurity.com/gcb
 - Offensive Security Experienced Penetration Tester (OSEP): https://www.offensive-security.com/pen300-osep/
-- Sektor7 Windows Evasion Course: https://institute.sektor7.net/rto-win-evasion
 - Sektor7 Windows Persistence Course: https://institute.sektor7.net/rto-windows-persistence
 - Sektor7 Privilege Escalation in Windows Course: :white_check_mark: https://institute.sektor7.net/rto-lpe-windows
 - Certified Enterprise Security Professional - AD CS (CESP - ADCS): https://www.alteredsecurity.com/adcs
@@ -38,6 +37,7 @@ Exploit Development
 - Sektor7 Malware Development Essentials Course: https://institute.sektor7.net/red-team-operator-malware-development-essentials
 - Sektor7 Malware Development Intermediate Course: https://institute.sektor7.net/rto-maldev-intermediate
 - Sektor7 Malware Development Advanced - Vol.1: https://institute.sektor7.net/rto-maldev-adv1
+- Sektor7 Windows Evasion Course: https://institute.sektor7.net/rto-win-evasion
 - SLAE (x86): https://www.pentesteracademy.com/course?id=3
 - SLAE (x64): https://www.pentesteracademy.com/course?id=7
 - MalDev Academy: https://maldevacademy.com/
