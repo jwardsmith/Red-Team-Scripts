@@ -1,4 +1,4 @@
-# RTO Sektor 7 Cheat Sheet
+# RTO Sektor7 Cheat Sheet
 
 ### Credentials
 
