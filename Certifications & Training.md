@@ -18,7 +18,7 @@ Penetration Testing
 - Certified Red Team Lead (CRTL): :white_check_mark: https://training.zeropointsecurity.co.uk/courses/red-team-ops-ii
 - Certified Red Team Master (CRTM): https://www.alteredsecurity.com/gcb
 - Offensive Security Experienced Penetration Tester (OSEP): https://www.offensive-security.com/pen300-osep/
-- Sektor7 Windows Persistence Course: https://institute.sektor7.net/rto-windows-persistence
+- Sektor7 Windows Persistence Course: :white_check_mark: https://institute.sektor7.net/rto-windows-persistence
 - Sektor7 Privilege Escalation in Windows Course: :white_check_mark: https://institute.sektor7.net/rto-lpe-windows
 - Certified Enterprise Security Professional - AD CS (CESP - ADCS): https://www.alteredsecurity.com/adcs
 
