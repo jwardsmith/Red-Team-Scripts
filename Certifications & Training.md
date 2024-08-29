@@ -46,7 +46,7 @@ Exploit Development
 - C2 Development in C#: :warning: https://training.zeropointsecurity.co.uk/courses/c2-development-in-csharp
 - Corelan: https://www.corelan-training.com/
 - Zero2Automated: https://courses.zero2auto.com/
-- Code Machine: https://codemachine.com/trainings/winmal.html
+- Code Machine: https://codemachine.com/index.html
 - Offensive Security Exploit Developer (OSED): https://www.offensive-security.com/exp301-osed/
 - Offensive Security Exploitation Expert (OSEE): https://www.offsec.com/courses/exp-401/
 
