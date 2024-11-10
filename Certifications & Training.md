@@ -21,6 +21,7 @@ Penetration Testing
 - Sektor7 Windows Persistence Course: :white_check_mark: https://institute.sektor7.net/rto-windows-persistence
 - Sektor7 Privilege Escalation in Windows Course: :white_check_mark: https://institute.sektor7.net/rto-lpe-windows
 - Certified Enterprise Security Professional - AD CS (CESP - ADCS): https://www.alteredsecurity.com/adcs
+- Certified Evasion Techniques Professional (CETP): https://www.alteredsecurity.com/evasionlab
 
 Web Application Penetration Testing
 ------------------------
