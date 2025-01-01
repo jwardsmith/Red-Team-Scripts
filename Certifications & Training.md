@@ -33,6 +33,7 @@ Penetration Testing
 Web Application Penetration Testing
 ------------------------
 - Portswigger Academy: :warning: https://portswigger.net/web-security
+- Burp Suite Certified Practitioner (BSCP): https://portswigger.net/web-security/certification
 - Hack The Box Certified Bug Bounty Hunter (HTB CBBH): https://academy.hackthebox.com/preview/certifications/htb-certified-bug-bounty-hunter
 - Hack The Box Certified Web Exploitation Expert (HTB CWEE): https://academy.hackthebox.com/preview/certifications/htb-certified-web-exploitation-expert
 - Offensive Security Web Expert (OSWE): :warning: https://www.offensive-security.com/awae-oswe/
