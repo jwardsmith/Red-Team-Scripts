@@ -100,3 +100,6 @@ Training
 - DVWA: https://dvwa.co.uk/
 - SecureFlag: https://www.secureflag.com/
 - CodeMachine: https://codemachine.com/index.html
+- DVWA: https://github.com/digininja/DVWA
+- OWASP Juice Shop: https://owasp.org/www-project-juice-shop/
+- OWASP WebGoat: https://owasp.org/www-project-webgoat/
