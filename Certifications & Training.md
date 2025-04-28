@@ -32,7 +32,7 @@ Penetration Testing
 
 Web Application Penetration Testing
 ------------------------
-- Hack The Box Certified Bug Bounty Hunter (HTB CBBH): :warning: https://academy.hackthebox.com/preview/certifications/htb-certified-bug-bounty-hunter
+- Hack The Box Certified Bug Bounty Hunter (HTB CBBH): :white_check_mark: https://academy.hackthebox.com/preview/certifications/htb-certified-bug-bounty-hunter
 - Hack The Box Certified Web Exploitation Expert (HTB CWEE): https://academy.hackthebox.com/preview/certifications/htb-certified-web-exploitation-expert
 - Burp Suite Certified Practitioner (BSCP): :warning: https://portswigger.net/web-security/certification
 - Offensive Security Web Expert (OSWE): :warning: https://www.offensive-security.com/awae-oswe/
