@@ -8,6 +8,7 @@ Penetration Testing
 - Certified Red Team Expert (CRTE): :white_check_mark: https://www.pentesteracademy.com/redteamlab
 - Certified Red Team Operator (CRTO): :white_check_mark: https://www.zeropointsecurity.co.uk/red-team-ops
 - Hack The Box Certified Penetration Testing Specialist (HTB CPTS): :warning: https://academy.hackthebox.com/preview/certifications/htb-certified-penetration-testing-specialist
+- Hack The Box Certified Advanced Penetration Testing Certification (HTB CAPE): https://academy.hackthebox.com/preview/certifications/htb-certified-active-directory-pentesting-expert
 - Hack The Box Pro Labs: https://www.hackthebox.eu/
     - Dante: :white_check_mark:
     - P.O.O.:
